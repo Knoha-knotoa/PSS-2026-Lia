@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apostila LDB para Concurso - Educador</title>
+  <style>
+    :root{
+      --bg:#f6f1e8;
+      --paper:#fffaf0;
+      --ink:#28221b;
+      --muted:#6b5f50;
+      --accent:#7a2d22;
+      --accent2:#b56b2c;
+      --green:#1f7a4d;
+      --red:#a93226;
+      --blue:#24507a;
+      --line:#e0d3bf;
+      --shadow:0 14px 35px rgba(54,38,20,.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(181,107,44,.12), transparent 30%),
+        radial-gradient(circle at top right, rgba(122,45,34,.10), transparent 28%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.65;
+    }
+    header.hero{
+      padding:42px 18px 34px;
+      background:linear-gradient(135deg, #2a1f1a 0%, #633024 55%, #b56b2c 100%);
+      color:#fff9ef;
+      position:relative;
+      overflow:hidden;
+    }
+    header.hero::after{
+      content:"LDB";
+      position:absolute;
+      right:-16px;
+      bottom:-62px;
+      font-size:150px;
+      font-weight:900;
+      opacity:.08;
+      letter-spacing:-8px;
+    }
+    .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+    .eyebrow{font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#f5d2a8;font-size:.82rem}
+    h1{font-size:clamp(2rem,6vw,4.2rem);line-height:1.05;margin:.35rem 0 1rem;letter-spacing:-.04em}
+    h2{font-size:clamp(1.55rem,4vw,2.35rem);line-height:1.15;margin:2.4rem 0 1rem;color:#3a2720;letter-spacing:-.02em}
+    h3{font-size:1.25rem;margin:1.8rem 0 .6rem;color:#4f2d24}
+    h4{font-size:1.05rem;margin:1.2rem 0 .4rem;color:#684034}
+    p{margin:.65rem 0}
+    strong{color:#2d1e17}
+    .hero p{max-width:860px;font-size:1.08rem;color:#fff1df}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .badge{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);padding:8px 12px;border-radius:999px;font-size:.92rem;backdrop-filter:blur(6px)}
+    nav.toc{
+      position:sticky;top:0;z-index:30;
+      background:rgba(255,250,240,.94);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
+      box-shadow:0 8px 22px rgba(54,38,20,.06);
+    }
+    .toc-inner{max-width:1080px;margin:0 auto;padding:10px 16px;display:flex;gap:8px;overflow:auto;white-space:nowrap}
+    .toc a{color:#5b3228;text-decoration:none;font-weight:700;border:1px solid #dbc8ad;border-radius:999px;padding:8px 12px;font-size:.9rem;background:#fff7e7}
+    .toc a:hover{background:#f1dfc2}
+    main{padding:22px 0 60px}
+    section.card, .card{
+      background:rgba(255,250,240,.92);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      margin:18px 0;
+      box-shadow:var(--shadow);
+    }
+    .grid{display:grid;gap:16px}
+    .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .mini{
+      border:1px solid #dfceb7;
+      background:#fffdfa;
+      border-radius:16px;
+      padding:16px;
+    }
+    .mini h3,.mini h4{margin-top:0}
+    .callout{
+      border-left:6px solid var(--accent2);
+      background:#fff4df;
+      padding:14px 16px;
+      border-radius:14px;
+      margin:16px 0;
+    }
+    .danger{border-left-color:var(--red);background:#fff0ed}
+    .success{border-left-color:var(--green);background:#eefaf3}
+    .info{border-left-color:var(--blue);background:#eef5fc}
+    .lawbox{
+      background:#2a1f1a;
+      color:#fff6e9;
+      border-radius:16px;
+      padding:18px;
+      margin:14px 0;
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .lawbox strong{color:#ffdbab}
+    .tag{display:inline-block;background:#efe0c8;color:#5a2f25;border:1px solid #dcc7a8;border-radius:999px;padding:4px 9px;font-weight:700;font-size:.82rem;margin:3px 4px 3px 0}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px;margin:16px 0;background:#fffdf9}
+    table{width:100%;border-collapse:collapse;min-width:720px}
+    th,td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+    th{background:#f2e3ca;color:#402720;position:sticky;top:0}
+    tr:last-child td{border-bottom:0}
+    .old-new{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+    .old,.new{border-radius:16px;padding:15px;border:1px solid var(--line)}
+    .old{background:#fff1ed;border-color:#eab7ad}
+    .new{background:#edf9f1;border-color:#addbbb}
+    .old h4,.new h4{margin-top:0}
+    ul,ol{padding-left:1.25rem}
+    li{margin:.35rem 0}
+    .chapter-title{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .num{
+      display:inline-grid;place-items:center;
+      width:40px;height:40px;border-radius:12px;
+      background:#6a3027;color:#fff;font-weight:900;
+      box-shadow:0 6px 18px rgba(106,48,39,.22)
+    }
+    .question{
+      border:1px solid #dfceb7;
+      background:#fffdf8;
+      border-radius:18px;
+      padding:18px;
+      margin:14px 0;
+    }
+    .question h3{margin-top:0;color:#3d2820;font-size:1.08rem}
+    .options{display:grid;gap:9px;margin-top:12px}
+    .option{
+      text-align:left;
+      border:1px solid #dcc8aa;
+      background:#fff7ea;
+      color:#2b211b;
+      border-radius:13px;
+      padding:12px 14px;
+      cursor:pointer;
+      font-size:1rem;
+      transition:.18s ease;
+    }
+    .option:hover{transform:translateY(-1px);background:#f3e4cc}
+    .option.correct{border-color:#4da16f;background:#e9f8ef;color:#145736;font-weight:700}
+    .option.wrong{border-color:#d36b5d;background:#fff0ed;color:#8a2418;font-weight:700}
+    .feedback{display:none;margin-top:12px;padding:12px 14px;border-radius:13px;background:#f2eadc;border:1px solid #ddcbb2}
+    .feedback.show{display:block}
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+    button.action{
+      border:0;background:var(--accent);color:white;border-radius:999px;padding:11px 16px;font-weight:800;cursor:pointer;
+      box-shadow:0 8px 18px rgba(122,45,34,.18)
+    }
+    button.action.secondary{background:#6f5b49}
+    .checklist label{display:block;margin:8px 0;padding:10px;border:1px solid #e2d2bd;border-radius:12px;background:#fffdf9}
+    .small{font-size:.9rem;color:var(--muted)}
+    .footer{font-size:.92rem;color:#5d5348;border-top:1px solid var(--line);padding-top:20px;margin-top:30px}
+    @media (max-width:760px){
+      .grid.two,.grid.three,.old-new{grid-template-columns:1fr}
+      section.card,.card{padding:18px;border-radius:16px}
+      .toc-inner{padding-left:12px}
+      header.hero{padding-top:34px}
+      table{font-size:.92rem}
+    }
+    @media print{
+      nav.toc,.controls,.option{display:none!important}
+      body{background:white;color:#111}
+      section.card,.card{box-shadow:none;border:1px solid #bbb;break-inside:avoid;background:white}
+      header.hero{background:white;color:#111;border-bottom:2px solid #111}
+      header.hero p,.eyebrow{color:#111}
+      .feedback{display:block!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="topo">
+    <div class="wrap">
+      <div class="eyebrow">Apostila de legislação educacional</div>
+      <h1>LDB para Concurso de Educador</h1>
+      <p>Lei nº 9.394/1996 explicada de forma direta, com foco em PSS municipal, educação infantil, responsabilidades do poder público, funções da escola, funções do professor, gestão democrática, educação especial e pegadinhas comuns de banca.</p>
+      <div class="badges">
+        <span class="badge">Base: LDB atualizada</span>
+        <span class="badge">Foco: Educador / Professor / PSS</span>
+        <span class="badge">Com questões interativas</span>
+        <span class="badge">Atenção a textos antigos</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Menu da apostila">
+    <div class="toc-inner">
+      <a href="#como-usar">Como estudar</a>
+      <a href="#alerta">Texto antigo x atual</a>
+      <a href="#prioridade">Prioridade</a>
+      <a href="#principios">Arts. 1º a 3º</a>
+      <a href="#direito">Direito à educação</a>
+      <a href="#organizacao">Organização</a>
+      <a href="#escola-docente">Escola e docente</a>
+      <a href="#basica">Educação básica</a>
+      <a href="#infantil">Educação infantil</a>
+      <a href="#especial">Educação especial</a>
+      <a href="#profissionais">Profissionais</a>
+      <a href="#simulado">Questões</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="card" id="como-usar">
+      <div class="chapter-title"><span class="num">✓</span><h2>Como usar esta apostila</h2></div>
+      <p>Esta apostila foi feita para estudar a LDB com foco em concurso. A melhor forma de usar é:</p>
+      <div class="grid three">
+        <div class="mini"><h3>1. Entender</h3><p>Leia cada artigo como uma regra de funcionamento da educação brasileira. A banca costuma cobrar a ideia central, não apenas a memorização.</p></div>
+        <div class="mini"><h3>2. Decorar os números</h3><p>Idades, percentuais, dias letivos e horas são pontos clássicos de pegadinha.</p></div>
+        <div class="mini"><h3>3. Treinar a cobrança</h3><p>Depois de cada tema, veja como ele vira alternativa de prova: certo/errado, múltipla escolha ou caso prático.</p></div>
+      </div>
+      <div class="controls">
+        <button class="action" onclick="window.print()">Imprimir / salvar em PDF</button>
+        <button class="action secondary" onclick="document.querySelectorAll('.feedback').forEach(f=>f.classList.add('show'))">Mostrar todos os comentários das questões</button>
+      </div>
+    </section>
+
+    <section class="card danger" id="alerta">
+      <div class="chapter-title"><span class="num">!</span><h2>Alerta: o texto colado está desatualizado em partes importantes</h2></div>
+      <p>O texto original da LDB, de 1996, foi alterado por várias leis. Para concurso, a regra é estudar o texto vigente, principalmente quando o edital cita apenas “Lei nº 9.394/1996 e alterações”.</p>
+      <div class="old-new">
+        <div class="old">
+          <h4>Redação antiga perigosa</h4>
+          <ul>
+            <li>Matrícula no ensino fundamental a partir dos 7 anos.</li>
+            <li>Educação infantil até 6 anos.</li>
+            <li>Pré-escola de 4 a 6 anos.</li>
+            <li>Ensino fundamental com duração mínima de 8 anos.</li>
+          </ul>
+        </div>
+        <div class="new">
+          <h4>Como estudar para a prova</h4>
+          <ul>
+            <li>Matrícula obrigatória na educação básica a partir dos 4 anos.</li>
+            <li>Educação infantil até 5 anos.</li>
+            <li>Creche: até 3 anos; pré-escola: 4 e 5 anos.</li>
+            <li>Ensino fundamental: 9 anos, iniciando-se aos 6 anos.</li>
+          </ul>
+        </div>
+      </div>
+      <p><strong>Regra de ouro:</strong> se a alternativa trouxer “até 6 anos”, “4 a 6 anos”, “7 anos” ou “8 anos de fundamental”, desconfie. Pode ser texto antigo.</p>
+    </section>
+
+    <section class="card" id="prioridade">
+      <div class="chapter-title"><span class="num">1</span><h2>O que mais tem chance de cair</h2></div>
+      <p>Para cargo de educador, auxiliar de educação infantil ou professor em concurso municipal, estes são os temas com melhor custo-benefício:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Prioridade</th><th>Tema</th><th>Por que cai?</th><th>Como a banca costuma cobrar</th></tr></thead>
+          <tbody>
+            <tr><td>Altíssima</td><td>Educação infantil</td><td>É diretamente ligada ao cargo de educador.</td><td>Idades, finalidade, avaliação sem promoção, creche x pré-escola.</td></tr>
+            <tr><td>Altíssima</td><td>Princípios da educação</td><td>Art. 3º é muito usado para questões conceituais.</td><td>Pluralismo, igualdade de acesso e permanência, gestão democrática, qualidade.</td></tr>
+            <tr><td>Alta</td><td>Direito à educação</td><td>Define o dever do Estado e a obrigatoriedade escolar.</td><td>Educação básica dos 4 aos 17 anos, AEE, EJA, programas suplementares.</td></tr>
+            <tr><td>Alta</td><td>Municípios</td><td>Em prova municipal, a competência do Município é essencial.</td><td>Educação infantil em creches e pré-escolas e prioridade no fundamental.</td></tr>
+            <tr><td>Alta</td><td>Escola e professor</td><td>Cai em situações práticas do cotidiano escolar.</td><td>Proposta pedagógica, recuperação, família, plano de trabalho, aprendizagem.</td></tr>
+            <tr><td>Média</td><td>Educação especial</td><td>Inclusão é tema recorrente.</td><td>Preferencialmente na rede regular, recursos específicos, professores capacitados.</td></tr>
+            <tr><td>Média</td><td>Recursos financeiros</td><td>Costuma aparecer em uma questão mais objetiva.</td><td>18% União, 25% Estados/DF/Municípios, o que entra e não entra em MDE.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="principios">
+      <div class="chapter-title"><span class="num">2</span><h2>Educação, princípios e finalidades — Arts. 1º, 2º e 3º</h2></div>
+      <h3>Art. 1º — O que é educação?</h3>
+      <p>A educação é mais ampla do que a escola. Ela ocorre na família, na convivência humana, no trabalho, nas instituições de ensino e pesquisa, nos movimentos sociais, nas organizações da sociedade civil e nas manifestações culturais.</p>
+      <div class="lawbox"><strong>Para memorizar:</strong> a LDB disciplina a educação escolar, mas reconhece que a formação humana acontece em muitos espaços sociais.</div>
+      <h3>Art. 2º — Finalidade da educação</h3>
+      <p>A educação é dever da <strong>família e do Estado</strong>. Ela se inspira nos princípios de liberdade e solidariedade humana e tem três finalidades centrais:</p>
+      <div class="grid three">
+        <div class="mini"><h4>Pleno desenvolvimento</h4><p>Formação integral da pessoa: aspectos intelectuais, sociais, éticos e humanos.</p></div>
+        <div class="mini"><h4>Cidadania</h4><p>Preparar o aluno para viver em sociedade, conhecer direitos e deveres e participar da vida pública.</p></div>
+        <div class="mini"><h4>Trabalho</h4><p>Qualificação para o mundo do trabalho, sem reduzir a escola a treinamento profissional.</p></div>
+      </div>
+      <div class="callout danger"><strong>Pegadinha:</strong> a banca pode dizer que a educação é dever apenas do Estado. Errado. A LDB fala em família e Estado.</div>
+      <h3>Art. 3º — Princípios do ensino</h3>
+      <p>Os princípios são a base ética e pedagógica da LDB. Os mais cobrados são:</p>
+      <p>
+        <span class="tag">Igualdade de acesso e permanência</span>
+        <span class="tag">Liberdade de aprender e ensinar</span>
+        <span class="tag">Pluralismo pedagógico</span>
+        <span class="tag">Tolerância</span>
+        <span class="tag">Gratuidade no ensino público</span>
+        <span class="tag">Valorização profissional</span>
+        <span class="tag">Gestão democrática</span>
+        <span class="tag">Padrão de qualidade</span>
+        <span class="tag">Experiência extraescolar</span>
+        <span class="tag">Educação e trabalho</span>
+        <span class="tag">Diversidade étnico-racial</span>
+        <span class="tag">Aprendizagem ao longo da vida</span>
+        <span class="tag">Educação digital</span>
+      </p>
+      <div class="callout info"><strong>Como pode cair:</strong> “A valorização da experiência extraescolar é princípio do ensino previsto na LDB.” Resposta: certo.</div>
+      <div class="callout danger"><strong>Pegadinha:</strong> “igualdade de acesso” sozinha está incompleta. A LDB fala em igualdade de condições para <strong>acesso e permanência</strong> na escola.</div>
+    </section>
+
+    <section class="card" id="direito">
+      <div class="chapter-title"><span class="num">3</span><h2>Direito à educação e dever de educar — Arts. 4º a 7º-A</h2></div>
+      <h3>Art. 4º — O que o Estado deve garantir</h3>
+      <p>O dever do Estado com a educação escolar pública aparece no art. 4º. Este artigo é muito cobrado porque define as garantias mínimas do poder público.</p>
+      <div class="grid two">
+        <div class="mini"><h4>Educação obrigatória</h4><p>Educação básica obrigatória e gratuita dos <strong>4 aos 17 anos</strong>: pré-escola, ensino fundamental e ensino médio.</p></div>
+        <div class="mini"><h4>Educação infantil</h4><p>Educação infantil gratuita às crianças de até <strong>5 anos</strong>.</p></div>
+        <div class="mini"><h4>Atendimento especializado</h4><p>AEE gratuito para educandos com deficiência, transtornos globais do desenvolvimento e altas habilidades/superdotação, preferencialmente na rede regular.</p></div>
+        <div class="mini"><h4>Programas suplementares</h4><p>Material didático-escolar, transporte, alimentação e assistência à saúde em todas as etapas da educação básica.</p></div>
+        <div class="mini"><h4>Trabalhador estudante</h4><p>Ensino noturno regular adequado às necessidades e disponibilidades do aluno trabalhador.</p></div>
+        <div class="mini"><h4>Educação digital e infraestrutura</h4><p>A LDB passou a prever educação digital, conectividade, água potável e infraestrutura física e sanitária adequada.</p></div>
+      </div>
+      <h3>Art. 5º — Direito público subjetivo</h3>
+      <p>O acesso à educação básica obrigatória é <strong>direito público subjetivo</strong>. Isso significa que o cidadão pode exigir judicialmente do Poder Público a garantia da vaga.</p>
+      <div class="callout success"><strong>Podem acionar o Poder Público:</strong> qualquer cidadão, grupo de cidadãos, associação comunitária, sindicato, entidade de classe, entidade legalmente constituída e Ministério Público.</div>
+      <h3>Art. 6º — Dever dos pais ou responsáveis</h3>
+      <p>É dever dos pais ou responsáveis efetuar a matrícula das crianças na educação básica a partir dos <strong>4 anos</strong>.</p>
+      <div class="callout danger"><strong>Pegadinha:</strong> se a questão disser “a partir dos 7 anos”, está usando redação antiga e deve ser considerada incorreta na lei atual.</div>
+      <h3>Art. 7º — Iniciativa privada</h3>
+      <p>O ensino é livre à iniciativa privada, desde que cumpra as normas gerais da educação nacional, tenha autorização e avaliação de qualidade pelo Poder Público e capacidade de autofinanciamento.</p>
+      <h3>Art. 7º-A — Liberdade de consciência e crença</h3>
+      <p>O aluno pode, mediante requerimento prévio e motivado, ausentar-se de prova ou aula marcada em dia no qual sua religião vede a prática da atividade, recebendo prestação alternativa sem custo.</p>
+    </section>
+
+    <section class="card" id="organizacao">
+      <div class="chapter-title"><span class="num">4</span><h2>Organização da educação nacional — Arts. 8º a 20</h2></div>
+      <p>A educação brasileira é organizada em <strong>regime de colaboração</strong> entre União, Estados, Distrito Federal e Municípios.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Ente</th><th>Função principal</th><th>O que memorizar</th><th>Pegadinha</th></tr></thead>
+          <tbody>
+            <tr><td>União</td><td>Coordena a política nacional de educação.</td><td>Função normativa, redistributiva e supletiva; PNE; avaliação nacional; diretrizes gerais.</td><td>A União não substitui automaticamente Estados e Municípios; atua em colaboração.</td></tr>
+            <tr><td>Estados</td><td>Organizam seus sistemas e atuam no ensino fundamental e médio.</td><td>Asseguram o fundamental e oferecem, com prioridade, o ensino médio.</td><td>Não é correto dizer que o Estado cuida apenas do ensino superior.</td></tr>
+            <tr><td>Municípios</td><td>Foco municipal: educação infantil e ensino fundamental.</td><td>Oferecem creches e pré-escolas nas zonas urbanas e rurais e, com prioridade, o ensino fundamental.</td><td>Só atuam em outros níveis se a área própria estiver plenamente atendida e houver recursos acima dos mínimos.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout info"><strong>Questão típica:</strong> “Compete prioritariamente aos Municípios a oferta da educação infantil em creches e pré-escolas.” Certo.</div>
+      <h3>Instituições públicas e privadas</h3>
+      <p>As instituições de ensino classificam-se em públicas e privadas. As privadas podem ser particulares, comunitárias, confessionais ou filantrópicas.</p>
+      <div class="callout danger"><strong>Pegadinha:</strong> “pública” não é qualquer escola gratuita; é a criada ou incorporada, mantida e administrada pelo Poder Público.</div>
+    </section>
+
+    <section class="card" id="escola-docente">
+      <div class="chapter-title"><span class="num">5</span><h2>Funções da escola, dos professores e gestão democrática — Arts. 12 a 15</h2></div>
+      <h3>Art. 12 — Incumbências dos estabelecimentos de ensino</h3>
+      <p>O art. 12 fala do que a escola deve fazer. Atenção: não confundir com as atribuições individuais do professor.</p>
+      <ul>
+        <li>Elaborar e executar sua proposta pedagógica.</li>
+        <li>Administrar pessoal e recursos materiais e financeiros.</li>
+        <li>Assegurar dias letivos e horas-aula estabelecidas.</li>
+        <li>Velar pelo cumprimento do plano de trabalho de cada docente.</li>
+        <li>Prover meios para recuperação dos alunos de menor rendimento.</li>
+        <li>Articular-se com famílias e comunidade.</li>
+        <li>Informar pais e responsáveis sobre frequência, rendimento e proposta pedagógica.</li>
+      </ul>
+      <h3>Art. 13 — Incumbências dos docentes</h3>
+      <ul>
+        <li>Participar da elaboração da proposta pedagógica.</li>
+        <li>Elaborar e cumprir plano de trabalho.</li>
+        <li>Zelar pela aprendizagem dos alunos.</li>
+        <li>Estabelecer estratégias de recuperação.</li>
+        <li>Ministrar dias letivos e horas-aula.</li>
+        <li>Participar de planejamento, avaliação e desenvolvimento profissional.</li>
+        <li>Colaborar com a articulação entre escola, família e comunidade.</li>
+      </ul>
+      <div class="old-new">
+        <div class="old"><h4>Se a questão falar da escola</h4><p>Procure palavras como proposta pedagógica da instituição, recursos, cumprimento de dias letivos, recuperação, comunicação com pais.</p></div>
+        <div class="new"><h4>Se a questão falar do docente</h4><p>Procure plano de trabalho, aprendizagem dos alunos, estratégias de recuperação, planejamento e avaliação.</p></div>
+      </div>
+      <h3>Art. 14 — Gestão democrática</h3>
+      <p>A gestão democrática envolve participação dos profissionais da educação na elaboração do projeto pedagógico e participação da comunidade escolar e local em conselhos escolares, fóruns ou equivalentes.</p>
+      <div class="callout danger"><strong>Pegadinha:</strong> gestão democrática não significa “todo mundo manda em tudo”. Significa participação organizada, conforme a LDB e as normas dos sistemas de ensino.</div>
+      <h3>Art. 15 — Autonomia da escola pública</h3>
+      <p>Os sistemas de ensino devem assegurar às unidades escolares públicas progressivos graus de autonomia pedagógica, administrativa e de gestão financeira, respeitadas as normas gerais de direito financeiro público.</p>
+    </section>
+
+    <section class="card" id="basica">
+      <div class="chapter-title"><span class="num">6</span><h2>Educação básica — Arts. 21 a 28</h2></div>
+      <h3>Composição dos níveis escolares</h3>
+      <div class="grid two">
+        <div class="mini"><h4>Educação básica</h4><p>Formada por educação infantil, ensino fundamental e ensino médio.</p></div>
+        <div class="mini"><h4>Educação superior</h4><p>Compreende cursos sequenciais, graduação, pós-graduação e extensão.</p></div>
+      </div>
+      <h3>Finalidade da educação básica — Art. 22</h3>
+      <p>Desenvolver o educando, assegurar-lhe formação comum indispensável para o exercício da cidadania e fornecer meios para progredir no trabalho e em estudos posteriores.</p>
+      <h3>Organização flexível — Art. 23</h3>
+      <p>A educação básica pode organizar-se em séries anuais, semestres, ciclos, alternância, grupos não seriados ou outras formas, sempre que o interesse do processo de aprendizagem recomendar.</p>
+      <h3>Regras comuns — Art. 24</h3>
+      <div class="grid two">
+        <div class="mini"><h4>Carga horária</h4><p>Mínimo de 800 horas anuais, distribuídas em no mínimo 200 dias de efetivo trabalho escolar, excluído o tempo de exames finais.</p></div>
+        <div class="mini"><h4>Avaliação</h4><p>Contínua e cumulativa, com prevalência dos aspectos qualitativos sobre os quantitativos.</p></div>
+        <div class="mini"><h4>Recuperação</h4><p>Obrigatória para casos de baixo rendimento, de preferência paralela ao período letivo.</p></div>
+        <div class="mini"><h4>Frequência</h4><p>Exigida frequência mínima de 75% do total de horas letivas para aprovação no ensino fundamental e médio.</p></div>
+      </div>
+      <h3>Condições mínimas nas escolas públicas — Art. 25-A</h3>
+      <p>O poder público deve assegurar condições mínimas nas escolas públicas de educação básica: número adequado de alunos por turma, biblioteca, laboratórios, internet, quadra coberta, cozinha, refeitório, banheiros, acessibilidade, energia elétrica, água tratada, esgotamento sanitário e manejo de resíduos sólidos.</p>
+      <h3>Currículo — Arts. 26 e 27</h3>
+      <p>Os currículos da educação infantil, ensino fundamental e ensino médio devem ter <strong>base nacional comum</strong>, complementada por <strong>parte diversificada</strong>, de acordo com características regionais e locais da sociedade, cultura, economia e dos educandos.</p>
+      <div class="callout info"><strong>Como cai:</strong> a banca pode dizer que a base nacional comum elimina a parte diversificada. Errado. As duas coexistem.</div>
+      <h3>Educação rural — Art. 28</h3>
+      <p>Na educação básica para a população rural, os sistemas devem fazer adaptações curriculares, metodológicas e de calendário, considerando necessidades dos alunos, ciclo agrícola, clima e natureza do trabalho rural.</p>
+    </section>
+
+    <section class="card" id="infantil">
+      <div class="chapter-title"><span class="num">7</span><h2>Educação infantil — Arts. 29, 30 e 31</h2></div>
+      <p>Este é o capítulo mais importante para concurso de educador infantil.</p>
+      <h3>Art. 29 — Finalidade</h3>
+      <p>A educação infantil é a <strong>primeira etapa da educação básica</strong> e tem como finalidade o desenvolvimento integral da criança de até <strong>5 anos</strong>, em seus aspectos físico, psicológico, intelectual e social, complementando a ação da família e da comunidade.</p>
+      <div class="grid two">
+        <div class="mini"><h4>Não é depósito de criança</h4><p>Creche e pré-escola têm função educativa e de cuidado, com intencionalidade pedagógica.</p></div>
+        <div class="mini"><h4>Não substitui a família</h4><p>A LDB usa a palavra “complementando”, não “substituindo”.</p></div>
+      </div>
+      <h3>Art. 30 — Onde é oferecida</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Etapa</th><th>Idade</th><th>O que a banca cobra</th></tr></thead>
+          <tbody>
+            <tr><td>Creche ou entidade equivalente</td><td>Crianças de até 3 anos</td><td>Não confundir com pré-escola.</td></tr>
+            <tr><td>Pré-escola</td><td>Crianças de 4 a 5 anos</td><td>É obrigatória dentro da educação básica dos 4 aos 17 anos.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Art. 31 — Organização da educação infantil</h3>
+      <ul>
+        <li>Avaliação mediante acompanhamento e registro do desenvolvimento das crianças.</li>
+        <li>Sem objetivo de promoção, mesmo para acesso ao ensino fundamental.</li>
+        <li>Carga horária mínima anual de 800 horas, distribuídas por no mínimo 200 dias de trabalho educacional.</li>
+        <li>Atendimento mínimo de 4 horas diárias no turno parcial e 7 horas para jornada integral.</li>
+        <li>Controle de frequência pela instituição de educação pré-escolar, exigida frequência mínima de 60%.</li>
+        <li>Expedição de documentação que permita atestar os processos de desenvolvimento e aprendizagem da criança.</li>
+      </ul>
+      <div class="callout danger"><strong>Pegadinha campeã:</strong> educação infantil não reprova, não promove e não usa avaliação como seleção para o ensino fundamental.</div>
+      <div class="callout success"><strong>Frase para decorar:</strong> “Na educação infantil, avalia-se para acompanhar e registrar o desenvolvimento, não para aprovar ou reprovar.”</div>
+    </section>
+
+    <section class="card" id="fundamental-medio">
+      <div class="chapter-title"><span class="num">8</span><h2>Ensino fundamental, médio e EJA — Arts. 32 a 38</h2></div>
+      <h3>Ensino fundamental — Art. 32</h3>
+      <p>O ensino fundamental é obrigatório, gratuito na escola pública, com duração de <strong>9 anos</strong>, iniciando-se aos <strong>6 anos de idade</strong>. Busca a formação básica do cidadão.</p>
+      <ul>
+        <li>Domínio da leitura, escrita e cálculo.</li>
+        <li>Compreensão do ambiente natural e social, sistema político, tecnologia, artes e valores.</li>
+        <li>Desenvolvimento de conhecimentos, habilidades, atitudes e valores.</li>
+        <li>Fortalecimento dos vínculos de família, solidariedade e tolerância.</li>
+      </ul>
+      <h3>Ensino religioso — Art. 33</h3>
+      <p>É disciplina dos horários normais das escolas públicas de ensino fundamental, mas de <strong>matrícula facultativa</strong>.</p>
+      <div class="callout danger"><strong>Pegadinha:</strong> a disciplina pode ser oferecida, mas o aluno não é obrigado a se matricular.</div>
+      <h3>Jornada escolar — Art. 34</h3>
+      <p>No ensino fundamental, a jornada escolar incluirá pelo menos quatro horas de trabalho efetivo em sala de aula, sendo progressivamente ampliado o período de permanência na escola.</p>
+      <h3>Ensino médio — Arts. 35 e 36</h3>
+      <p>É etapa final da educação básica. Tem como finalidades consolidar conhecimentos do fundamental, preparar para o trabalho e cidadania, aprimorar a pessoa humana e relacionar teoria e prática.</p>
+      <h3>Educação de jovens e adultos — Arts. 37 e 38</h3>
+      <p>A EJA destina-se a quem não teve acesso ou continuidade de estudos no ensino fundamental e médio na idade própria. Deve considerar características do alunado, interesses, condições de vida e trabalho.</p>
+      <div class="callout info"><strong>Como cai:</strong> a banca pode afirmar que a EJA é “ensino inferior” ou “ensino supletivo sem base comum”. Errado. A EJA deve assegurar oportunidades educacionais apropriadas e prosseguimento de estudos.</div>
+    </section>
+
+    <section class="card" id="especial">
+      <div class="chapter-title"><span class="num">9</span><h2>Educação especial — Arts. 58 a 60</h2></div>
+      <p>A educação especial é uma modalidade de educação escolar oferecida preferencialmente na rede regular de ensino para educandos com deficiência, transtornos globais do desenvolvimento e altas habilidades ou superdotação.</p>
+      <div class="grid two">
+        <div class="mini"><h4>Preferencialmente regular</h4><p>A regra é incluir na rede regular, com apoio especializado quando necessário.</p></div>
+        <div class="mini"><h4>Não é exclusivamente regular</h4><p>Quando não for possível a integração em classes comuns, pode haver classes, escolas ou serviços especializados.</p></div>
+      </div>
+      <h3>O que os sistemas de ensino devem assegurar</h3>
+      <ul>
+        <li>Currículos, métodos, técnicas, recursos educativos e organização específicos.</li>
+        <li>Terminalidade específica para quem não puder atingir o nível exigido para conclusão do ensino fundamental.</li>
+        <li>Aceleração para concluir em menor tempo o programa escolar para superdotados.</li>
+        <li>Professores especializados e professores do ensino regular capacitados.</li>
+        <li>Educação especial para o trabalho.</li>
+        <li>Acesso igualitário aos programas sociais suplementares.</li>
+      </ul>
+      <div class="callout danger"><strong>Pegadinha:</strong> “preferencialmente” não é “exclusivamente”. A LDB admite atendimento especializado conforme as necessidades do aluno.</div>
+    </section>
+
+    <section class="card" id="profissionais">
+      <div class="chapter-title"><span class="num">10</span><h2>Profissionais da educação — Arts. 61 a 67</h2></div>
+      <h3>Formação</h3>
+      <p>A formação dos profissionais da educação deve ter como fundamentos a associação entre teorias e práticas e o aproveitamento da formação e experiências anteriores.</p>
+      <p>A formação de docentes para atuar na educação básica ocorre, como regra, em nível superior, em curso de licenciatura plena. A LDB admite como formação mínima para educação infantil e anos iniciais do ensino fundamental a formação em nível médio na modalidade Normal.</p>
+      <h3>Valorização profissional — Art. 67</h3>
+      <ul>
+        <li>Ingresso exclusivamente por concurso público de provas e títulos.</li>
+        <li>Aperfeiçoamento profissional continuado.</li>
+        <li>Piso salarial profissional.</li>
+        <li>Progressão funcional baseada em titulação/habilitação e avaliação de desempenho.</li>
+        <li>Período reservado a estudos, planejamento e avaliação incluído na carga de trabalho.</li>
+        <li>Condições adequadas de trabalho.</li>
+      </ul>
+      <div class="callout info"><strong>Como cai:</strong> “A LDB prevê período reservado a estudos, planejamento e avaliação, incluído na carga de trabalho.” Certo.</div>
+    </section>
+
+    <section class="card" id="financeiro">
+      <div class="chapter-title"><span class="num">11</span><h2>Recursos financeiros — Arts. 68 a 77</h2></div>
+      <p>Esse tema costuma cair menos para educador, mas pode aparecer em uma questão objetiva.</p>
+      <div class="grid two">
+        <div class="mini"><h4>Mínimos constitucionais</h4><p>União: nunca menos de 18% da receita de impostos. Estados, DF e Municípios: 25% ou o que constar nas constituições/leis orgânicas.</p></div>
+        <div class="mini"><h4>MDE</h4><p>Manutenção e desenvolvimento do ensino inclui remuneração, aperfeiçoamento, instalações, equipamentos, material didático e transporte escolar.</p></div>
+      </div>
+      <h3>O que não é MDE — Art. 71</h3>
+      <ul>
+        <li>Pesquisa não vinculada às instituições de ensino.</li>
+        <li>Subvenção a instituições assistenciais, desportivas ou culturais.</li>
+        <li>Formação de quadros especiais para administração pública.</li>
+        <li>Programas suplementares de alimentação, assistência médica, odontológica, farmacêutica, psicológica e social.</li>
+        <li>Obras de infraestrutura, ainda que beneficiem indiretamente a escola.</li>
+        <li>Pessoal docente e trabalhadores da educação em desvio de função.</li>
+      </ul>
+      <div class="callout danger"><strong>Pegadinha:</strong> alimentação escolar é programa suplementar importante, mas não entra como manutenção e desenvolvimento do ensino no art. 71.</div>
+    </section>
+
+    <section class="card" id="mapa-mental">
+      <div class="chapter-title"><span class="num">★</span><h2>Mapa mental para revisar antes da prova</h2></div>
+      <div class="grid two checklist">
+        <div class="mini">
+          <h3>Educação infantil</h3>
+          <label><input type="checkbox"> Primeira etapa da educação básica.</label>
+          <label><input type="checkbox"> Até 5 anos.</label>
+          <label><input type="checkbox"> Creche até 3 anos.</label>
+          <label><input type="checkbox"> Pré-escola de 4 a 5 anos.</label>
+          <label><input type="checkbox"> Avaliação sem promoção.</label>
+        </div>
+        <div class="mini">
+          <h3>Educação básica</h3>
+          <label><input type="checkbox"> Infantil + fundamental + médio.</label>
+          <label><input type="checkbox"> Obrigatória dos 4 aos 17 anos.</label>
+          <label><input type="checkbox"> Fundamental de 9 anos, começa aos 6.</label>
+          <label><input type="checkbox"> Frequência de 75% no fundamental/médio.</label>
+          <label><input type="checkbox"> Pré-escola: frequência mínima de 60%.</label>
+        </div>
+        <div class="mini">
+          <h3>Funções</h3>
+          <label><input type="checkbox"> Escola elabora e executa proposta pedagógica.</label>
+          <label><input type="checkbox"> Professor zela pela aprendizagem.</label>
+          <label><input type="checkbox"> Escola informa pais sobre frequência e rendimento.</label>
+          <label><input type="checkbox"> Docente participa do planejamento.</label>
+        </div>
+        <div class="mini">
+          <h3>Inclusão e gestão</h3>
+          <label><input type="checkbox"> Educação especial preferencialmente na rede regular.</label>
+          <label><input type="checkbox"> Gestão democrática com participação.</label>
+          <label><input type="checkbox"> Município oferta educação infantil e fundamental.</label>
+          <label><input type="checkbox"> União tem função normativa, redistributiva e supletiva.</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="simulado">
+      <div class="chapter-title"><span class="num">?</span><h2>Questões interativas de fixação</h2></div>
+      <p>Clique na alternativa. A resposta aparece automaticamente.</p>
+
+      <div class="question" data-correct="b">
+        <h3>1. Segundo a LDB, a educação infantil é considerada:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Modalidade de ensino superior.</button>
+          <button class="option" data-option="b">B) Primeira etapa da educação básica.</button>
+          <button class="option" data-option="c">C) Etapa preparatória fora da educação básica.</button>
+          <button class="option" data-option="d">D) Parte facultativa do ensino fundamental.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: B.</strong> A educação infantil é a primeira etapa da educação básica.</div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3>2. A finalidade da educação infantil é:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Preparar exclusivamente para provas.</button>
+          <button class="option" data-option="b">B) Substituir a ação da família.</button>
+          <button class="option" data-option="c">C) Promover o desenvolvimento integral da criança até 5 anos.</button>
+          <button class="option" data-option="d">D) Alfabetizar obrigatoriamente todas as crianças aos 4 anos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: C.</strong> A LDB fala em desenvolvimento integral nos aspectos físico, psicológico, intelectual e social.</div>
+      </div>
+
+      <div class="question" data-correct="a">
+        <h3>3. A creche atende, segundo a LDB:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Crianças de até 3 anos.</button>
+          <button class="option" data-option="b">B) Crianças de 4 a 5 anos.</button>
+          <button class="option" data-option="c">C) Crianças de 6 a 10 anos.</button>
+          <button class="option" data-option="d">D) Apenas crianças alfabetizadas.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: A.</strong> Creche ou entidade equivalente atende crianças de até 3 anos.</div>
+      </div>
+
+      <div class="question" data-correct="d">
+        <h3>4. A pré-escola atende:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Crianças de até 3 anos.</button>
+          <button class="option" data-option="b">B) Crianças de 5 a 7 anos.</button>
+          <button class="option" data-option="c">C) Crianças de 6 a 8 anos.</button>
+          <button class="option" data-option="d">D) Crianças de 4 a 5 anos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: D.</strong> Pré-escola é para crianças de 4 a 5 anos.</div>
+      </div>
+
+      <div class="question" data-correct="b">
+        <h3>5. Na educação infantil, a avaliação deve ocorrer:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Por provas finais classificatórias.</button>
+          <button class="option" data-option="b">B) Mediante acompanhamento e registro do desenvolvimento.</button>
+          <button class="option" data-option="c">C) Com objetivo de promoção para o ensino fundamental.</button>
+          <button class="option" data-option="d">D) Apenas por notas bimestrais.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: B.</strong> A avaliação acompanha e registra o desenvolvimento, sem promoção ou reprovação.</div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3>6. É dever dos pais ou responsáveis matricular a criança na educação básica a partir de:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) 2 anos.</button>
+          <button class="option" data-option="b">B) 3 anos.</button>
+          <button class="option" data-option="c">C) 4 anos.</button>
+          <button class="option" data-option="d">D) 7 anos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: C.</strong> A matrícula obrigatória começa aos 4 anos.</div>
+      </div>
+
+      <div class="question" data-correct="a">
+        <h3>7. A educação básica obrigatória e gratuita compreende a faixa etária de:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) 4 a 17 anos.</button>
+          <button class="option" data-option="b">B) 0 a 3 anos.</button>
+          <button class="option" data-option="c">C) 7 a 14 anos.</button>
+          <button class="option" data-option="d">D) 18 a 24 anos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: A.</strong> A educação básica obrigatória e gratuita vai dos 4 aos 17 anos.</div>
+      </div>
+
+      <div class="question" data-correct="d">
+        <h3>8. O ensino fundamental atual tem duração de:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) 6 anos.</button>
+          <button class="option" data-option="b">B) 7 anos.</button>
+          <button class="option" data-option="c">C) 8 anos.</button>
+          <button class="option" data-option="d">D) 9 anos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: D.</strong> O ensino fundamental tem duração de 9 anos e inicia-se aos 6 anos.</div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3>9. A educação básica é formada por:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Ensino fundamental e ensino superior.</button>
+          <button class="option" data-option="b">B) Creche e universidade.</button>
+          <button class="option" data-option="c">C) Educação infantil, ensino fundamental e ensino médio.</button>
+          <button class="option" data-option="d">D) Ensino médio e pós-graduação.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: C.</strong> Essa composição está no art. 21 da LDB.</div>
+      </div>
+
+      <div class="question" data-correct="b">
+        <h3>10. A educação, segundo a LDB, é dever:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Exclusivo do Estado.</button>
+          <button class="option" data-option="b">B) Da família e do Estado.</button>
+          <button class="option" data-option="c">C) Apenas da família.</button>
+          <button class="option" data-option="d">D) Apenas das instituições privadas.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: B.</strong> O art. 2º afirma que a educação é dever da família e do Estado.</div>
+      </div>
+
+      <div class="question" data-correct="a">
+        <h3>11. A finalidade da educação envolve:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Pleno desenvolvimento do educando, cidadania e qualificação para o trabalho.</button>
+          <button class="option" data-option="b">B) Apenas preparação para vestibulares.</button>
+          <button class="option" data-option="c">C) Apenas treinamento para o mercado de trabalho.</button>
+          <button class="option" data-option="d">D) Apenas memorização de conteúdos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: A.</strong> São as três finalidades centrais do art. 2º.</div>
+      </div>
+
+      <div class="question" data-correct="d">
+        <h3>12. É princípio da LDB:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Proibição do pluralismo pedagógico.</button>
+          <button class="option" data-option="b">B) Ensino público pago em estabelecimentos oficiais.</button>
+          <button class="option" data-option="c">C) Desvalorização da experiência extraescolar.</button>
+          <button class="option" data-option="d">D) Igualdade de condições para acesso e permanência na escola.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: D.</strong> A LDB fala em acesso e permanência.</div>
+      </div>
+
+      <div class="question" data-correct="b">
+        <h3>13. A gestão democrática do ensino público envolve:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Decisão exclusiva do diretor.</button>
+          <button class="option" data-option="b">B) Participação dos profissionais da educação e da comunidade escolar/local.</button>
+          <button class="option" data-option="c">C) Ausência total de normas.</button>
+          <button class="option" data-option="d">D) Escolha aleatória de conteúdos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: B.</strong> Gestão democrática envolve participação organizada.</div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3>14. Compete prioritariamente aos Municípios:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Manter universidades federais.</button>
+          <button class="option" data-option="b">B) Oferecer exclusivamente ensino médio.</button>
+          <button class="option" data-option="c">C) Oferecer educação infantil em creches e pré-escolas e, com prioridade, o ensino fundamental.</button>
+          <button class="option" data-option="d">D) Organizar apenas cursos de pós-graduação.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: C.</strong> É a competência municipal mais importante para concurso de educador.</div>
+      </div>
+
+      <div class="question" data-correct="a">
+        <h3>15. A União exerce, em relação às demais instâncias educacionais, função:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Normativa, redistributiva e supletiva.</button>
+          <button class="option" data-option="b">B) Apenas fiscalizadora.</button>
+          <button class="option" data-option="c">C) Apenas municipal.</button>
+          <button class="option" data-option="d">D) Exclusivamente disciplinar.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: A.</strong> Essa expressão aparece no art. 8º.</div>
+      </div>
+
+      <div class="question" data-correct="d">
+        <h3>16. Cabe aos estabelecimentos de ensino:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Elaborar leis federais de educação.</button>
+          <button class="option" data-option="b">B) Substituir a função da família.</button>
+          <button class="option" data-option="c">C) Definir o salário mínimo nacional.</button>
+          <button class="option" data-option="d">D) Elaborar e executar sua proposta pedagógica.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: D.</strong> É uma incumbência expressa no art. 12.</div>
+      </div>
+
+      <div class="question" data-correct="b">
+        <h3>17. Cabe aos docentes:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Apenas aplicar provas finais.</button>
+          <button class="option" data-option="b">B) Zelar pela aprendizagem dos alunos.</button>
+          <button class="option" data-option="c">C) Definir sozinho o orçamento municipal.</button>
+          <button class="option" data-option="d">D) Excluir a família da vida escolar.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: B.</strong> O art. 13 afirma que o docente deve zelar pela aprendizagem dos alunos.</div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3>18. A avaliação do rendimento escolar no ensino fundamental e médio deve ser:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Exclusivamente quantitativa.</button>
+          <button class="option" data-option="b">B) Baseada apenas em prova final.</button>
+          <button class="option" data-option="c">C) Contínua e cumulativa, com prevalência dos aspectos qualitativos.</button>
+          <button class="option" data-option="d">D) Sempre classificatória e eliminatória.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: C.</strong> Esse é um dos pontos mais cobrados do art. 24.</div>
+      </div>
+
+      <div class="question" data-correct="a">
+        <h3>19. A frequência mínima para aprovação no ensino fundamental e médio é:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) 75% do total de horas letivas.</button>
+          <button class="option" data-option="b">B) 60% do total de horas letivas.</button>
+          <button class="option" data-option="c">C) 50% do total de horas letivas.</button>
+          <button class="option" data-option="d">D) 100% do total de horas letivas.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: A.</strong> Cuidado: na pré-escola, a frequência mínima citada na LDB é 60%.</div>
+      </div>
+
+      <div class="question" data-correct="d">
+        <h3>20. A frequência mínima na pré-escola, segundo a organização da educação infantil, é:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) 30%.</button>
+          <button class="option" data-option="b">B) 50%.</button>
+          <button class="option" data-option="c">C) 75%.</button>
+          <button class="option" data-option="d">D) 60%.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: D.</strong> A LDB exige frequência mínima de 60% na pré-escola.</div>
+      </div>
+
+      <div class="question" data-correct="b">
+        <h3>21. A recuperação dos alunos de menor rendimento deve ser:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Proibida pela LDB.</button>
+          <button class="option" data-option="b">B) Obrigatória, preferencialmente paralela ao período letivo.</button>
+          <button class="option" data-option="c">C) Feita apenas no ano seguinte.</button>
+          <button class="option" data-option="d">D) Responsabilidade exclusiva dos pais.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: B.</strong> O art. 24 prevê estudos de recuperação, de preferência paralelos ao período letivo.</div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3>22. A educação especial deve ser oferecida:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Exclusivamente em escolas especiais.</button>
+          <button class="option" data-option="b">B) Somente em hospitais.</button>
+          <button class="option" data-option="c">C) Preferencialmente na rede regular de ensino.</button>
+          <button class="option" data-option="d">D) Apenas no ensino superior.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: C.</strong> “Preferencialmente” é palavra-chave.</div>
+      </div>
+
+      <div class="question" data-correct="a">
+        <h3>23. A educação especial destina-se a educandos com:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Deficiência, transtornos globais do desenvolvimento e altas habilidades/superdotação.</button>
+          <button class="option" data-option="b">B) Apenas deficiência física.</button>
+          <button class="option" data-option="c">C) Apenas dificuldade financeira.</button>
+          <button class="option" data-option="d">D) Apenas atraso escolar.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: A.</strong> A LDB atual ampliou e especificou o público da educação especial.</div>
+      </div>
+
+      <div class="question" data-correct="d">
+        <h3>24. O currículo da educação básica deve ter:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Apenas parte diversificada, sem base comum.</button>
+          <button class="option" data-option="b">B) Apenas base comum, sem consideração regional.</button>
+          <button class="option" data-option="c">C) Conteúdo livre sem qualquer diretriz nacional.</button>
+          <button class="option" data-option="d">D) Base nacional comum e parte diversificada.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: D.</strong> A base comum é complementada pela parte diversificada.</div>
+      </div>
+
+      <div class="question" data-correct="b">
+        <h3>25. A educação básica para a população rural deve:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Ignorar as condições locais.</button>
+          <button class="option" data-option="b">B) Adaptar conteúdos, metodologias e calendário às peculiaridades da vida rural.</button>
+          <button class="option" data-option="c">C) Ter calendário obrigatório idêntico ao urbano.</button>
+          <button class="option" data-option="d">D) Ser oferecida apenas a distância.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: B.</strong> A LDB prevê adaptações à vida rural, ciclo agrícola e condições climáticas.</div>
+      </div>
+
+      <div class="question" data-correct="a">
+        <h3>26. O ensino religioso nas escolas públicas de ensino fundamental é:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) De matrícula facultativa.</button>
+          <button class="option" data-option="b">B) Obrigatório para todos os alunos.</button>
+          <button class="option" data-option="c">C) Proibido pela LDB.</button>
+          <button class="option" data-option="d">D) Ministrado apenas no ensino médio.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: A.</strong> A matrícula é facultativa.</div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3>27. O ingresso no magistério público, segundo a valorização dos profissionais, deve ocorrer:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Por indicação política.</button>
+          <button class="option" data-option="b">B) Por sorteio público.</button>
+          <button class="option" data-option="c">C) Exclusivamente por concurso público de provas e títulos.</button>
+          <button class="option" data-option="d">D) Por entrevista informal.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: C.</strong> É previsão do art. 67.</div>
+      </div>
+
+      <div class="question" data-correct="d">
+        <h3>28. A União deve aplicar anualmente em educação, no mínimo:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) 10% da receita de impostos.</button>
+          <button class="option" data-option="b">B) 12% da receita de impostos.</button>
+          <button class="option" data-option="c">C) 15% da receita de impostos.</button>
+          <button class="option" data-option="d">D) 18% da receita de impostos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: D.</strong> União: mínimo de 18%.</div>
+      </div>
+
+      <div class="question" data-correct="b">
+        <h3>29. Estados, Distrito Federal e Municípios devem aplicar em educação, no mínimo:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) 18% da receita de impostos.</button>
+          <button class="option" data-option="b">B) 25% da receita de impostos.</button>
+          <button class="option" data-option="c">C) 30% da receita de impostos.</button>
+          <button class="option" data-option="d">D) 50% da receita de impostos.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: B.</strong> Estados, DF e Municípios: mínimo de 25%.</div>
+      </div>
+
+      <div class="question" data-correct="c">
+        <h3>30. Segundo a LDB, a educação escolar deve vincular-se:</h3>
+        <div class="options">
+          <button class="option" data-option="a">A) Apenas ao conteúdo memorizado.</button>
+          <button class="option" data-option="b">B) Apenas aos exames finais.</button>
+          <button class="option" data-option="c">C) Ao mundo do trabalho e à prática social.</button>
+          <button class="option" data-option="d">D) Apenas à formação militar.</button>
+        </div>
+        <div class="feedback"><strong>Resposta: C.</strong> Esse é o §2º do art. 1º.</div>
+      </div>
+    </section>
+
+    <section class="card" id="fontes">
+      <div class="chapter-title"><span class="num">i</span><h2>Fontes e observações</h2></div>
+      <p>Material elaborado a partir da Lei nº 9.394/1996, com atenção às alterações posteriores. Para estudo oficial, consulte sempre a versão compilada no site do Planalto.</p>
+      <ul>
+        <li>Lei nº 9.394/1996 — LDB, versão compilada: https://planalto.gov.br/CCivil_03/Leis/L9394compilado.htm</li>
+        <li>Lei nº 12.796/2013 — alterou educação básica obrigatória, educação infantil e formação docente.</li>
+        <li>Lei nº 15.360/2026 — incluiu condições mínimas das escolas públicas de educação básica.</li>
+        <li>Lei nº 15.369/2026 — alterou a competência municipal sobre oferta de educação infantil em zonas urbanas e rurais.</li>
+      </ul>
+      <p class="small">Esta apostila é material de estudo e revisão. Em caso de divergência, prevalece o texto legal vigente publicado oficialmente.</p>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('.question').forEach(q => {
+      const correct = q.dataset.correct;
+      const feedback = q.querySelector('.feedback');
+      q.querySelectorAll('.option').forEach(btn => {
+        btn.addEventListener('click', () => {
+          q.querySelectorAll('.option').forEach(b => {
+            b.disabled = true;
+            if (b.dataset.option === correct) b.classList.add('correct');
+          });
+          if (btn.dataset.option !== correct) btn.classList.add('wrong');
+          feedback.classList.add('show');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
