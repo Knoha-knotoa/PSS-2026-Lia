@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apostila PSS Cianorte — Conhecimentos Específicos: Educação Infantil</title>
+<style>
+  :root {
+    --bg: #f6f4ef; --paper: #fffaf1; --ink: #1f2933; --muted: #5c6670;
+    --brand: #7b1e1e; --brand2: #a6402d; --gold: #d89b2b; --green: #1f7a4d;
+    --red: #a83232; --blue: #254e70; --line: #e7ddca; --soft: #f3e6d1; --white: #fff;
+  }
+  * { box-sizing: border-box; } html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: radial-gradient(circle at top left, rgba(216,155,43,.18), transparent 35%), linear-gradient(120deg, #f7efe0, #f6f4ef 45%, #fff8ee); line-height: 1.65; }
+  .layout { display: grid; grid-template-columns: 310px 1fr; max-width: 1520px; margin: 0 auto; }
+  aside { position: sticky; top: 0; height: 100vh; overflow: auto; padding: 28px 22px; background: #2b211c; color: #fff3df; border-right: 5px solid var(--gold); }
+  aside h2 { margin: 0 0 12px; font-size: 1.05rem; letter-spacing: .04em; text-transform: uppercase; color: #ffd58b; }
+  aside a { display: block; color: #fff3df; text-decoration: none; padding: 7px 0; font-size: .92rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+  aside a:hover { color: #ffd58b; }
+  main { background: rgba(255,250,241,.94); min-height: 100vh; }
+  .hero { padding: 56px 56px 42px; background: linear-gradient(135deg, rgba(123,30,30,.94), rgba(37,78,112,.92)), radial-gradient(circle at top right, rgba(216,155,43,.4), transparent 35%); color: white; border-bottom: 8px solid var(--gold); }
+  .hero .tag { display: inline-block; padding: 6px 12px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28); border-radius: 999px; font-size: .86rem; margin-bottom: 16px; }
+  h1 { font-size: clamp(2rem, 4vw, 4.1rem); line-height: 1.05; margin: 0 0 18px; }
+  .subtitle { max-width: 960px; font-size: 1.15rem; color: #fff4df; }
+  .content { padding: 38px 56px 80px; }
+  section { margin: 0 0 44px; padding: 30px; background: var(--paper); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 10px 24px rgba(90,64,38,.08); }
+  h2 { color: var(--brand); font-size: 2rem; margin: 0 0 18px; line-height: 1.2; }
+  h3 { color: var(--blue); font-size: 1.38rem; margin: 26px 0 10px; }
+  h4 { color: var(--brand2); margin: 18px 0 8px; font-size: 1.08rem; }
+  p { margin: 0 0 13px; } ul, ol { margin-top: 8px; } li { margin: 6px 0; }
+  .note, .warning, .law, .example, .memory, .trap { padding: 16px 18px; border-radius: 16px; margin: 18px 0; border-left: 6px solid; }
+  .note { background: #edf4fa; border-color: var(--blue); } .warning { background: #fff4db; border-color: var(--gold); }
+  .law { background: #f7e9e9; border-color: var(--brand); } .example { background: #eef8f2; border-color: var(--green); }
+  .memory { background: #f3ecff; border-color: #6f42c1; } .trap { background: #fff0f0; border-color: var(--red); }
+  .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 18px 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 18px 0; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; box-shadow: 0 6px 16px rgba(90,64,38,.05); }
+  .card h4 { margin-top: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 14px; overflow: hidden; }
+  th, td { padding: 12px 14px; border: 1px solid var(--line); vertical-align: top; } th { background: #3b2c25; color: #fff4df; text-align: left; }
+  .toc-box { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .toc-box a { display: block; padding: 12px 14px; background: white; border: 1px solid var(--line); border-radius: 14px; color: var(--brand); font-weight: bold; text-decoration: none; }
+  .q-section { background: #fff9ed; } .question-card { background: white; border: 1px solid var(--line); border-radius: 18px; padding: 22px; margin: 18px 0; box-shadow: 0 8px 18px rgba(90,64,38,.06); }
+  .q-meta { color: var(--brand); font-size: .92rem; margin-bottom: 10px; } .q-meta span { color: var(--muted); } .q-text { font-weight: bold; font-size: 1.06rem; }
+  .options { display: grid; gap: 10px; margin-top: 14px; } .option { width: 100%; text-align: left; border: 1px solid #ddd0bd; border-radius: 12px; background: #fffdf8; color: var(--ink); padding: 12px 14px; cursor: pointer; font-size: 1rem; line-height: 1.45; }
+  .option:hover { border-color: var(--gold); background: #fff7e8; } .option .letter { display: inline-block; font-weight: bold; color: var(--brand); margin-right: 8px; }
+  .option.correct { border-color: var(--green); background: #e9f8ef; color: #114d2c; font-weight: bold; } .option.incorrect { border-color: var(--red); background: #fff1f1; color: #7a1e1e; }
+  .feedback { margin-top: 14px; padding: 14px 16px; background: #eef8f2; border-left: 5px solid var(--green); border-radius: 12px; }
+  .mini { font-size: .95rem; color: var(--muted); } .print-note { padding: 14px 18px; border-radius: 14px; background: rgba(255,255,255,.12); border: 1px dashed rgba(255,255,255,.5); margin: 14px 0 0; }
+  a.source { color: var(--blue); text-decoration: underline; } .footer { padding: 24px 56px; background: #2b211c; color: #fff3df; }
+  .button-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; } .utility-btn { border: 0; border-radius: 999px; background: var(--blue); color: white; padding: 10px 16px; cursor: pointer; }
+  .utility-btn:hover { opacity: .9; }
+  @media (max-width: 1000px) { .layout { display: block; } aside { position: relative; height: auto; } .content, .hero, .footer { padding-left: 22px; padding-right: 22px; } .grid, .grid-3, .toc-box { grid-template-columns: 1fr; } }
+  @media print { body { background: white; } aside, .button-row { display: none; } .layout { display: block; } section { box-shadow: none; break-inside: avoid; } .hero { color: black; background: white; border-bottom: 3px solid #000; } .option { border: 1px solid #999; } .feedback[hidden] { display: block; } }
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+  <h2>Sumário</h2>
+  <a href="#como-usar">Como usar a apostila</a>
+  <a href="#mapa">Mapa da prova</a>
+  <a href="#historia">1. Criança, infância e evolução histórica</a>
+  <a href="#educar-cuidar">2. Educar e cuidar</a>
+  <a href="#direito">3. Direito da criança e Educação Básica</a>
+  <a href="#interacionistas">4. Aprendizagem e desenvolvimento</a>
+  <a href="#brincadeira">5. Brincadeira, linguagem e movimento</a>
+  <a href="#avaliacao">6. Avaliação na Educação Infantil</a>
+  <a href="#pratica">7. Prática pedagógica e gestão</a>
+  <a href="#neuro">8. Neuroaprendizagem</a>
+  <a href="#bncc">9. BNCC</a>
+  <a href="#rcnei">10. RCNEI</a>
+  <a href="#parana">11. Referencial do Paraná e CREP</a>
+  <a href="#leis">12. ECA, LDB, FUNDEB e LBI</a>
+  <a href="#diretrizes">13. Diretrizes Nacionais</a>
+  <a href="#pegadinhas">14. Pegadinhas finais</a>
+  <a href="#questoes">15. Questões interativas</a>
+  <a href="#referencias">Referências</a>
+</aside>
+<main>
+  <div class="hero">
+    <span class="tag">PSS Cianorte/PR · Educador Infantil · Conhecimentos Específicos</span>
+    <h1>Apostila aprofundada de Educação Infantil</h1>
+    <p class="subtitle">Versão ampliada para curso preparatório: teoria, leis comentadas, prática pedagógica, pegadinhas e 50 questões interativas no padrão de PSS e concursos de Educação Infantil.</p>
+    <div class="print-note">Atualizado em 16/05/2026. As questões são interativas: clique em uma alternativa e o HTML mostra a resposta verdadeira com comentário.</div>
+  </div>
+  <div class="content">
+  
+<section id="como-usar">
+<h2>Como usar esta apostila</h2>
+<p>Esta versão foi reorganizada para funcionar como material de curso preparatório. O objetivo não é apenas “saber o tema”, mas reconhecer como a banca transforma teoria, legislação e prática pedagógica em alternativa correta ou pegadinha.</p>
+<div class="grid-3">
+  <div class="card"><h4>1. Entenda a ideia</h4><p>Leia o conceito principal de cada tema: criança como sujeito de direitos, educar-cuidar, interações, brincadeira, avaliação processual, inclusão e currículo por experiências.</p></div>
+  <div class="card"><h4>2. Aplique na rotina</h4><p>Relacione com creche, pré-escola, alimentação, sono, higiene, roda de conversa, brincadeira, conflitos, famílias, registros e planejamento.</p></div>
+  <div class="card"><h4>3. Caçe a pegadinha</h4><p>Procure palavras perigosas: “apenas”, “exclusivamente”, “prova”, “nota”, “reprovação”, “preparar para o Fundamental”, “sem intervenção” e “cuidado sem pedagogia”.</p></div>
+</div>
+<div class="warning"><strong>Regra de ouro:</strong> na Educação Infantil, a alternativa correta tende a valorizar desenvolvimento integral, direitos da criança, cuidar e educar juntos, brincadeiras, interações, escuta, mediação, intencionalidade pedagógica, inclusão, diversidade e avaliação por acompanhamento e registro.</div>
+</section>
+
+<section id="mapa">
+<h2>Mapa da prova: temas mais prováveis</h2>
+<p>Os PSS municipais e concursos de Educação Infantil costumam repetir um núcleo de cobrança: LDB, ECA, BNCC, DCNEI, avaliação, PPP, inclusão, educar-cuidar e prática pedagógica. Provas recentes de professor/educador infantil também têm cobrado LBI/inclusão, formação continuada, Conselho Tutelar, PPP, faixa etária da Educação Infantil, direitos da BNCC e avaliação por relatórios e observações.</p>
+<table>
+<tr><th>Prioridade</th><th>Tema</th><th>O que memorizar</th><th>Como a banca costuma cobrar</th></tr>
+<tr><td>Altíssima</td><td>LDB — art. 29, 30 e 31</td><td>Primeira etapa; desenvolvimento integral; creche até 3; pré-escola 4 e 5; avaliação sem promoção.</td><td>Troca finalidade por alfabetização, prova, nota ou preparação para o Fundamental.</td></tr>
+<tr><td>Altíssima</td><td>BNCC</td><td>6 direitos, 5 campos, 3 grupos etários, códigos e transição.</td><td>Insere “competir”, “obedecer” ou disciplinas do Ensino Fundamental como se fossem campos.</td></tr>
+<tr><td>Altíssima</td><td>DCNEI</td><td>Criança sujeito histórico e de direitos; interações e brincadeira; princípios éticos, políticos e estéticos.</td><td>Confunde criança ativa com criança passiva ou Educação Infantil com assistência.</td></tr>
+<tr><td>Alta</td><td>Avaliação</td><td>Acompanhamento, registro, relatório, portfólio, documentação pedagógica, sem classificação.</td><td>Fala em prova, nota, ranking, retenção ou “apto/inapto”.</td></tr>
+<tr><td>Alta</td><td>Educar-cuidar</td><td>Indissociabilidade na rotina inteira.</td><td>Divide creche como cuidado e pré-escola como educação.</td></tr>
+<tr><td>Alta</td><td>Pensadores</td><td>Piaget: construção/estágios; Vygotsky: mediação/ZDP; Wallon: afetividade/movimento.</td><td>Apresenta situação prática e pede autor ou conceito.</td></tr>
+<tr><td>Média/Alta</td><td>RCNEI</td><td>Volume 1; Formação Pessoal e Social; Conhecimento de Mundo.</td><td>Confunde eixos do RCNEI com campos da BNCC.</td></tr>
+<tr><td>Média/Alta</td><td>Referencial do Paraná e CREP</td><td>Referencial segue BNCC e contextualiza para o Paraná; CREP complementa o Referencial, sobretudo no Ensino Fundamental.</td><td>Pergunta diferença entre BNCC, Referencial do Paraná e CREP.</td></tr>
+<tr><td>Média/Alta</td><td>Inclusão e diversidade</td><td>Acesso, permanência, participação, aprendizagem, AEE, acessibilidade, relações étnico-raciais e Educação do Campo.</td><td>Opõe inclusão a escola separada ou reduz diversidade a datas comemorativas.</td></tr>
+</table>
+</section>
+
+<section id="historia">
+<h2>1. Concepções de criança, infância e Educação Infantil: evolução histórica</h2>
+<p>Infância não é apenas uma etapa biológica. É também uma construção histórica, social e cultural. Isso significa que cada sociedade, em cada tempo, cria modos de enxergar, tratar, educar, proteger ou silenciar suas crianças. A prova pode cobrar exatamente essa passagem: da criança como objeto de tutela, assistência ou preparação para a criança como sujeito histórico, social, cultural e de direitos.</p>
+<h3>1.1. Linha histórica simplificada</h3>
+<table>
+<tr><th>Momento</th><th>Concepção predominante</th><th>Consequência pedagógica</th><th>Pegadinha</th></tr>
+<tr><td>Visão tradicional</td><td>Criança como adulto pequeno ou ser incompleto.</td><td>Exigência de obediência, silêncio e adaptação ao mundo adulto.</td><td>A banca pode chamar isso de “disciplina necessária”. Cuidado.</td></tr>
+<tr><td>Assistencialismo</td><td>Criança como objeto de cuidado e proteção física.</td><td>Creche como guarda, alimentação, higiene e abrigo.</td><td>Cuidado é necessário, mas cuidado sem intencionalidade educativa é insuficiente.</td></tr>
+<tr><td>Escolarização preparatória</td><td>Criança como futuro aluno do Ensino Fundamental.</td><td>Cópias, fichas, alfabetização precoce, treino motor e provas.</td><td>Pré-escola não é “mini 1º ano”.</td></tr>
+<tr><td>Concepção atual</td><td>Criança como sujeito histórico, social, cultural e de direitos.</td><td>Brincadeira, interação, cuidado, escuta, exploração, participação e desenvolvimento integral.</td><td>Liberdade infantil não significa ausência de planejamento.</td></tr>
+</table>
+<h3>1.2. Criança como sujeito histórico e de direitos</h3>
+<p>Na concepção contemporânea, a criança participa da vida social. Ela constrói identidade, produz cultura, cria sentidos, brinca, pergunta, narra, observa, fantasia, experimenta, negocia e aprende nas relações. Portanto, o planejamento da Educação Infantil deve partir da criança real: sua idade, seu contexto, sua cultura, sua família, suas necessidades, seus interesses, seus ritmos e suas formas de expressão.</p>
+<div class="example"><strong>Exemplos de aplicação:</strong><ol><li>Em vez de entregar desenho pronto de árvore, a professora leva as crianças ao pátio, observa árvores reais, recolhe folhas, conversa sobre cheiros e texturas e propõe desenho/colagem depois da experiência.</li><li>Em vez de exigir silêncio absoluto durante toda a manhã, organiza momentos de fala, escuta, movimento, brincadeira e descanso.</li><li>Em vez de tratar o choro na entrada como “manha”, acolhe a criança, conversa com a família e cria rotina de segurança afetiva.</li><li>Em vez de corrigir toda garatuja como “errada”, valoriza o desenho como linguagem infantil e registro de pensamento.</li></ol></div>
+<h3>1.3. Concepções que a prova pode pedir</h3>
+<div class="grid">
+<div class="card"><h4>Assistencialista</h4><p>Foca guarda, higiene e alimentação. A instituição substitui temporariamente a família. O pedagógico é fraco ou inexistente.</p><p><strong>Resposta errada comum:</strong> “cuidar basta”.</p></div>
+<div class="card"><h4>Preparatória</h4><p>Foca alfabetização, treino e adaptação ao Ensino Fundamental. Valoriza disciplina, cópia e provas.</p><p><strong>Resposta errada comum:</strong> “principal finalidade é preparar para o 1º ano”.</p></div>
+<div class="card"><h4>Espontaneísta</h4><p>Confunde protagonismo da criança com abandono pedagógico. O adulto quase não intervém.</p><p><strong>Resposta errada comum:</strong> “basta deixar brincar sem planejar”.</p></div>
+<div class="card"><h4>Crítica/atual</h4><p>Reconhece a criança como sujeito de direitos e a Educação Infantil como etapa da Educação Básica.</p><p><strong>Resposta correta comum:</strong> “experiências, interações, brincadeiras e desenvolvimento integral”.</p></div>
+</div>
+<div class="trap"><strong>Cai muito:</strong> “criança como sujeito de direitos” não significa que a criança decide tudo sozinha; significa que ela deve ser respeitada, escutada, protegida, cuidada, educada e inserida em experiências significativas.</div>
+</section>
+
+<section id="educar-cuidar">
+<h2>2. Função atual da Educação Infantil: educar e cuidar</h2>
+<p>A função atual da Educação Infantil é promover o desenvolvimento integral da criança, complementando a ação da família e da comunidade. Para isso, cuidar e educar são inseparáveis. Esse tema é um dos mais cobrados em provas de Educação Infantil.</p>
+<h3>2.1. Cuidar não é “menos pedagógico”</h3>
+<p>Cuidar envolve alimentação, higiene, sono, proteção, acolhimento, vínculo, segurança, saúde, escuta, respeito ao corpo e bem-estar. Na Educação Infantil, essas ações não podem ser mecânicas, frias ou apressadas. Elas ensinam autonomia, linguagem, confiança, convivência, respeito e cuidado de si.</p>
+<h3>2.2. Educar não é antecipar o Ensino Fundamental</h3>
+<p>Educar na Educação Infantil é organizar experiências para que a criança se desenvolva integralmente. Isso inclui linguagem, corpo, pensamento, emoção, imaginação, convivência, cultura, exploração do mundo físico e social, autonomia e identidade. Não é substituir brincadeira por apostilas ou transformar pré-escola em treino de alfabetização.</p>
+<div class="grid-3">
+<div class="card"><h4>Alimentação</h4><p>Ensina autonomia, cultura alimentar, convivência, preferências, higiene e linguagem: “quente”, “frio”, “azedo”, “doce”, “mais”, “menos”.</p></div>
+<div class="card"><h4>Troca e banheiro</h4><p>Envolve privacidade, respeito ao corpo, nomeação de ações, vínculo, cuidado pessoal e progressiva autonomia.</p></div>
+<div class="card"><h4>Sono</h4><p>Exige ambiente tranquilo e respeito aos ritmos. Descanso não é castigo nem imposição igual para todos.</p></div>
+<div class="card"><h4>Acolhimento</h4><p>Choro, medo e saudade fazem parte da adaptação. Vínculo seguro abre caminho para exploração e aprendizagem.</p></div>
+<div class="card"><h4>Conflitos</h4><p>Disputa por brinquedo vira oportunidade de nomear sentimentos, escutar, negociar e construir combinados.</p></div>
+<div class="card"><h4>Organização</h4><p>Guardar brinquedos, cuidar dos materiais e escolher cantos desenvolve responsabilidade e participação.</p></div>
+</div>
+<h3>2.3. Como a banca cobra</h3>
+<table>
+<tr><th>Enunciado típico</th><th>Resposta esperada</th></tr>
+<tr><td>“Na creche, o essencial é cuidar, pois a educação começa na pré-escola.”</td><td>Errado. Creche e pré-escola educam e cuidam.</td></tr>
+<tr><td>“A higiene e a alimentação podem ser momentos educativos.”</td><td>Certo. São parte da rotina pedagógica.</td></tr>
+<tr><td>“A brincadeira deve ser substituída por atividades preparatórias para alfabetização.”</td><td>Errado. Brincadeira é eixo estruturante.</td></tr>
+<tr><td>“Cuidar e educar são dimensões indissociáveis.”</td><td>Certo. Esta é a formulação segura.</td></tr>
+</table>
+<div class="trap"><strong>Pegadinha:</strong> cuidado sem educação vira assistência; educação sem cuidado vira escolarização fria e inadequada. A alternativa correta integra as duas dimensões.</div>
+</section>
+
+<section id="direito">
+<h2>3. Educação Infantil como direito da criança e primeira etapa da Educação Básica</h2>
+<p>A Educação Infantil é direito da criança, dever do Estado e primeira etapa da Educação Básica. A prova pode cobrar tanto a literalidade da lei quanto a interpretação prática desse direito.</p>
+<h3>3.1. Creche e pré-escola</h3>
+<table>
+<tr><th>Oferta</th><th>Idade</th><th>O que a prova tenta confundir</th></tr>
+<tr><td>Creche ou entidade equivalente</td><td>Crianças de até 3 anos</td><td>Dizer que é assistência social fora da Educação Básica.</td></tr>
+<tr><td>Pré-escola</td><td>Crianças de 4 e 5 anos</td><td>Dizer que sua finalidade principal é alfabetizar ou preparar para o Fundamental.</td></tr>
+</table>
+<h3>3.2. Direito da criança, não favor</h3>
+<p>A Educação Infantil não é favor municipal, caridade ou benefício apenas para famílias vulneráveis. É direito educacional da criança. Isso não elimina a importância social da creche para as famílias trabalhadoras, mas muda a centralidade: a criança é titular do direito.</p>
+<h3>3.3. Obrigatoriedade e acesso</h3>
+<ul>
+<li>A educação básica obrigatória começa aos 4 anos.</li>
+<li>A pré-escola é obrigatória para crianças de 4 e 5 anos.</li>
+<li>A creche é direito da criança e dever do Estado ofertar, mas a matrícula não é obrigatória para a família.</li>
+<li>A frequência na Educação Infantil não é pré-requisito para matrícula no Ensino Fundamental.</li>
+<li>A oferta deve ser pública, gratuita e de qualidade, sem requisito de seleção.</li>
+</ul>
+<div class="example"><strong>Exemplos:</strong><ol><li>Criança de 2 anos: tem direito à vaga em creche, mas a família não é obrigada a matricular.</li><li>Criança de 4 anos: deve ser matriculada na pré-escola.</li><li>Criança que não frequentou pré-escola: não pode ser impedida de ingressar no Ensino Fundamental por esse motivo.</li><li>Município não pode tratar vaga como prêmio, sorteio sem critérios transparentes ou favor político.</li></ol></div>
+<div class="trap"><strong>Erro comum:</strong> confundir “direito à creche” com “obrigatoriedade de matrícula na creche”. O direito existe; a obrigatoriedade familiar começa aos 4 anos.</div>
+</section>
+
+<section id="interacionistas">
+<h2>4. Processos de aprendizagem e desenvolvimento: perspectivas interacionistas</h2>
+<p>Este capítulo é central. Em concursos, os autores aparecem principalmente em situações práticas: uma criança brincando, resolvendo problema, falando consigo mesma, negociando brinquedo, explorando objetos ou expressando emoção. A banca quer saber se você reconhece a teoria por trás da prática.</p>
+<div class="warning"><strong>Ideia central:</strong> o desenvolvimento infantil não é apenas maturação biológica nem transmissão mecânica. A criança aprende em interação com objetos, pessoas, linguagem, cultura, corpo, emoção e ambiente.</div>
+<h3>4.1. Quadro rápido dos autores</h3>
+<table>
+<tr><th>Autor</th><th>Palavras-chave</th><th>Como pode cair</th></tr>
+<tr><td>Piaget</td><td>Construtivismo, ação, esquemas, assimilação, acomodação, equilibração, estágios.</td><td>Criança constrói conhecimento ao manipular objetos e reorganizar pensamento.</td></tr>
+<tr><td>Vygotsky</td><td>Sociointeracionismo, cultura, linguagem, mediação, ZDP, internalização.</td><td>Adulto/colega ajuda a criança a fazer o que ainda não faz sozinha.</td></tr>
+<tr><td>Wallon</td><td>Afetividade, emoção, motricidade, cognição, pessoa completa, meio social.</td><td>Movimento e emoção não atrapalham: integram o desenvolvimento.</td></tr>
+<tr><td>Froebel</td><td>Jardim de infância, brincar, dons, natureza, atividade infantil.</td><td>Brincadeira como atividade fundamental da infância.</td></tr>
+<tr><td>Montessori</td><td>Ambiente preparado, autonomia, materiais, autoeducação, adulto observador.</td><td>Sala organizada para independência e exploração com limites.</td></tr>
+<tr><td>Dewey</td><td>Experiência, aprender fazendo, democracia, problema real.</td><td>Aprendizagem ligada à experiência e à investigação.</td></tr>
+<tr><td>Freinet</td><td>Cooperação, texto livre, expressão, trabalho, imprensa escolar.</td><td>Criança comunica, produz, coopera e participa.</td></tr>
+<tr><td>Paulo Freire</td><td>Diálogo, escuta, problematização, sujeito histórico, leitura de mundo.</td><td>Educação dialógica, não bancária, respeitando saberes dos sujeitos.</td></tr>
+</table>
+<h3>4.2. Piaget: construção ativa do conhecimento</h3>
+<p>Para Piaget, a criança constrói conhecimento pela ação sobre o mundo. Ela não recebe ideias prontas como se fosse recipiente vazio. Ela manipula, compara, erra, testa, cria hipóteses e reorganiza esquemas mentais.</p>
+<h4>Conceitos que mais caem</h4>
+<ul>
+<li><strong>Assimilação:</strong> interpretar uma novidade usando esquemas já existentes. Ex.: chamar zebra de “cavalo”.</li>
+<li><strong>Acomodação:</strong> modificar o esquema para compreender a novidade. Ex.: perceber que zebra tem listras e não é cavalo.</li>
+<li><strong>Equilibração:</strong> reorganização entre o conhecido e o novo desafio.</li>
+<li><strong>Estágio sensório-motor:</strong> 0 a 2 anos aproximadamente; ação, corpo, percepção, permanência do objeto.</li>
+<li><strong>Estágio pré-operatório:</strong> 2 a 7 anos aproximadamente; linguagem, símbolo, faz de conta, egocentrismo cognitivo.</li>
+</ul>
+<div class="example"><strong>Exemplos de prova:</strong><ol><li>Bebê joga objeto várias vezes: explora causa e efeito.</li><li>Criança usa caixa como carro: pensamento simbólico.</li><li>Crianças classificam folhas por cor e tamanho: construção de noções lógicas a partir de objetos concretos.</li><li>Criança acha que todos veem o que ela vê: egocentrismo cognitivo, não maldade.</li></ol></div>
+<div class="trap"><strong>Pegadinha:</strong> Piaget não é defensor de cópia mecânica nem transmissão verbal. Também não se deve interpretar estágio como prisão rígida; as idades são aproximadas.</div>
+<h3>4.3. Vygotsky: mediação, linguagem e cultura</h3>
+<p>Vygotsky entende o desenvolvimento como histórico-cultural. A criança se desenvolve na relação com adultos, outras crianças, linguagem, signos, instrumentos e práticas culturais. A aprendizagem bem mediada pode impulsionar o desenvolvimento.</p>
+<h4>Conceitos que mais caem</h4>
+<ul>
+<li><strong>Mediação:</strong> o adulto organiza, pergunta, orienta, oferece pistas e amplia a experiência.</li>
+<li><strong>Linguagem:</strong> estrutura o pensamento, a comunicação e a autorregulação.</li>
+<li><strong>Zona de Desenvolvimento Real:</strong> o que a criança faz sozinha.</li>
+<li><strong>Zona de Desenvolvimento Proximal:</strong> o que a criança faz com ajuda de adulto ou colega mais experiente.</li>
+<li><strong>Internalização:</strong> uma ação inicialmente social torna-se função interna.</li>
+</ul>
+<div class="example"><strong>Exemplos de ZDP:</strong><ol><li>A criança não monta o quebra-cabeça sozinha, mas consegue quando a professora dá pistas.</li><li>Um colega mostra como encaixar uma peça; depois a criança faz sozinha.</li><li>Na roda, a professora ajuda a criança a narrar: “primeiro você foi ao parque, depois...”.</li><li>No conflito, o adulto ajuda a nomear sentimentos até que as crianças aprendam a negociar melhor.</li></ol></div>
+<div class="trap"><strong>Pegadinha:</strong> mediação não é dar resposta pronta. É oferecer ajuda ajustada para a criança avançar.</div>
+<h3>4.4. Wallon: afetividade, movimento e pessoa completa</h3>
+<p>Wallon vê o desenvolvimento como integração entre afetividade, motricidade, cognição e meio social. Para ele, emoção e corpo não são acessórios; são dimensões constitutivas do desenvolvimento infantil.</p>
+<ul>
+<li><strong>Afetividade:</strong> vínculo, emoção, relação com o outro.</li>
+<li><strong>Motricidade:</strong> movimento, expressão corporal, gesto, postura.</li>
+<li><strong>Cognição:</strong> pensamento, linguagem, compreensão.</li>
+<li><strong>Meio social:</strong> relações que organizam a experiência da criança.</li>
+</ul>
+<div class="example"><strong>Exemplos:</strong><ol><li>A criança que se sente segura explora mais o ambiente.</li><li>Dança, circuito motor e dramatização são também experiências cognitivas e afetivas.</li><li>Uma birra não deve ser vista apenas como indisciplina; pode ser expressão emocional que exige mediação.</li><li>Roda de conversa sobre sentimentos integra linguagem, emoção e socialização.</li></ol></div>
+<div class="trap"><strong>Pegadinha:</strong> dizer que afetividade atrapalha a aprendizagem está errado. Em Wallon, afetividade, corpo e inteligência se articulam.</div>
+<h3>4.5. Como diferenciar Piaget, Vygotsky e Wallon na prova</h3>
+<table>
+<tr><th>Situação</th><th>Autor mais provável</th><th>Por quê</th></tr>
+<tr><td>Criança manipula objetos, testa hipóteses e reorganiza esquemas.</td><td>Piaget</td><td>Construção do conhecimento pela ação e equilibração.</td></tr>
+<tr><td>Criança resolve tarefa com ajuda de adulto/colega.</td><td>Vygotsky</td><td>ZDP e mediação social.</td></tr>
+<tr><td>Professor valoriza fala, cultura e interação social.</td><td>Vygotsky</td><td>Linguagem e cultura são centrais.</td></tr>
+<tr><td>Criança expressa aprendizagem por gesto, emoção e movimento.</td><td>Wallon</td><td>Integra afetividade, motricidade e cognição.</td></tr>
+<tr><td>Ambiente com materiais acessíveis e autonomia.</td><td>Montessori</td><td>Ambiente preparado e autoeducação.</td></tr>
+<tr><td>Brincar como essência do jardim de infância.</td><td>Froebel</td><td>Brincadeira e dons froebelianos.</td></tr>
+</table>
+</section>
+
+<section id="brincadeira">
+<h2>5. Brincadeira, linguagem e movimento</h2>
+<p>Brincadeira, linguagem e movimento não são conteúdos isolados. São dimensões do desenvolvimento infantil. A criança pequena aprende com o corpo, com a palavra, com o gesto, com o olhar, com a imaginação, com os objetos, com os espaços e com os outros.</p>
+<h3>5.1. Brincadeira como eixo da infância</h3>
+<p>Brincar é direito, linguagem e forma de aprendizagem. No faz de conta, a criança reorganiza experiências, assume papéis sociais, inventa regras, negocia, imita, imagina, elabora medos e desejos e amplia a linguagem.</p>
+<table>
+<tr><th>Tipo de brincadeira</th><th>Aprendizagens envolvidas</th><th>Exemplo</th></tr>
+<tr><td>Faz de conta</td><td>Linguagem, cultura, papéis sociais, imaginação, regras simbólicas.</td><td>Mercado, médico, família, oficina, restaurante, escola.</td></tr>
+<tr><td>Brincadeira corporal</td><td>Equilíbrio, coordenação, força, ritmo, noção espacial, autocontrole.</td><td>Pular, correr, rolar, túnel, circuito, dança.</td></tr>
+<tr><td>Jogos com regras simples</td><td>Espera, combinados, memória, respeito ao outro, estratégia.</td><td>Dominó de imagens, jogo de percurso, bingo de figuras.</td></tr>
+<tr><td>Brincadeiras tradicionais</td><td>Cultura, oralidade, ritmo, pertencimento, memória social.</td><td>Ciranda, amarelinha, parlendas, cantigas, passa-anel.</td></tr>
+<tr><td>Exploração de materiais</td><td>Investigação, sentidos, causa e efeito, classificação, criatividade.</td><td>Água, areia, argila, folhas, caixas, tecidos, potes.</td></tr>
+</table>
+<div class="trap"><strong>Pegadinha:</strong> brincadeira livre não é abandono. O adulto observa, organiza ambiente, garante segurança, amplia repertório e intervém quando necessário.</div>
+<h3>5.2. Linguagem: muito além da alfabetização</h3>
+<p>Na Educação Infantil, linguagem inclui choro, olhar, gesto, balbucio, fala, desenho, música, dança, dramatização, movimento, brincadeira, narrativa e contato com a cultura escrita. A criança deve participar de práticas reais de linguagem, não de treino mecânico.</p>
+<div class="grid">
+<div class="card"><h4>Práticas adequadas</h4><ul><li>Roda de conversa.</li><li>Contação e reconto de histórias.</li><li>Livros acessíveis.</li><li>Brincadeiras cantadas.</li><li>Produção coletiva de listas, bilhetes e combinados.</li><li>Escrita espontânea e desenho valorizados.</li></ul></div>
+<div class="card"><h4>Práticas inadequadas</h4><ul><li>Cópia repetitiva sem sentido.</li><li>Treino de caligrafia como centro da rotina.</li><li>Prova de leitura na pré-escola.</li><li>Corrigir garatujas como erro.</li><li>Exigir silêncio constante.</li><li>Ignorar linguagem corporal do bebê.</li></ul></div>
+</div>
+<h3>5.3. Movimento como linguagem</h3>
+<p>Movimento não é bagunça. É modo de existir, comunicar e aprender. Crianças pequenas precisam correr, pular, engatinhar, equilibrar-se, dançar, empurrar, puxar, subir, descer, encaixar, rasgar, modelar e desenhar. Isso desenvolve coordenação ampla e fina, lateralidade, orientação espacial, autonomia e consciência corporal.</p>
+<div class="example"><strong>Exemplo integrado:</strong> um circuito com túnel, colchonete, corda e caixas pode trabalhar corpo, fala, espera, regras, noções de dentro/fora, em cima/embaixo, antes/depois, coragem, cooperação e registro por desenho depois da atividade.</div>
+<h3>5.4. Como a banca cobra</h3>
+<ul><li>Se disser que brincar é perda de tempo, está errado.</li><li>Se disser que linguagem é apenas alfabetização, está errado.</li><li>Se disser que movimento deve ser reprimido para aprender, está errado.</li><li>Se disser que o professor planeja experiências lúdicas, observa e intervém com intencionalidade, tende a estar correto.</li></ul>
+</section>
+
+<section id="avaliacao">
+<h2>6. Avaliação do processo educativo na Educação Infantil</h2>
+<p>A avaliação na Educação Infantil é um dos temas mais certos de aparecer. A formulação legal mais segura é: acompanhamento e registro do desenvolvimento das crianças, sem objetivo de promoção, mesmo para acesso ao Ensino Fundamental.</p>
+<h3>6.1. Para que serve avaliar?</h3>
+<p>Avaliar serve para compreender a trajetória da criança e melhorar a prática pedagógica. A avaliação mostra avanços, interesses, desafios, formas de participação, interações, linguagem, autonomia, movimento, brincadeiras e necessidades de mediação. Ela não serve para punir, reter, classificar ou ranquear.</p>
+<h3>6.2. Instrumentos adequados</h3>
+<table>
+<tr><th>Instrumento</th><th>Como usar</th><th>O que revela</th></tr>
+<tr><td>Observação sistemática</td><td>Observar com foco: fala, interação, autonomia, movimento, brincadeira.</td><td>Como a criança age em situações reais.</td></tr>
+<tr><td>Relatório descritivo</td><td>Registrar avanços, desafios e propostas, sem nota.</td><td>Processo de desenvolvimento.</td></tr>
+<tr><td>Portfólio</td><td>Reunir produções, fotos, falas e registros ao longo do tempo.</td><td>Progressão e percurso.</td></tr>
+<tr><td>Documentação pedagógica</td><td>Organizar registros para refletir com equipe e família.</td><td>Aprendizagem da criança e qualidade da prática.</td></tr>
+<tr><td>Diário de bordo</td><td>Anotar acontecimentos relevantes da rotina.</td><td>Hipóteses, interesses, conflitos e necessidades.</td></tr>
+<tr><td>Conversa com famílias</td><td>Articular informações da escola e casa.</td><td>Contexto e continuidade do cuidado.</td></tr>
+</table>
+<h3>6.3. O que é inadequado</h3>
+<ul><li>Prova escrita para crianças pequenas.</li><li>Nota final para decidir aprovação.</li><li>Reprovação por não ler ou escrever.</li><li>Ranking de crianças.</li><li>Classificar como “apta” ou “não apta” para o Ensino Fundamental.</li><li>Comparar crianças sem considerar ritmos e contextos.</li></ul>
+<div class="example"><strong>Exemplo:</strong> se uma criança não participa da roda, o relatório deve investigar contexto: roda longa demais, tema pouco significativo, horário inadequado, necessidade de movimento, timidez, linguagem em desenvolvimento ou falta de vínculo. Não deve simplesmente rotular a criança como “desinteressada”.</div>
+<h3>6.4. Avaliação também da prática</h3>
+<p>Quando os registros mostram que muitas crianças não se envolvem em determinada proposta, o professor deve rever planejamento, materiais, espaço, tempo, abordagem e mediação. Avaliar é também perguntar: “o que minha prática está oferecendo ou impedindo?”.</p>
+<div class="trap"><strong>Pegadinha:</strong> avaliação formativa/processual é uma expressão pedagógica correta, mas se a questão cobrar a LDB, escolha a alternativa com “acompanhamento e registro” e “sem objetivo de promoção”.</div>
+</section>
+
+<section id="pratica">
+<h2>7. Prática pedagógica: gestão democrática, PPP, proposta pedagógica e plano de trabalho</h2>
+<p>A prática pedagógica na Educação Infantil deve unir intenção, escuta, organização, cuidado, brincadeira, mediação e avaliação. Não basta “gostar de criança”; há trabalho profissional, planejamento e responsabilidade legal.</p>
+<h3>7.1. Gestão democrática</h3>
+<p>Gestão democrática significa participação, diálogo e corresponsabilidade. Envolve direção, coordenação, professores, educadores, funcionários, famílias, comunidade e, de modo adequado à idade, as crianças. Não é falta de liderança; é liderança com participação.</p>
+<div class="trap"><strong>Pegadinha:</strong> relações verticais, decisões centralizadas e PPP imposto pela direção contrariam a gestão democrática.</div>
+<h3>7.2. PPP, proposta pedagógica e plano de trabalho</h3>
+<table>
+<tr><th>Documento</th><th>Função</th><th>Como cai</th></tr>
+<tr><td>PPP — Projeto Político-Pedagógico</td><td>Expressa identidade, objetivos, concepção de educação, gestão e compromissos da escola.</td><td>Documento coletivo, vivo e orientador, não mera burocracia.</td></tr>
+<tr><td>Proposta pedagógica</td><td>Define concepção de criança, currículo, avaliação, inclusão, rotina, família e organização da Educação Infantil.</td><td>Deve articular cuidar e educar, brincadeira e interação.</td></tr>
+<tr><td>Plano de trabalho docente</td><td>Organiza experiências, objetivos, campos, materiais, tempo, espaço, mediação e avaliação.</td><td>É a prática planejada, não improviso.</td></tr>
+<tr><td>Registros/relatórios</td><td>Acompanham desenvolvimento e ajudam a replanejar.</td><td>Não são notas nem classificação.</td></tr>
+</table>
+<h3>7.3. Rotina na Educação Infantil</h3>
+<p>Rotina não deve ser rígida a ponto de apagar a criança, nem solta a ponto de virar improviso. Boa rotina combina previsibilidade e flexibilidade. Ela inclui acolhimento, alimentação, higiene, brincadeira, exploração, movimento, repouso, roda, histórias, pátio, interações e transições respeitosas.</p>
+<h3>7.4. Organização de espaços e materiais</h3>
+<ul><li>Materiais acessíveis à altura das crianças.</li><li>Ambientes seguros, limpos, acolhedores e desafiadores.</li><li>Cantos de leitura, faz de conta, construção, arte, natureza e movimento.</li><li>Materiais não estruturados: caixas, tecidos, potes, rolos, folhas, pedras, sementes, argila.</li><li>Representatividade: bonecas, livros, imagens e músicas que valorizem diversidade racial, cultural, familiar e regional.</li><li>Acessibilidade para crianças com deficiência.</li></ul>
+<h3>7.5. Exemplo de plano de trabalho completo</h3>
+<div class="example"><p><strong>Tema:</strong> água, corpo e descobertas.</p><p><strong>Campos:</strong> Corpo, gestos e movimentos; Espaços, tempos, quantidades, relações e transformações; Escuta, fala, pensamento e imaginação.</p><p><strong>Experiências:</strong> encher e esvaziar potes, observar flutua/afunda, ouvir sons da água, conversar sobre chuva e banho, desenhar descobertas.</p><p><strong>Mediação:</strong> perguntar, nomear ações, cuidar da segurança, observar hipóteses e incentivar cooperação.</p><p><strong>Avaliação:</strong> registros de falas, fotos, observação de interação, autonomia e participação.</p></div>
+</section>
+
+<section id="neuro">
+<h2>8. Neuroaprendizagem na Educação Infantil</h2>
+<p>Neuroaprendizagem aparece em editais recentes e exige cuidado. O tema deve ser estudado sem neuromitos. A ideia principal é que o desenvolvimento cerebral na infância é profundamente influenciado por experiências, vínculos, linguagem, movimento, sono, alimentação, segurança emocional e interações responsivas.</p>
+<h3>8.1. O que é relevante para prova</h3>
+<ul><li><strong>Plasticidade cerebral:</strong> o cérebro se desenvolve em interação com o ambiente.</li><li><strong>Afeto e segurança:</strong> vínculo seguro favorece exploração e aprendizagem.</li><li><strong>Atenção infantil:</strong> crianças pequenas aprendem melhor em experiências ativas, curtas, variadas e significativas.</li><li><strong>Memória:</strong> repetição com sentido, rotina e emoção ajudam a consolidar aprendizagens.</li><li><strong>Movimento:</strong> corpo e cognição estão integrados.</li><li><strong>Linguagem:</strong> conversar, cantar, narrar e responder à criança desenvolvem pensamento e comunicação.</li><li><strong>Brincadeira:</strong> combina emoção, imaginação, regra, relação social e resolução de problemas.</li></ul>
+<h3>8.2. Interação responsiva</h3>
+<p>Quando o bebê balbucia, olha, aponta ou entrega um objeto, ele “lança” uma interação. O adulto responde com olhar, fala, gesto e cuidado. Essas trocas de ida e volta fortalecem vínculo, linguagem, atenção compartilhada e desenvolvimento social.</p>
+<div class="example"><strong>Exemplos:</strong><ol><li>Bebê aponta para cachorro; adulto diz: “Você viu o cachorro? Ele está latindo: au-au!”.</li><li>Criança pergunta por que chove; adulto propõe observar nuvens, poças e guarda-chuva.</li><li>Durante música, adulto acompanha gestos da criança e amplia a brincadeira.</li><li>Na frustração, adulto nomeia: “Você ficou bravo porque queria o brinquedo. Vamos combinar a vez?”.</li></ol></div>
+<h3>8.3. Neuromitos perigosos</h3>
+<table>
+<tr><th>Neuromito</th><th>Por que está errado</th><th>Resposta correta</th></tr>
+<tr><td>“Cada criança aprende apenas por um estilo: visual, auditivo ou cinestésico.”</td><td>Rotula e empobrece experiências.</td><td>Oferecer múltiplas linguagens e experiências.</td></tr>
+<tr><td>“Usamos só 10% do cérebro.”</td><td>Afirmação falsa e sem base pedagógica séria.</td><td>Diversas áreas cerebrais participam de funções complexas.</td></tr>
+<tr><td>“Quanto mais tela, mais estímulo cerebral.”</td><td>Tempo e qualidade de tela exigem cuidado, idade e mediação.</td><td>Priorizar interação humana, movimento, brincadeira e linguagem.</td></tr>
+<tr><td>“Criança aprende melhor sentada e quieta.”</td><td>Ignora corpo, movimento e atenção infantil.</td><td>Alternar movimento, exploração, fala, escuta e descanso.</td></tr>
+<tr><td>“Medo e punição aceleram aprendizagem.”</td><td>Insegurança prejudica exploração e vínculo.</td><td>Ambiente seguro, limites claros e acolhimento.</td></tr>
+</table>
+</section>
+
+<section id="bncc">
+<h2>9. BNCC na Educação Infantil</h2>
+<p>A BNCC é documento normativo que define aprendizagens essenciais para a Educação Básica. Na Educação Infantil, ela não organiza o currículo por disciplinas, mas por direitos de aprendizagem e campos de experiências. Este é um dos pontos que mais caem.</p>
+<h3>9.1. Eixos estruturantes</h3>
+<p>As aprendizagens e o desenvolvimento na Educação Infantil têm como eixos estruturantes as <strong>interações</strong> e a <strong>brincadeira</strong>. Isso significa que o currículo deve partir de experiências concretas do cotidiano infantil, não de aulas disciplinares fragmentadas.</p>
+<h3>9.2. Seis direitos de aprendizagem e desenvolvimento</h3>
+<table>
+<tr><th>Direito</th><th>Sentido prático</th><th>Pegadinha</th></tr>
+<tr><td>Conviver</td><td>Relacionar-se com crianças e adultos, respeitando diferenças.</td><td>Não é apenas “ficar junto”.</td></tr>
+<tr><td>Brincar</td><td>Brincar de diversas formas, espaços, tempos e parceiros.</td><td>Não é prêmio nem recreio sem valor.</td></tr>
+<tr><td>Participar</td><td>Ter voz em atividades, escolhas, ambientes e vida cotidiana.</td><td>Não significa ausência de limites.</td></tr>
+<tr><td>Explorar</td><td>Investigar movimentos, sons, formas, texturas, natureza, objetos e relações.</td><td>Não é bagunça; exige segurança e planejamento.</td></tr>
+<tr><td>Expressar</td><td>Comunicar sentimentos, ideias, hipóteses e descobertas em várias linguagens.</td><td>Não é só fala oral.</td></tr>
+<tr><td>Conhecer-se</td><td>Construir identidade pessoal, social e cultural.</td><td>Não é individualismo; inclui relação com o outro.</td></tr>
+</table>
+<div class="memory"><strong>Macete:</strong> Co-Bri-Par-Ex-Ex-Co: Conviver, Brincar, Participar, Explorar, Expressar, Conhecer-se.</div>
+<h3>9.3. Cinco campos de experiências</h3>
+<table>
+<tr><th>Campo</th><th>O que envolve</th><th>Exemplo</th></tr>
+<tr><td>O eu, o outro e o nós</td><td>Identidade, autonomia, convivência, respeito, pertencimento.</td><td>Combinados, roda de sentimentos, brincadeiras cooperativas.</td></tr>
+<tr><td>Corpo, gestos e movimentos</td><td>Corpo, movimento, dança, cuidado de si, expressão corporal.</td><td>Circuito motor, dança, imitação de animais.</td></tr>
+<tr><td>Traços, sons, cores e formas</td><td>Artes visuais, música, sons, materiais, formas de expressão estética.</td><td>Pintura com diferentes suportes, instrumentos sonoros.</td></tr>
+<tr><td>Escuta, fala, pensamento e imaginação</td><td>Oralidade, narrativas, literatura, cultura escrita, imaginação.</td><td>Histórias, reconto, dramatização, biblioteca de sala.</td></tr>
+<tr><td>Espaços, tempos, quantidades, relações e transformações</td><td>Noções matemáticas, natureza, sociedade, investigação, tempo e espaço.</td><td>Medir plantas, observar clima, classificar objetos, contar coleções.</td></tr>
+</table>
+<h3>9.4. Grupos etários e códigos</h3>
+<p>A BNCC organiza objetivos por três grupos etários: <strong>bebês</strong> de zero a 1 ano e 6 meses; <strong>crianças bem pequenas</strong> de 1 ano e 7 meses a 3 anos e 11 meses; e <strong>crianças pequenas</strong> de 4 anos a 5 anos e 11 meses. Os códigos indicam etapa, grupo etário, campo e objetivo.</p>
+<div class="example"><strong>Exemplo de leitura de código:</strong> EI03EF01. “EI” indica Educação Infantil; “03” indica crianças pequenas; “EF” indica Escuta, fala, pensamento e imaginação; “01” indica o objetivo dentro do campo.</div>
+<h3>9.5. Transição para o Ensino Fundamental</h3>
+<p>A transição deve garantir continuidade, acolhimento afetivo e respeito ao que a criança já sabe e é capaz de fazer. Não deve haver ruptura brusca nem antecipação escolarizante na Educação Infantil.</p>
+<div class="trap"><strong>Pegadinhas da BNCC:</strong><ul><li>“Competir” não é direito de aprendizagem.</li><li>Matemática, História e Ciências não são campos da Educação Infantil.</li><li>Campos de experiências não são disciplinas.</li><li>BNCC não elimina PPP nem autonomia curricular; orienta aprendizagens essenciais.</li></ul></div>
+</section>
+
+<section id="rcnei">
+<h2>10. RCNEI — Referencial Curricular Nacional para a Educação Infantil</h2>
+<p>O RCNEI é um documento orientador publicado em 1998. Embora a BNCC seja o documento normativo atual, o RCNEI ainda aparece em editais e provas, especialmente quando o edital cita “todos os volumes”. O candidato precisa saber sua estrutura.</p>
+<h3>10.1. Estrutura dos três volumes</h3>
+<table>
+<tr><th>Volume</th><th>Conteúdo</th><th>O que cai</th></tr>
+<tr><td>Volume 1 — Introdução</td><td>Concepção de criança, educação, instituição, profissional, objetivos gerais, cuidar, educar, brincar, avaliação e organização institucional.</td><td>Função da Educação Infantil, cuidado integrado à educação e brincadeira.</td></tr>
+<tr><td>Volume 2 — Formação Pessoal e Social</td><td>Eixo Identidade e Autonomia.</td><td>Construção de identidade, autoestima, independência, socialização e cuidado de si.</td></tr>
+<tr><td>Volume 3 — Conhecimento de Mundo</td><td>Eixos: Movimento, Música, Artes Visuais, Linguagem Oral e Escrita, Natureza e Sociedade, Matemática.</td><td>Confusão com campos de experiências da BNCC.</td></tr>
+</table>
+<h3>10.2. Formação Pessoal e Social</h3>
+<p>Relaciona-se à construção da identidade e autonomia. Inclui o conhecimento de si, autoestima, independência, confiança, cuidado com o corpo, relação com adultos e crianças, construção de regras e convivência.</p>
+<div class="example"><strong>Exemplos:</strong><ol><li>Criança escolhe brinquedo e aprende a guardá-lo.</li><li>Reconhece seu nome, imagem, pertences e características.</li><li>Aprende a pedir ajuda, esperar a vez e cuidar de si.</li><li>Constrói combinados de convivência com apoio do adulto.</li></ol></div>
+<h3>10.3. Conhecimento de Mundo</h3>
+<p>Reúne experiências que ampliam a relação da criança com diferentes linguagens e áreas do conhecimento, sem transformar a Educação Infantil em aulas disciplinares rígidas. O trabalho deve ocorrer por experiências significativas, exploração e brincadeiras.</p>
+<h3>10.4. RCNEI x BNCC x DCNEI</h3>
+<table>
+<tr><th>Documento</th><th>Natureza</th><th>Como diferenciar</th></tr>
+<tr><td>RCNEI</td><td>Orientador, de 1998.</td><td>Âmbitos: Formação Pessoal e Social; Conhecimento de Mundo.</td></tr>
+<tr><td>DCNEI</td><td>Diretriz normativa.</td><td>Criança como sujeito histórico e de direitos; interações e brincadeira.</td></tr>
+<tr><td>BNCC</td><td>Normativa, aprendizagens essenciais.</td><td>6 direitos e 5 campos de experiências.</td></tr>
+</table>
+<div class="trap"><strong>Pegadinha:</strong> no RCNEI aparece Matemática como eixo de Conhecimento de Mundo. Na BNCC da Educação Infantil, a organização atual não é por disciplinas, mas por campos de experiências.</div>
+</section>
+
+<section id="parana">
+<h2>11. Referencial Curricular do Paraná e CREP</h2>
+<p>Como a prova é para o Paraná, este capítulo precisa ser levado a sério. O Referencial Curricular do Paraná segue a estrutura da BNCC e contextualiza os princípios, direitos e orientações para a realidade paranaense. O CREP complementa o Referencial Curricular do Paraná, com forte presença na organização de conteúdos do Ensino Fundamental.</p>
+<h3>11.1. Referencial Curricular do Paraná na Educação Infantil</h3>
+<p>Na Educação Infantil, o Referencial do Paraná aprofunda a BNCC considerando o território paranaense, as redes, os municípios, a diversidade sociocultural, a inclusão, a equidade, a transição para o Ensino Fundamental e o organizador curricular.</p>
+<ul><li>Retoma a história da Educação Infantil.</li><li>Articula princípios éticos, políticos e estéticos aos direitos de aprendizagem.</li><li>Reforça interações e brincadeira como eixos.</li><li>Organiza campos de experiências.</li><li>Trata da transição entre Educação Infantil e Ensino Fundamental.</li><li>Inclui saberes e conhecimentos para marcar a intencionalidade do planejamento docente.</li><li>Detalha faixas por idade, ampliando a organização geral da BNCC.</li></ul>
+<h3>11.2. Organização por idade no Paraná</h3>
+<p>Enquanto a BNCC apresenta três grandes grupos etários, o Referencial Curricular do Paraná detalha a Educação Infantil em seis partes por idade, o que ajuda o professor a planejar com maior precisão: bebês de zero a 1 ano; crianças bem pequenas de 1, 2 e 3 anos; crianças pequenas de 4 e 5 anos.</p>
+<h3>11.3. CREP</h3>
+<p>O CREP — Currículo da Rede Estadual Paranaense — complementa o Referencial Curricular do Paraná e traz conteúdos essenciais por componente curricular, especialmente para os anos do Ensino Fundamental, além de sugestões de distribuição temporal.</p>
+<div class="trap"><strong>Pegadinha:</strong> para Educação Infantil, o documento paranaense mais diretamente ligado ao trabalho pedagógico é o Referencial Curricular do Paraná. O CREP não substitui a BNCC nem o Referencial; ele complementa.</div>
+</section>
+
+<section id="leis">
+<h2>12. Legislação essencial: ECA, LDB, FUNDEB e LBI</h2>
+<p>Este capítulo deve ser estudado como “lei seca comentada”. A prova costuma trocar uma palavra ou um número para derrubar o candidato.</p>
+<h3>12.1. LDB — Lei nº 9.394/1996</h3>
+<table>
+<tr><th>Artigo</th><th>Conteúdo essencial</th><th>Pegadinha</th></tr>
+<tr><td>Art. 29</td><td>Educação Infantil é primeira etapa da Educação Básica e visa ao desenvolvimento integral da criança até 5 anos.</td><td>Trocar por preparação para o Ensino Fundamental.</td></tr>
+<tr><td>Art. 30</td><td>Creche para crianças de até 3 anos; pré-escola para 4 e 5 anos.</td><td>Trocar idades.</td></tr>
+<tr><td>Art. 31</td><td>Avaliação por acompanhamento e registro, sem objetivo de promoção.</td><td>Inserir prova, nota ou reprovação.</td></tr>
+<tr><td>Art. 58</td><td>Educação Especial como modalidade oferecida preferencialmente na rede regular.</td><td>Defender escola separada como regra.</td></tr>
+<tr><td>Art. 12</td><td>Estabelecimentos de ensino elaboram e executam sua proposta pedagógica.</td><td>Dizer que a proposta vem pronta de fora da escola.</td></tr>
+<tr><td>Art. 13</td><td>Docentes participam da proposta pedagógica e elaboram plano de trabalho.</td><td>Reduzir professor a executor sem planejamento.</td></tr>
+<tr><td>Art. 14</td><td>Gestão democrática na educação pública, conforme legislação.</td><td>Centralização autoritária.</td></tr>
+</table>
+<h3>12.2. ECA — Lei nº 8.069/1990</h3>
+<ul><li><strong>Criança:</strong> pessoa até 12 anos incompletos.</li><li><strong>Adolescente:</strong> pessoa entre 12 e 18 anos.</li><li><strong>Proteção integral:</strong> crianças e adolescentes são sujeitos de direitos.</li><li><strong>Prioridade absoluta:</strong> preferência na formulação e execução de políticas públicas e atendimento.</li><li><strong>Educação:</strong> atendimento em creche e pré-escola às crianças de zero a cinco anos.</li><li><strong>Conselho Tutelar:</strong> órgão encarregado de zelar pelo cumprimento dos direitos da criança e do adolescente.</li></ul>
+<div class="trap"><strong>Pegadinha:</strong> Conselho Tutelar não é escola, polícia, juiz ou secretaria. É órgão de proteção de direitos.</div>
+<h3>12.3. FUNDEB — Lei nº 14.113/2020</h3>
+<ul><li>É fundo de natureza contábil, instituído no âmbito de cada Estado e do Distrito Federal.</li><li>Financia a Educação Básica pública.</li><li>Abrange Educação Infantil, Ensino Fundamental, Ensino Médio e modalidades da Educação Básica.</li><li>Relaciona-se à valorização dos profissionais da educação.</li><li>Proporção não inferior a 70% dos recursos anuais totais dos Fundos deve ser destinada à remuneração dos profissionais da educação básica em efetivo exercício, conforme a lei.</li></ul>
+<div class="trap"><strong>Pegadinhas do FUNDEB:</strong><ul><li>Não é só para Ensino Fundamental.</li><li>Não é programa pedagógico.</li><li>Não confundir 70% com 60%, percentual do antigo Fundeb.</li><li>Profissionais da educação básica abrangem mais que docentes, desde que em efetivo exercício e conforme a lei.</li></ul></div>
+<h3>12.4. LBI — Lei Brasileira de Inclusão</h3>
+<p>Embora nem sempre apareça no edital, tem aparecido em PSS de Educação Infantil. A LBI reforça sistema educacional inclusivo, acessibilidade, eliminação de barreiras, participação e aprendizagem, sem segregação.</p>
+<ul><li>Educação é direito da pessoa com deficiência.</li><li>Deve haver sistema educacional inclusivo em todos os níveis.</li><li>Devem ser garantidos acesso, permanência, participação e aprendizagem.</li><li>Barreiras devem ser eliminadas por recursos de acessibilidade e adaptações razoáveis.</li><li>Instituição privada não pode cobrar adicional por medidas de inclusão previstas na lei.</li></ul>
+</section>
+
+<section id="diretrizes">
+<h2>13. Diretrizes Nacionais para a Educação Básica</h2>
+<p>O edital cita pareceres e resoluções do CNE/CEB sobre Educação Básica, Educação do Campo, Educação Especial, Educação Infantil, Ensino Fundamental e Relações Étnico-Raciais. Para PSS, o mais importante é entender princípios e reconhecer práticas adequadas.</p>
+<h3>13.1. DCNEI — Diretrizes Curriculares Nacionais para a Educação Infantil</h3>
+<ul><li>A criança é sujeito histórico e de direitos, centro do planejamento curricular.</li><li>O currículo articula experiências e saberes das crianças com conhecimentos culturais, artísticos, ambientais, científicos e tecnológicos.</li><li>Os eixos das práticas pedagógicas são interações e brincadeira.</li><li>As propostas devem respeitar princípios éticos, políticos e estéticos.</li><li>A avaliação não deve ter objetivo de seleção, promoção ou classificação.</li></ul>
+<h3>13.2. Princípios éticos, políticos e estéticos</h3>
+<table>
+<tr><th>Princípio</th><th>Envolve</th><th>Exemplo</th></tr>
+<tr><td>Éticos</td><td>Autonomia, responsabilidade, solidariedade, respeito ao bem comum, meio ambiente e diferenças.</td><td>Combinados, cuidado com materiais, respeito aos colegas.</td></tr>
+<tr><td>Políticos</td><td>Direitos de cidadania, criticidade, ordem democrática.</td><td>Participação das crianças em escolhas e escuta das famílias.</td></tr>
+<tr><td>Estéticos</td><td>Sensibilidade, criatividade, ludicidade, liberdade de expressão artística e cultural.</td><td>Artes, música, dramatização, dança e exploração de materiais.</td></tr>
+</table>
+<h3>13.3. Educação Especial na perspectiva inclusiva</h3>
+<p>A Educação Especial é modalidade transversal e deve ser ofertada preferencialmente na rede regular, com AEE, recursos, acessibilidade e adaptações quando necessário. Inclusão não é apenas matrícula: exige participação real e aprendizagem.</p>
+<div class="example"><strong>Exemplo:</strong> uma criança com deficiência física deve participar da brincadeira de circuito com adaptações de percurso, materiais e apoio, não ficar apenas observando.</div>
+<h3>13.4. Educação do Campo</h3>
+<p>Valoriza modos de vida, cultura, calendário, trabalho, território e saberes das populações do campo. Na Educação Infantil, significa reconhecer experiências das crianças com natureza, família, comunidade, animais, plantações, festas, rios, clima e deslocamentos, sem inferiorizar a cultura rural.</p>
+<h3>13.5. Relações Étnico-Raciais</h3>
+<p>Na Educação Infantil, educação das relações étnico-raciais envolve representatividade, combate ao racismo, valorização da história e cultura afro-brasileira, africana e indígena, identidade, respeito e diversidade. Não deve aparecer apenas como data comemorativa.</p>
+<div class="example"><strong>Práticas adequadas:</strong><ol><li>Livros com protagonistas negros e indígenas.</li><li>Bonecas e imagens de diferentes tons de pele.</li><li>Músicas, brincadeiras, histórias e referências culturais diversas.</li><li>Intervenção imediata diante de apelidos racistas.</li><li>Valorização positiva de cabelos, nomes, famílias e pertencimentos.</li></ol></div>
+<h3>13.6. Ensino Fundamental de 9 anos e transição</h3>
+<p>A transição da Educação Infantil para o Ensino Fundamental deve ser planejada, acolhedora e contínua. Não se trata de transformar o último ano da pré-escola em primeiro ano antecipado. A criança deve chegar ao Fundamental com sua infância respeitada.</p>
+</section>
+
+<section id="pegadinhas">
+<h2>14. Pegadinhas finais para revisar na véspera</h2>
+<div class="grid">
+<div class="card"><h4>BNCC</h4><ul><li>Direitos: conviver, brincar, participar, explorar, expressar, conhecer-se.</li><li>Campos não são disciplinas.</li><li>“Competir” não é direito.</li></ul></div>
+<div class="card"><h4>LDB</h4><ul><li>Educação Infantil é primeira etapa.</li><li>Desenvolvimento integral até 5 anos.</li><li>Avaliação sem promoção.</li></ul></div>
+<div class="card"><h4>ECA</h4><ul><li>Criança: até 12 incompletos.</li><li>Adolescente: 12 a 18.</li><li>Creche e pré-escola de 0 a 5 são dever do Estado.</li></ul></div>
+<div class="card"><h4>RCNEI</h4><ul><li>Formação Pessoal e Social.</li><li>Conhecimento de Mundo.</li><li>Identidade e autonomia.</li></ul></div>
+<div class="card"><h4>Avaliação</h4><ul><li>Observar, registrar, acompanhar.</li><li>Sem nota, retenção, ranking ou apto/inapto.</li><li>Avaliar também a prática.</li></ul></div>
+<div class="card"><h4>Pensadores</h4><ul><li>Piaget: ação e construção.</li><li>Vygotsky: mediação e ZDP.</li><li>Wallon: afetividade e movimento.</li></ul></div>
+</div>
+</section>
+
+  <section id="questoes" class="q-section">
+    <h2>15. Questões interativas — concursos anteriores, padrões de PSS e inéditas</h2>
+    <p>As questões abaixo foram organizadas por temas com base em provas e padrões recorrentes de concursos de Educação Infantil. Quando a questão vem de prova anterior, ela aparece como <strong>adaptada/inspirada</strong> para preservar o sentido pedagógico sem depender de cópia literal do enunciado original.</p>
+    <div class="button-row"><button class="utility-btn" onclick="resetQuestions()">Refazer questões</button></div>
+    
+<article class="question-card" id="q1">
+  <div class="q-meta"><strong>Questão 1</strong> · BNCC — direitos de aprendizagem<br><span>Adaptada de prova VUNESP/BNCC e padrão de concursos de Educação Infantil.</span></div>
+  <p class="q-text">Assinale a alternativa que apresenta apenas direitos de aprendizagem e desenvolvimento da Educação Infantil na BNCC.</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> Ler, escrever, contar e competir.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> Conviver, brincar, participar, explorar, expressar e conhecer-se.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> Obedecer, memorizar, copiar, classificar e competir.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Alfabetizar-se, calcular, pesquisar e produzir textos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Estudar disciplinas, fazer provas e obter promoção.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>A BNCC apresenta seis direitos: conviver, brincar, participar, explorar, expressar e conhecer-se. Competir, copiar e fazer provas não são direitos de aprendizagem da Educação Infantil.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q2">
+  <div class="q-meta"><strong>Questão 2</strong> · BNCC — campos de experiências<br><span>Adaptada de questões recorrentes de concursos municipais.</span></div>
+  <p class="q-text">Qual alternativa apresenta corretamente um campo de experiências da Educação Infantil?</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> Matemática.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Ciências da Natureza.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> História e Geografia.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">D</span> Corpo, gestos e movimentos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Língua Portuguesa.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa D.</strong>
+    <p>Corpo, gestos e movimentos é campo de experiências. Matemática, Ciências, História e Língua Portuguesa são componentes/áreas de outras organizações curriculares.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q3">
+  <div class="q-meta"><strong>Questão 3</strong> · BNCC — pegadinha<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Assinale a alternativa que NÃO corresponde a um direito de aprendizagem da BNCC na Educação Infantil.</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> Conviver.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Brincar.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> Participar.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">D</span> Competir.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Explorar.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa D.</strong>
+    <p>Competir não é direito de aprendizagem da BNCC. Essa é uma pegadinha muito comum.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q4">
+  <div class="q-meta"><strong>Questão 4</strong> · BNCC — grupos etários<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Na BNCC, os objetivos de aprendizagem e desenvolvimento da Educação Infantil estão organizados, entre outros elementos, em grupos etários. Assinale a alternativa correta.</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> Bebês; crianças bem pequenas; crianças pequenas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Berçário; maternal; jardim; pré-escola obrigatória.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> Crianças pequenas; adolescentes; jovens.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Creche; alfabetização; ensino seriado.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Ciclo inicial; ciclo intermediário; ciclo final.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>A BNCC organiza em bebês, crianças bem pequenas e crianças pequenas. Redes podem usar nomenclaturas locais, mas a BNCC usa esses grupos.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q5">
+  <div class="q-meta"><strong>Questão 5</strong> · BNCC — código<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">No código EI03EF01, usado na BNCC, a sigla EI indica:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> Ensino Integral.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Educação Inclusiva.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> Educação Infantil.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Ensino Inicial.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Educação Interdisciplinar.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>EI indica Educação Infantil. No código, também aparecem grupo etário, campo de experiência e número do objetivo.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q6">
+  <div class="q-meta"><strong>Questão 6</strong> · BNCC — transição<br><span>Adaptada de questões FAUEL/BNCC sobre transição.</span></div>
+  <p class="q-text">Segundo a lógica da BNCC, a transição da Educação Infantil para o Ensino Fundamental deve:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> antecipar o currículo do 1º ano na pré-escola.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> romper com brincadeiras para iniciar treino formal.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> garantir continuidade, acolhimento afetivo e respeito ao percurso da criança.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> ocorrer por prova de prontidão.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> eliminar registros anteriores da criança.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A transição deve equilibrar mudanças e continuidade, com acolhimento e respeito às aprendizagens já construídas.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q7">
+  <div class="q-meta"><strong>Questão 7</strong> · BNCC — campos<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">O campo &#x27;Escuta, fala, pensamento e imaginação&#x27; relaciona-se principalmente a:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> apenas caligrafia e cópia.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> oralidade, narrativas, literatura, cultura escrita, imaginação e comunicação.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> ensino formal de gramática.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> exclusivamente atividades motoras amplas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> somente cálculos e quantidades.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>O campo envolve linguagem oral, escuta, imaginação, narrativas, literatura e aproximação significativa à cultura escrita.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q8">
+  <div class="q-meta"><strong>Questão 8</strong> · BNCC — campos<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">O campo &#x27;Espaços, tempos, quantidades, relações e transformações&#x27; favorece experiências com:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> somente alfabetização silábica.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> investigação do mundo físico e social, noções matemáticas, tempo, espaço, relações e transformações.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> apenas pintura livre.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> somente obediência a normas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> exclusivamente atividades de higiene.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Esse campo envolve curiosidade sobre fenômenos naturais e socioculturais, quantidades, medidas, formas, tempo, espaço e relações.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q9">
+  <div class="q-meta"><strong>Questão 9</strong> · LDB — finalidade da Educação Infantil<br><span>Inspirada em PSS/ACT Itapoá 2024 — Professor de Educação Infantil.</span></div>
+  <p class="q-text">De acordo com a LDB, a finalidade da Educação Infantil é:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> preparar a criança para provas do Ensino Fundamental.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> desenvolver a leitura e a escrita formal antes dos 5 anos.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> promover o desenvolvimento integral da criança até 5 anos, nos aspectos físico, psicológico, intelectual e social.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> ensinar habilidades matemáticas e científicas de forma disciplinar.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> classificar crianças aptas e não aptas.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>O art. 29 da LDB define a Educação Infantil como primeira etapa da Educação Básica e aponta o desenvolvimento integral como finalidade.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q10">
+  <div class="q-meta"><strong>Questão 10</strong> · LDB — creche e pré-escola<br><span>Adaptada de questões recorrentes de concursos municipais.</span></div>
+  <p class="q-text">Segundo a LDB, a Educação Infantil será oferecida em:</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> creches para crianças de até 3 anos e pré-escolas para crianças de 4 e 5 anos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> creches para crianças de 4 e 5 anos e pré-escolas para até 3 anos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> escolas de Ensino Fundamental para crianças de 0 a 5 anos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> classes de alfabetização obrigatória para todas as crianças de 3 anos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> programas assistenciais fora da Educação Básica.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>O art. 30 da LDB estabelece creches para até 3 anos e pré-escolas para 4 e 5 anos.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q11">
+  <div class="q-meta"><strong>Questão 11</strong> · LDB — avaliação<br><span>Adaptada de provas DECORP/Professor de Educação Infantil 2025.</span></div>
+  <p class="q-text">Na Educação Infantil, a avaliação deve ocorrer:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> por provas bimestrais e nota final.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> por retenção das crianças que não atingirem objetivos.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> por acompanhamento e registro do desenvolvimento, sem objetivo de promoção.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> por exame de prontidão para o Ensino Fundamental.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> por ranking de desempenho.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A formulação segura da LDB é acompanhamento e registro do desenvolvimento, sem objetivo de promoção.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q12">
+  <div class="q-meta"><strong>Questão 12</strong> · LDB — carga horária<br><span>Questão inédita de lei seca.</span></div>
+  <p class="q-text">A LDB prevê que a Educação Infantil será organizada com carga horária mínima anual de:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> 400 horas em 100 dias.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> 600 horas em 150 dias.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> 800 horas distribuídas por mínimo de 200 dias de trabalho educacional.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> 1000 horas em 180 dias.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> sem previsão legal de carga horária.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>O art. 31 prevê carga horária mínima anual de 800 horas, distribuídas por mínimo de 200 dias.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q13">
+  <div class="q-meta"><strong>Questão 13</strong> · LDB — jornada<br><span>Questão inédita de lei seca.</span></div>
+  <p class="q-text">Na Educação Infantil, segundo a LDB, o atendimento em turno parcial e em jornada integral deve ser, respectivamente, de no mínimo:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> 2 horas e 4 horas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> 3 horas e 5 horas.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> 4 horas e 7 horas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> 5 horas e 8 horas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> 6 horas e 10 horas.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A LDB prevê mínimo de 4 horas diárias para turno parcial e 7 horas para jornada integral.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q14">
+  <div class="q-meta"><strong>Questão 14</strong> · ECA — conceito de criança<br><span>Inspirada em PSS/ACT Itapoá 2024.</span></div>
+  <p class="q-text">De acordo com o ECA, considera-se criança a pessoa:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> até 10 anos incompletos.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> até 12 anos incompletos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> até 14 anos incompletos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> até 16 anos incompletos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> até 18 anos incompletos.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>O ECA considera criança a pessoa até 12 anos de idade incompletos.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q15">
+  <div class="q-meta"><strong>Questão 15</strong> · ECA — direito à educação<br><span>Adaptada de questões sobre art. 54 do ECA.</span></div>
+  <p class="q-text">O ECA prevê como dever do Estado assegurar:</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> atendimento em creche e pré-escola às crianças de zero a cinco anos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> pré-escola apenas para crianças de cinco anos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> creche apenas para crianças em situação de pobreza extrema.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Educação Infantil somente mediante seleção.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> atendimento em creche apenas quando houver vaga sobrando.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>O ECA assegura atendimento em creche e pré-escola às crianças de zero a cinco anos.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q16">
+  <div class="q-meta"><strong>Questão 16</strong> · ECA — Conselho Tutelar<br><span>Inspirada em PSS/ACT Itapoá 2024.</span></div>
+  <p class="q-text">O órgão encarregado de zelar pelo cumprimento dos direitos da criança e do adolescente é:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> Secretaria Especial da Infância.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Ministério da Criança.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> Conselho Tutelar.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Associação de Pais.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Direção escolar.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>O Conselho Tutelar zela pelo cumprimento dos direitos previstos no ECA.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q17">
+  <div class="q-meta"><strong>Questão 17</strong> · FUNDEB — percentual<br><span>Adaptada de questões OBJETIVA/FUNDEB 2026.</span></div>
+  <p class="q-text">Segundo a Lei nº 14.113/2020, proporção não inferior a qual percentual dos recursos anuais totais dos Fundos deve ser destinada à remuneração dos profissionais da educação básica em efetivo exercício?</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> 25%.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> 30%.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> 50%.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> 60%.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">E</span> 70%.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa E.</strong>
+    <p>A lei prevê proporção não inferior a 70%, observadas as regras legais.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q18">
+  <div class="q-meta"><strong>Questão 18</strong> · FUNDEB — abrangência<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Sobre o FUNDEB, é correto afirmar que:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> financia apenas o Ensino Fundamental.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> é programa de avaliação de crianças.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> abrange a Educação Básica pública e se relaciona à valorização dos profissionais da educação.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> não alcança a Educação Infantil.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> é exclusivamente federal e não envolve Estados e Distrito Federal.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>O FUNDEB financia a Educação Básica pública e está ligado à valorização dos profissionais da educação.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q19">
+  <div class="q-meta"><strong>Questão 19</strong> · LBI — inclusão<br><span>Inspirada em PSS/ACT Itapoá 2024.</span></div>
+  <p class="q-text">De acordo com a lógica da Lei Brasileira de Inclusão, as instituições de ensino devem:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> criar escolas separadas como regra para estudantes com deficiência.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> adaptar-se às necessidades dos estudantes, promover inclusão plena e eliminar barreiras.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> oferecer Educação Especial apenas no Ensino Fundamental.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> dispensar estudantes com deficiência das atividades coletivas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> cobrar taxa adicional para acessibilidade.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>A LBI valoriza sistema educacional inclusivo, acessibilidade, eliminação de barreiras, participação e aprendizagem.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q20">
+  <div class="q-meta"><strong>Questão 20</strong> · DCNEI — concepção de criança<br><span>Adaptada de questões recorrentes CNE/CEB nº 5/2009.</span></div>
+  <p class="q-text">Segundo as DCNEI, a criança deve ser compreendida como:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> adulto em miniatura.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> sujeito passivo que recebe conteúdos.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> sujeito histórico e de direitos, centro do planejamento curricular.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> ser incapaz de produzir cultura.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> aluno a ser preparado prioritariamente para provas.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A DCNEI define a criança como sujeito histórico e de direitos, que nas relações cotidianas constrói identidade, brinca, aprende e produz cultura.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q21">
+  <div class="q-meta"><strong>Questão 21</strong> · DCNEI — eixos<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">As práticas pedagógicas que compõem a proposta curricular da Educação Infantil devem ter como eixos norteadores:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> provas e relatórios classificatórios.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> interações e brincadeira.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> cópia e memorização.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> disciplina e silêncio.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> alfabetização e cálculo formal.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Interações e brincadeira são eixos estruturantes da Educação Infantil.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q22">
+  <div class="q-meta"><strong>Questão 22</strong> · DCNEI — princípios<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">As propostas pedagógicas de Educação Infantil devem respeitar princípios:</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> éticos, políticos e estéticos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> disciplinares, classificatórios e seletivos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> econômicos, militares e religiosos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> exclusivamente cognitivos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> preparatórios, seletivos e competitivos.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>As DCNEI destacam princípios éticos, políticos e estéticos.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q23">
+  <div class="q-meta"><strong>Questão 23</strong> · Educar-cuidar<br><span>Adaptada de questões CETRO/RCNEI e concursos municipais.</span></div>
+  <p class="q-text">Na Educação Infantil, educar e cuidar devem ser entendidos como:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> ações separadas: cuidar na creche e educar na pré-escola.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> dimensões indissociáveis da prática pedagógica.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> responsabilidades exclusivas da família.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> atividades sem relação com o currículo.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> tarefas de menor importância.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Cuidar e educar são inseparáveis em toda a rotina da Educação Infantil.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q24">
+  <div class="q-meta"><strong>Questão 24</strong> · Direito da criança<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Assinale a alternativa correta sobre creche.</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> É favor oferecido pela prefeitura quando há sobra de recursos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> É apenas assistência social, fora da Educação Básica.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> É direito da criança e integra a Educação Infantil.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> É obrigatória para a família desde o nascimento.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Serve apenas para guarda e alimentação.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A creche integra a Educação Infantil e é direito da criança. A matrícula na creche não é obrigatória para a família, mas a oferta é dever do Estado.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q25">
+  <div class="q-meta"><strong>Questão 25</strong> · Piaget — assimilação<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Uma criança vê uma zebra pela primeira vez e diz “cavalo”. Em Piaget, esse processo exemplifica principalmente:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> mediação simbólica.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> assimilação.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> zona de desenvolvimento proximal.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> afetividade walloniana.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> educação bancária.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>A criança usa um esquema já existente para interpretar uma novidade; isso é assimilação.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q26">
+  <div class="q-meta"><strong>Questão 26</strong> · Piaget — estágio<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Na Educação Infantil, o faz de conta, o uso de objetos simbólicos e a linguagem em expansão relacionam-se principalmente ao estágio piagetiano:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> sensório-motor exclusivamente.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> pré-operatório.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> operatório formal.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> operatório concreto final.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> pós-convencional.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>O estágio pré-operatório, aproximadamente dos 2 aos 7 anos, envolve pensamento simbólico, faz de conta e linguagem.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q27">
+  <div class="q-meta"><strong>Questão 27</strong> · Vygotsky — ZDP<br><span>Adaptada de questões recorrentes sobre Vygotsky.</span></div>
+  <p class="q-text">A Zona de Desenvolvimento Proximal corresponde:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> ao que a criança jamais conseguirá aprender.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> ao que a criança faz apenas sozinha.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> ao que a criança consegue fazer com ajuda de adulto ou colega mais experiente.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> à maturação biológica sem influência social.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> à classificação por idade cronológica.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A ZDP é a distância entre o que a criança já faz sozinha e o que consegue realizar com ajuda.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q28">
+  <div class="q-meta"><strong>Questão 28</strong> · Vygotsky — mediação<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Uma professora oferece pistas, pergunta, organiza materiais e ajuda a criança a avançar sem dar a resposta pronta. Essa prática aproxima-se do conceito de:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> retenção classificatória.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> mediação.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> egocentrismo moral.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> espontaneísmo absoluto.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> controle punitivo.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Em Vygotsky, mediação envolve ajuda intencional, linguagem, instrumentos culturais e interação social.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q29">
+  <div class="q-meta"><strong>Questão 29</strong> · Wallon — afetividade<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Na perspectiva de Wallon, afetividade, movimento e cognição:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> devem ser separados para evitar confusão.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> integram o desenvolvimento da pessoa completa.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> só importam no berçário.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> atrapalham a aprendizagem intelectual.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> substituem toda forma de planejamento.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Wallon compreende o desenvolvimento de forma integrada: afetividade, motricidade, cognição e meio social.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q30">
+  <div class="q-meta"><strong>Questão 30</strong> · Montessori<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Materiais acessíveis, ambiente preparado, autonomia com limites e adulto observador são ideias associadas a:</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> Montessori.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Skinner exclusivamente.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> avaliação classificatória.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> educação bancária.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> exame de prontidão.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>Montessori é associada a ambiente preparado, autonomia, materiais adequados e adulto observador.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q31">
+  <div class="q-meta"><strong>Questão 31</strong> · Froebel<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">O jardim de infância, a valorização do brincar e materiais conhecidos como &#x27;dons&#x27; relacionam-se a:</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> Froebel.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Wallon.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> Paulo Freire.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> FUNDEB.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> LBI.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>Froebel é referência histórica do jardim de infância e da valorização do brincar.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q32">
+  <div class="q-meta"><strong>Questão 32</strong> · Paulo Freire<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Uma prática pedagógica baseada no diálogo, escuta, problematização e valorização dos saberes dos sujeitos aproxima-se de:</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> Paulo Freire.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> mecanicismo puro.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> avaliação seletiva.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> assistencialismo sem educação.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> treinamento por cópia.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>Paulo Freire é referência para educação dialógica, problematizadora e crítica.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q33">
+  <div class="q-meta"><strong>Questão 33</strong> · Brincadeira<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Na Educação Infantil, a brincadeira deve ser compreendida como:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> perda de tempo em relação aos conteúdos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> atividade a ser usada apenas como recompensa.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> linguagem da infância e eixo das práticas pedagógicas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> momento sem valor para o desenvolvimento.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> substituta de todo planejamento docente.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>Brincar é direito, linguagem e eixo estruturante, mas exige ambiente, observação e intencionalidade.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q34">
+  <div class="q-meta"><strong>Questão 34</strong> · Linguagem<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Sobre linguagem na Educação Infantil, assinale a correta.</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> Resume-se à alfabetização formal.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> Inclui fala, escuta, gesto, desenho, música, corpo, brincadeira, narrativa e contato com a cultura escrita.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> Deve ser trabalhada apenas por cópia.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Só começa após a criança ler convencionalmente.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Não envolve bebês.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Linguagem na infância é ampla e inclui múltiplas formas de expressão, inclusive nos bebês.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q35">
+  <div class="q-meta"><strong>Questão 35</strong> · Movimento<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Na Educação Infantil, o movimento:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> é bagunça e deve ser evitado.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> é dimensão do desenvolvimento e forma de expressão e conhecimento do mundo.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> serve apenas para recreio.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> não precisa ser planejado.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> prejudica a linguagem.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Movimento é linguagem, expressão e forma de aprender; precisa de ambientes seguros e experiências planejadas.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q36">
+  <div class="q-meta"><strong>Questão 36</strong> · Faz de conta<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Ao brincar de mercado, a criança negocia papéis, usa linguagem, representa situações sociais e cria regras. Essa brincadeira contribui principalmente para:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> apenas coordenação motora fina.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> desenvolvimento simbólico, social, linguístico e afetivo.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> treino para prova escrita.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> classificação por desempenho.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> reprodução mecânica de letras.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>O faz de conta integra linguagem, imaginação, cultura, regras, emoções e relações sociais.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q37">
+  <div class="q-meta"><strong>Questão 37</strong> · Avaliação — instrumentos<br><span>Inspirada em PSS/ACT Itapoá 2024 e DECORP 2025.</span></div>
+  <p class="q-text">De acordo com a concepção adequada de avaliação na Educação Infantil, são instrumentos coerentes:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> provas, notas e reprovação.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> relatórios descritivos, observações contínuas, portfólios e registros.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> testes padronizados mensais e ranking.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> exame final de prontidão.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> avaliação apenas no último dia de aula.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>A avaliação deve acompanhar e registrar o desenvolvimento, sem finalidade classificatória.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q38">
+  <div class="q-meta"><strong>Questão 38</strong> · Avaliação — função<br><span>Adaptada de provas DECORP/Professor de Educação Infantil 2025.</span></div>
+  <p class="q-text">A principal função da avaliação na Educação Infantil é:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> classificar crianças em níveis rígidos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> determinar repetência.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> mensurar por testes padronizados.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">D</span> acompanhar o desenvolvimento integral e orientar a prática pedagógica.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> selecionar crianças para o Ensino Fundamental.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa D.</strong>
+    <p>A avaliação acompanha o desenvolvimento e ajuda a replanejar, sem classificação ou promoção.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q39">
+  <div class="q-meta"><strong>Questão 39</strong> · Avaliação — prática<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Se muitas crianças não se envolvem em uma roda de conversa longa, uma postura avaliativa adequada é:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> registrar todas como desinteressadas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> aplicar prova oral individual.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> rever tempo, proposta, materiais, horário, mediação e participação das crianças.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> punir o grupo sem parque.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> classificar as crianças como imaturas.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A avaliação também ajuda a repensar a prática pedagógica e as condições oferecidas.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q40">
+  <div class="q-meta"><strong>Questão 40</strong> · Avaliação — proibido<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Na Educação Infantil, é inadequado:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> registrar falas e brincadeiras.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> montar portfólio.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> conversar com famílias.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">D</span> reter criança por não reconhecer letras.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> observar interações.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa D.</strong>
+    <p>Não há reprovação ou retenção por desempenho na Educação Infantil.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q41">
+  <div class="q-meta"><strong>Questão 41</strong> · PPP<br><span>Inspirada em PSS/ACT Itapoá 2024.</span></div>
+  <p class="q-text">O Projeto Político-Pedagógico deve ser entendido como:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> documento apenas administrativo.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> plano coletivo que orienta a educação implementada pela escola.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> programa de avaliação de professores.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> documento sem relevância para a gestão.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> arquivo feito exclusivamente por consultoria externa.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>O PPP expressa identidade, objetivos, concepções, organização e compromissos coletivos da escola.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q42">
+  <div class="q-meta"><strong>Questão 42</strong> · Gestão democrática<br><span>Adaptada de questões CEBRASPE/gestão democrática.</span></div>
+  <p class="q-text">A gestão democrática pressupõe:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> relações verticais e decisões centralizadas.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> participação, diálogo, corresponsabilidade e construção coletiva.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> exclusão das famílias do processo escolar.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> PPP imposto pela direção.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> ausência de planejamento.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Gestão democrática envolve participação da comunidade escolar e decisões coletivas, conforme normas do sistema.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q43">
+  <div class="q-meta"><strong>Questão 43</strong> · Plano de trabalho<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">O plano de trabalho docente na Educação Infantil deve:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> ser improvisado diariamente.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> prever objetivos, experiências, materiais, espaços, mediação, registros e avaliação.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> substituir brincadeiras por cópias.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> ignorar a proposta pedagógica.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> ter foco exclusivo em alfabetização formal.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>O plano traduz a proposta pedagógica em experiências intencionais e avaliáveis.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q44">
+  <div class="q-meta"><strong>Questão 44</strong> · Rotina<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Uma rotina adequada na Educação Infantil deve:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> ser rígida, sem considerar ritmos infantis.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> combinar previsibilidade, flexibilidade, cuidado, brincadeira, exploração e descanso.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> eliminar transições e brincadeiras.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> manter todos sentados por longos períodos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> servir apenas para controle disciplinar.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Rotina boa dá segurança, mas respeita ritmos, experiências e necessidades das crianças.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q45">
+  <div class="q-meta"><strong>Questão 45</strong> · RCNEI — volumes<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">O RCNEI organiza seus volumes, entre outros aspectos, em:</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> Volume 1 Introdução; Volume 2 Formação Pessoal e Social; Volume 3 Conhecimento de Mundo.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Volume 1 Matemática; Volume 2 História; Volume 3 Geografia.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> Volume 1 CREP; Volume 2 FUNDEB; Volume 3 ECA.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Volume único obrigatório da BNCC.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Apenas campos de experiências.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>O RCNEI possui três volumes: Introdução, Formação Pessoal e Social e Conhecimento de Mundo.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q46">
+  <div class="q-meta"><strong>Questão 46</strong> · RCNEI — Formação Pessoal e Social<br><span>Adaptada de questões CETRO/RCNEI.</span></div>
+  <p class="q-text">No RCNEI, identidade e autonomia relacionam-se principalmente ao âmbito:</p>
+  <div class="options">
+    <button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">A</span> Formação Pessoal e Social.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Conhecimento de Mundo exclusivamente matemático.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> Ensino Fundamental.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Avaliação classificatória.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Educação financeira.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa A.</strong>
+    <p>O Volume 2 do RCNEI trata do âmbito Formação Pessoal e Social, com eixo identidade e autonomia.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q47">
+  <div class="q-meta"><strong>Questão 47</strong> · RCNEI x BNCC<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Assinale a alternativa correta.</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> BNCC e RCNEI são o mesmo documento.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> No RCNEI aparecem eixos como movimento, música, artes visuais, linguagem oral e escrita, natureza e sociedade e matemática; na BNCC, a Educação Infantil organiza-se por campos de experiências.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> A BNCC revogou a LDB.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> O RCNEI organiza a Educação Infantil por disciplinas obrigatórias e provas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> A BNCC não se aplica à Educação Infantil.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>O RCNEI e a BNCC têm estruturas diferentes; a BNCC usa direitos e campos de experiências.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q48">
+  <div class="q-meta"><strong>Questão 48</strong> · Referencial do Paraná<br><span>Questão inédita no padrão PSS Paraná.</span></div>
+  <p class="q-text">O Referencial Curricular do Paraná:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> substitui a BNCC nacional.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> segue a estrutura da BNCC, contextualizando princípios, direitos e orientações para o território paranaense.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> é documento exclusivo do Ensino Médio.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> elimina interações e brincadeira.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> não trata de Educação Infantil.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>O Referencial do Paraná dialoga com a BNCC e contextualiza o currículo para o estado.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q49">
+  <div class="q-meta"><strong>Questão 49</strong> · CREP<br><span>Questão inédita no padrão PSS Paraná.</span></div>
+  <p class="q-text">Sobre o CREP, assinale a correta.</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> Substitui a LDB.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> É o documento central da Educação Infantil, acima da BNCC.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> Complementa o Referencial Curricular do Paraná e traz conteúdos essenciais, especialmente por componente curricular do Ensino Fundamental.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Elimina o PPP da escola.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> É lei federal sobre financiamento.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>O CREP complementa o Referencial Curricular do Paraná e é mais ligado à organização de conteúdos do Ensino Fundamental.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q50">
+  <div class="q-meta"><strong>Questão 50</strong> · Educação Especial<br><span>Inspirada em PSS/ACT Itapoá 2024.</span></div>
+  <p class="q-text">Conforme a LDB e a perspectiva inclusiva, a Educação Especial deve ser oferecida:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> exclusivamente em escolas separadas.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> preferencialmente na rede regular de ensino, com recursos e apoio quando necessários.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> apenas no Ensino Médio.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> somente para crianças até 12 anos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> sem relação com o PPP.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>A Educação Especial é modalidade transversal, ofertada preferencialmente na rede regular.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q51">
+  <div class="q-meta"><strong>Questão 51</strong> · Inclusão<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Inclusão escolar significa:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> apenas matricular a criança.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> garantir acesso, permanência, participação, aprendizagem, acessibilidade e eliminação de barreiras.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> separar todos os estudantes com deficiência.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> dispensar planejamento pedagógico.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> oferecer atividades paralelas sem integração.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>Inclusão real exige participação e aprendizagem, não apenas presença física.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q52">
+  <div class="q-meta"><strong>Questão 52</strong> · Relações étnico-raciais<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Na Educação Infantil, uma prática adequada para educação das relações étnico-raciais é:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> tratar diversidade apenas no mês de novembro.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> evitar o tema para não gerar conflitos.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> garantir representatividade em livros, brinquedos, imagens, histórias e combater atitudes racistas.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> usar estereótipos como recurso pedagógico.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> dizer que crianças pequenas não percebem diferenças.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A prática deve valorizar diversidade e combater racismo cotidianamente, não apenas em datas comemorativas.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q53">
+  <div class="q-meta"><strong>Questão 53</strong> · Educação do Campo<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Na Educação Infantil do Campo, é adequado:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> ignorar saberes da comunidade local.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">B</span> valorizar cultura, território, natureza, modos de vida e experiências das crianças do campo.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">C</span> copiar integralmente a rotina urbana sem adaptação.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> tratar a cultura rural como atraso.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> excluir famílias do planejamento.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa B.</strong>
+    <p>A Educação do Campo respeita sujeitos, cultura, território, calendário, modos de vida e saberes locais.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q54">
+  <div class="q-meta"><strong>Questão 54</strong> · Princípios DCNEI<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Sensibilidade, criatividade, ludicidade e liberdade de expressão artística e cultural correspondem aos princípios:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> éticos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> políticos.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> estéticos.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> classificatórios.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> financeiros.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>Nas DCNEI, esses elementos correspondem aos princípios estéticos.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q55">
+  <div class="q-meta"><strong>Questão 55</strong> · Neuroaprendizagem<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Uma prática coerente com neuroaprendizagem na Educação Infantil é:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> manter crianças sentadas por longos períodos para treinar atenção.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> usar medo para acelerar aprendizagem.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> oferecer movimento, brincadeira, linguagem, vínculo, exploração e interação responsiva.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> separar crianças por estilos fixos de aprendizagem.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> substituir brincadeiras por apostilas desde o berçário.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>Experiências significativas, vínculo, movimento, linguagem e interação responsiva favorecem aprendizagem.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q56">
+  <div class="q-meta"><strong>Questão 56</strong> · Neuromitos<br><span>Questão inédita no padrão PSS.</span></div>
+  <p class="q-text">Assinale a alternativa que apresenta um neuromito.</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> Crianças aprendem em interação com adultos e ambiente.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> Brincadeira e movimento contribuem para o desenvolvimento.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> Cada criança aprende exclusivamente por um estilo fixo: visual, auditivo ou cinestésico.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> Vínculo afetivo pode favorecer a exploração.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> Sono, alimentação e segurança influenciam o desenvolvimento.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A ideia de estilos fixos e exclusivos de aprendizagem é um neuromito e pode empobrecer a prática pedagógica.</p>
+  </div>
+</article>
+
+<article class="question-card" id="q57">
+  <div class="q-meta"><strong>Questão 57</strong> · Formação continuada<br><span>Inspirada em PSS/ACT Itapoá 2024.</span></div>
+  <p class="q-text">A formação continuada de professores deve ser compreendida como prática:</p>
+  <div class="options">
+    <button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">A</span> inexistente, pois a graduação basta.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">B</span> oportuna e esporádica, sem relação com a escola.</button><button class="option" data-correct="true" onclick="answerQuestion(this)"><span class="letter">C</span> constante, contextualizada e adaptável às necessidades da equipe.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">D</span> apenas burocrática para cumprir calendário.</button><button class="option" data-correct="false" onclick="answerQuestion(this)"><span class="letter">E</span> restrita a palestras sem reflexão sobre a prática.</button>
+  </div>
+  <div class="feedback" hidden>
+    <strong>Resposta verdadeira: alternativa C.</strong>
+    <p>A formação continuada deve dialogar com necessidades reais da equipe, da escola e das crianças.</p>
+  </div>
+</article>
+  </section>
+  <section id="referencias">
+    <h2>Referências e fontes oficiais de estudo</h2>
+    <p>Use estas fontes para revisão final e conferência da legislação/documentos.</p>
+    <ul>
+      <li><a class="source" href="https://www.planalto.gov.br/ccivil_03/leis/l9394.htm" target="_blank">Lei nº 9.394/1996 — LDB</a></li>
+      <li><a class="source" href="https://www.planalto.gov.br/ccivil_03/leis/l8069.htm" target="_blank">Lei nº 8.069/1990 — ECA</a></li>
+      <li><a class="source" href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/Lei/L14113.htm" target="_blank">Lei nº 14.113/2020 — FUNDEB</a></li>
+      <li><a class="source" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank">Lei nº 13.146/2015 — Lei Brasileira de Inclusão</a></li>
+      <li><a class="source" href="https://basenacionalcomum.mec.gov.br/images/BNCC_EI_EF_110518_versaofinal_site.pdf" target="_blank">BNCC — Educação Infantil e Ensino Fundamental</a></li>
+      <li><a class="source" href="https://portal.mec.gov.br/seb/arquivos/pdf/rcnei_vol1.pdf" target="_blank">RCNEI — Volume 1</a></li>
+      <li><a class="source" href="https://portal.mec.gov.br/seb/arquivos/pdf/volume2.pdf" target="_blank">RCNEI — Volume 2</a></li>
+      <li><a class="source" href="https://portal.mec.gov.br/seb/arquivos/pdf/volume3.pdf" target="_blank">RCNEI — Volume 3</a></li>
+      <li><a class="source" href="https://portal.mec.gov.br/dmdocuments/rceb005_09.pdf" target="_blank">Resolução CNE/CEB nº 5/2009 — DCNEI</a></li>
+      <li><a class="source" href="https://www.referencialcurriculardoparana.pr.gov.br/Educacao-Infantil" target="_blank">Referencial Curricular do Paraná — Educação Infantil</a></li>
+      <li><a class="source" href="https://www.educacao.pr.gov.br/Pagina/Curriculo-da-Rede-Estadual-Paranaense" target="_blank">CREP — Currículo da Rede Estadual Paranaense</a></li>
+      <li><a class="source" href="https://educaitapoa.sc.gov.br/images/editais/2024/EDITAL_49_PSS_ACT_2025/provas/PROVA_EDUCAO_INFANTIL_EDITAL_49_-_2024_PARA_PUBLICAO.pdf" target="_blank">Exemplo de prova PSS/ACT Educação Infantil 2024/2025</a></li>
+    </ul>
+  </section>
+  </div>
+  <div class="footer">Apostila elaborada para estudo de Conhecimentos Específicos — Educação Infantil. Revise os quadros de pegadinhas e refaça as questões até conseguir justificar a alternativa correta sem olhar o comentário.</div>
+</main>
+</div>
+<script>
+function answerQuestion(btn) {
+  const card = btn.closest('.question-card');
+  const buttons = card.querySelectorAll('.option');
+  buttons.forEach(b => {
+    b.disabled = true;
+    if (b.dataset.correct === 'true') b.classList.add('correct');
+  });
+  if (btn.dataset.correct !== 'true') btn.classList.add('incorrect');
+  const feedback = card.querySelector('.feedback');
+  feedback.hidden = false;
+}
+function resetQuestions() {
+  document.querySelectorAll('.question-card').forEach(card => {
+    card.querySelectorAll('.option').forEach(b => { b.disabled = false; b.classList.remove('correct','incorrect'); });
+    const feedback = card.querySelector('.feedback');
+    if (feedback) feedback.hidden = true;
+  });
+  window.location.hash = '#questoes';
+}
+</script>
+</body>
+</html>

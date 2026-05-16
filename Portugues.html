@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apostila Completa de Português — Curso Preparatório PSS Cianorte 2026</title>
+<style>
+:root {
+  --bg:#f2e7d8; --paper:#fffdf7; --ink:#241f1b; --muted:#6c6258;
+  --brand:#8b1e24; --brand2:#b12b33; --dark:#551015; --gold:#c99035;
+  --green:#267454; --blue:#285f8f; --purple:#7252a3; --line:#e1d1bd;
+  --ok:#e7f5ee; --bad:#fae7e8; --shadow:0 16px 42px rgba(46,31,19,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.68;background:radial-gradient(circle at 8% 0%,rgba(201,144,53,.25),transparent 26%),radial-gradient(circle at 94% 2%,rgba(139,30,36,.15),transparent 28%),linear-gradient(180deg,#faf0e4,var(--bg));}
+.progress{position:fixed;top:0;left:0;width:100%;height:6px;background:rgba(255,255,255,.65);z-index:50}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--gold))}
+.wrap{max-width:1180px;margin:auto;padding:28px 20px 76px}
+.hero{min-height:500px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;border-radius:34px;padding:58px 48px;color:white;box-shadow:var(--shadow);background:linear-gradient(135deg,var(--dark),var(--brand) 56%,var(--gold));}
+.hero:after{content:"CONTEÚDO";position:absolute;right:-10px;bottom:8px;font-size:clamp(3.4rem,11vw,8rem);font-weight:900;letter-spacing:-6px;opacity:.11}
+.badge{display:inline-block;width:max-content;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 14px;font-weight:900;margin-bottom:18px}
+h1{font-size:clamp(2rem,5.6vw,4.9rem);line-height:1.05;margin:0 0 18px;letter-spacing:-2px;max-width:1000px}
+.hero p{font-size:1.15rem;max-width:940px;color:rgba(255,255,255,.92)}
+.herogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.hcard{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:16px;backdrop-filter:blur(10px)}
+.hcard strong{display:block;font-size:1.7rem}
+.toc, section{background:rgba(255,253,247,.96);border:1px solid var(--line);border-radius:24px;box-shadow:0 8px 22px rgba(46,31,19,.08);margin:24px 0;padding:28px}
+.toc{position:relative;top:auto}
+.toc h2, section h2{color:var(--brand);margin:0 0 14px;line-height:1.2}
+.tocgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.toc a{display:block;text-decoration:none;color:var(--ink);background:#fff7ec;border:1px solid var(--line);border-radius:14px;padding:12px;font-weight:800}
+.toc a:hover{border-color:var(--gold);color:var(--brand)}
+section{position:relative;overflow:hidden}
+section:before{content:"";position:absolute;top:0;left:0;right:0;height:7px;background:linear-gradient(90deg,var(--brand),var(--gold))}
+section h2{font-size:clamp(1.65rem,3vw,2.35rem);border-bottom:2px solid #f1e3cf;padding-bottom:14px}
+h3{color:var(--dark);margin:30px 0 12px;font-size:1.35rem}
+h4{color:var(--blue);margin:20px 0 8px}
+p{margin:0 0 14px}
+ul,ol{padding-left:24px}
+li{margin:7px 0}
+.box{border-left:7px solid var(--blue);background:#eaf2fb;border-radius:18px;padding:17px 19px;margin:18px 0}
+.box.warn{border-color:var(--brand);background:#fae7e8}
+.box.tip{border-color:var(--green);background:#e7f5ee}
+.box.gold{border-color:var(--gold);background:#fff4db}
+.label{display:inline-block;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:999px;padding:5px 10px;font-size:.75rem;font-weight:900;text-transform:uppercase;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:linear-gradient(180deg,#fffaf2,#fff5e7);border:1px solid var(--line);border-radius:18px;padding:18px}
+table{width:100%;border-collapse:collapse;margin:18px 0;background:white;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+th,td{padding:12px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:linear-gradient(135deg,var(--brand),var(--dark));color:white}
+tr:nth-child(even) td{background:#fffaf2}
+.quizbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:#fff7ec;border:1px solid var(--line);border-radius:18px;padding:16px;margin:20px 0}
+.score{font-weight:900;color:var(--brand);font-size:1.4rem}
+button{border:0;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--dark));color:#fff;font-weight:900;padding:11px 16px;cursor:pointer}
+.q{background:#fffaf2;border:1px solid var(--line);border-radius:20px;padding:20px;margin:17px 0}
+.qhead{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.qnum{flex:0 0 auto;display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--brand);color:#fff;font-weight:900}
+.topic{display:inline-block;margin-bottom:8px;color:var(--muted);font-weight:900;text-transform:uppercase;font-size:.8rem;letter-spacing:.06em}
+.alt{list-style:none;padding:0;margin:12px 0 0}
+.alt li{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:13px 14px 13px 54px;cursor:pointer;transition:.15s;box-shadow:0 4px 10px rgba(46,31,19,.03)}
+.alt li:hover{transform:translateY(-1px);border-color:var(--gold)}
+.alt li:before{content:attr(data-letter);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:#f2e5d2;color:var(--brand);display:grid;place-items:center;font-weight:900}
+.alt li.correct{background:var(--ok);border-color:#8fc3ab}
+.alt li.correct:before{content:"✓";background:var(--green);color:white}
+.alt li.wrong{background:var(--bad);border-color:#dc9ca1}
+.alt li.wrong:before{content:"✕";background:var(--brand);color:white}
+.alt li.dim{opacity:.76}
+.feedback{display:none;margin-top:12px;border-radius:12px;padding:13px 14px;font-weight:700}
+.feedback.show{display:block}
+.feedback.ok{background:var(--ok);border:1px solid #b7dbc9;color:#1f533c}
+.feedback.bad{background:var(--bad);border:1px solid #e3b4b8;color:#6e1b21}
+.exp{display:none;margin-top:10px;background:white;border:1px dashed var(--line);border-radius:12px;padding:13px 14px}
+.q.done .exp{display:block}
+.printbar{position:sticky;bottom:16px;display:flex;justify-content:center;z-index:20;pointer-events:none}
+.printbar button{pointer-events:auto;box-shadow:0 12px 24px rgba(85,16,21,.25)}
+footer{text-align:center;color:var(--muted);padding:28px}
+@media(max-width:850px){.herogrid,.tocgrid,.grid,.grid3{grid-template-columns:1fr}.hero{padding:34px 22px;min-height:auto}.wrap{padding:16px 12px 60px}section,.toc{padding:22px 18px}table{display:block;overflow-x:auto}}
+@media print{.progress,.printbar,button{display:none}body{background:white}.wrap{max-width:none;padding:0}section,.toc,.hero{box-shadow:none;border-radius:0;break-inside:avoid}.q{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="progress"><span id="bar"></span></div>
+<div class="wrap">
+<header class="hero">
+  <span class="badge">Curso Preparatório • PSS Cianorte/PR 2026 • Língua Portuguesa</span>
+  <h1>Apostila completa de conteúdo de Português</h1>
+  <p>Sem cronograma e sem enrolação: conteúdo completo do edital, teoria aprofundada, exemplos de prova, pegadinhas, quadros de revisão, checklist e questões interativas comentadas.</p>
+  <div class="herogrid">
+    <div class="hcard"><strong>12</strong><span>capítulos de conteúdo</span></div>
+    <div class="hcard"><strong>40</strong><span>questões interativas</span></div>
+    <div class="hcard"><strong>100%</strong><span>itens do edital</span></div>
+    <div class="hcard"><strong>0</strong><span>enrolação</span></div>
+  </div>
+</header>
+
+<nav class="toc">
+  <h2>Sumário</h2>
+  <div class="tocgrid">
+    <a href="#estrategia">1. Estratégia de prova</a>
+    <a href="#interpretacao">2. Interpretação de texto</a>
+    <a href="#coesao">3. Coesão textual</a>
+    <a href="#morfologia">4. Morfologia</a>
+    <a href="#sintaxe">5. Sintaxe</a>
+    <a href="#periodo">6. Período composto</a>
+    <a href="#concordancia">7. Concordância</a>
+    <a href="#crase">8. Crase</a>
+    <a href="#pontuacao">9. Pontuação</a>
+    <a href="#acentuacao">10. Acentuação</a>
+    <a href="#pegadinhas">11. Pegadinhas</a>
+    <a href="#checklist">12. Checklist</a>
+    <a href="#questoes">13. Questões interativas</a>
+  </div>
+</nav>
+
+<section id="estrategia">
+<h2>1. Estratégia de prova: como Português derruba candidato</h2>
+<p>Em prova de PSS, a questão de Português raramente cobra apenas memorização. A banca testa leitura, atenção ao comando e aplicação de regra no contexto. O candidato precisa aprender a identificar a armadilha antes de marcar a alternativa.</p>
+
+<h3>1.1 Tipos de alternativa errada</h3>
+<table>
+<thead><tr><th>Tipo de erro</th><th>Como aparece</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Exagero</td><td>usa sempre, nunca, todos, somente, garante</td><td>“A leitura sempre garante aprendizagem.”</td></tr>
+<tr><td>Contradição</td><td>diz o contrário do texto</td><td>Texto valoriza o brincar; alternativa diz que brincar deve ser evitado.</td></tr>
+<tr><td>Extrapolação</td><td>traz informação que parece verdadeira, mas não está no texto</td><td>Texto fala de leitura; alternativa fala de alfabetização obrigatória.</td></tr>
+<tr><td>Redução indevida</td><td>transforma detalhe em ideia central</td><td>Um exemplo vira tese principal.</td></tr>
+<tr><td>Troca lógica</td><td>confunde causa, consequência, oposição ou conclusão</td><td>“Embora” tratado como causa.</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="label">Regra prática</span><p>Quando duas alternativas parecem corretas, a certa geralmente é a mais fiel ao texto e a mais precisa gramaticalmente. A alternativa “mais bonita” nem sempre é a correta.</p></div>
+
+<h3>1.2 Comandos que mudam a resposta</h3>
+<table>
+<thead><tr><th>Comando</th><th>O que exige</th><th>Erro comum</th></tr></thead>
+<tbody>
+<tr><td>Segundo o texto</td><td>resposta explícita ou paráfrase fiel</td><td>usar opinião pessoal</td></tr>
+<tr><td>Infere-se</td><td>conclusão possível a partir de pistas</td><td>inventar informação</td></tr>
+<tr><td>Ideia central</td><td>síntese da mensagem principal</td><td>marcar detalhe secundário</td></tr>
+<tr><td>O termo retoma</td><td>identificar referente anterior ou posterior</td><td>olhar só a frase isolada</td></tr>
+<tr><td>Sem alteração de sentido</td><td>testar substituição no contexto</td><td>trocar conectivo por outro de valor diferente</td></tr>
+<tr><td>Norma-padrão</td><td>aplicar regra culta</td><td>responder pelo uso informal</td></tr>
+</tbody>
+</table>
+</section>
+<section id="interpretacao">
+<h2>2. Análise e interpretação de texto</h2>
+
+<h3>2.1 Compreensão geral</h3>
+<p>Compreender um texto é identificar o que ele afirma, como afirma e com qual finalidade. Em provas, a compreensão geral costuma aparecer com perguntas como: “O texto trata principalmente de...”, “A ideia central é...”, “De acordo com o texto...” ou “A finalidade do texto é...”.</p>
+
+<h3>2.2 Assunto, tema, tese e ideia central</h3>
+<table>
+<thead><tr><th>Conceito</th><th>Definição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Assunto</td><td>campo geral tratado</td><td>leitura na infância</td></tr>
+<tr><td>Tema</td><td>recorte específico do assunto</td><td>papel da leitura compartilhada na Educação Infantil</td></tr>
+<tr><td>Tese</td><td>posição defendida</td><td>a leitura compartilhada deve integrar a rotina</td></tr>
+<tr><td>Ideia central</td><td>síntese da mensagem principal</td><td>a leitura compartilhada favorece linguagem, escuta e construção de sentidos</td></tr>
+</tbody>
+</table>
+
+<div class="box gold"><span class="label">Exemplo comentado</span><p><em>A leitura compartilhada deve fazer parte da rotina escolar, pois favorece a ampliação do vocabulário, a escuta atenta e a construção de sentidos coletivos.</em></p><p><strong>Assunto:</strong> leitura compartilhada. <strong>Tese:</strong> deve fazer parte da rotina. <strong>Argumento:</strong> favorece vocabulário, escuta e sentidos coletivos.</p></div>
+
+<h3>2.3 Ponto de vista do autor</h3>
+<p>O ponto de vista aparece em marcas de avaliação: é necessário, é fundamental, deve, precisa, convém, é insuficiente, é inadequado. Em textos argumentativos, a banca pode pedir a posição defendida pelo autor.</p>
+
+<h3>2.4 Argumentação</h3>
+<p>Argumentar é defender uma ideia com razões. A estrutura básica é:</p>
+<ul>
+<li><strong>Tese:</strong> o que se defende.</li>
+<li><strong>Argumento:</strong> por que se defende.</li>
+<li><strong>Exemplo:</strong> situação que ilustra.</li>
+<li><strong>Conclusão:</strong> fechamento ou consequência.</li>
+</ul>
+
+<h3>2.5 Inferência</h3>
+<p>Inferência é conclusão permitida pelo texto. Ela não está escrita literalmente, mas pode ser deduzida. A inferência correta não exagera e não contradiz.</p>
+<table>
+<thead><tr><th>Texto diz</th><th>Inferência possível</th><th>Erro de extrapolação</th></tr></thead>
+<tbody>
+<tr><td>“pode contribuir”</td><td>há possibilidade de contribuição</td><td>sempre garante</td></tr>
+<tr><td>“não se limita a”</td><td>inclui, mas vai além</td><td>exclui totalmente</td></tr>
+<tr><td>“é necessário considerar”</td><td>é fator relevante</td><td>é o único fator</td></tr>
+</tbody>
+</table>
+
+<h3>2.6 Estrutura e organização dos parágrafos</h3>
+<p>Um parágrafo costuma ter uma ideia-núcleo. As demais frases explicam, exemplificam ou justificam essa ideia. Em textos maiores, observe a progressão:</p>
+<ul>
+<li>primeiro parágrafo: apresentação do tema;</li>
+<li>parágrafos intermediários: desenvolvimento e argumentos;</li>
+<li>último parágrafo: conclusão, crítica ou encaminhamento.</li>
+</ul>
+</section>
+<section id="coesao">
+<h2>3. Coesão textual e elementos de ligação</h2>
+<p>Coesão é a ligação entre partes do texto. É um dos assuntos mais cobrados porque mistura interpretação e gramática.</p>
+
+<h3>3.1 Anáfora, catáfora, elipse e substituição lexical</h3>
+<table>
+<thead><tr><th>Recurso</th><th>Definição</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Anáfora</td><td>retoma algo já mencionado</td><td>A professora propôs uma roda. <strong>Essa atividade</strong> envolveu a turma.</td></tr>
+<tr><td>Catáfora</td><td>anuncia algo que virá depois</td><td><strong>Isto</strong> é essencial: planejar com intenção.</td></tr>
+<tr><td>Elipse</td><td>omissão recuperável pelo contexto</td><td>A coordenadora revisou os registros; a professora, o planejamento.</td></tr>
+<tr><td>Substituição lexical</td><td>retomada por outra expressão</td><td>A leitura compartilhada... <strong>essa prática</strong>...</td></tr>
+</tbody>
+</table>
+
+<h3>3.2 Pronomes que mais caem</h3>
+<table>
+<thead><tr><th>Pronome</th><th>Uso</th><th>Pegadinha</th></tr></thead>
+<tbody>
+<tr><td>esse/essa/isso</td><td>retoma algo já citado</td><td>confundir com algo posterior</td></tr>
+<tr><td>este/esta/isto</td><td>pode anunciar algo que virá</td><td>achar que sempre retoma anterior</td></tr>
+<tr><td>onde</td><td>retoma lugar físico</td><td>usar com ideia abstrata sem valor locativo</td></tr>
+<tr><td>cujo/cuja</td><td>indica posse/relação</td><td>usar “cujo o”, forma inadequada</td></tr>
+<tr><td>que</td><td>pode ser relativo ou conjunção</td><td>classificar sempre igual</td></tr>
+</tbody>
+</table>
+
+<h3>3.3 Conectivos e valores semânticos</h3>
+<table>
+<thead><tr><th>Valor</th><th>Conectivos</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Causa</td><td>porque, pois, já que, visto que, como</td><td>Como choveu, a atividade foi interna.</td></tr>
+<tr><td>Conclusão</td><td>portanto, logo, por isso, assim</td><td>Estudou; portanto, acertou.</td></tr>
+<tr><td>Oposição</td><td>mas, porém, contudo, entretanto</td><td>Estudou, mas errou.</td></tr>
+<tr><td>Concessão</td><td>embora, ainda que, mesmo que</td><td>Embora cansada, estudou.</td></tr>
+<tr><td>Condição</td><td>se, caso, desde que</td><td>Se revisar, terá segurança.</td></tr>
+<tr><td>Finalidade</td><td>para que, a fim de que</td><td>Explicou para que todos entendessem.</td></tr>
+<tr><td>Tempo</td><td>quando, enquanto, assim que</td><td>Quando chegou, iniciou a reunião.</td></tr>
+</tbody>
+</table>
+
+<div class="box warn"><span class="label">Pegadinha</span><p>O conectivo “como” pode indicar causa, comparação ou conformidade. O sentido depende do contexto.</p></div>
+</section>
+<section id="morfologia">
+<h2>4. Morfologia: classes gramaticais no contexto</h2>
+<p>Morfologia estuda as classes das palavras. Em prova, a palavra deve ser classificada conforme sua função na frase.</p>
+
+<h3>4.1 Classes variáveis</h3>
+<table>
+<thead><tr><th>Classe</th><th>Função</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Substantivo</td><td>nomeia seres, ações, ideias, sentimentos</td><td>criança, escola, aprendizagem, cuidado</td></tr>
+<tr><td>Adjetivo</td><td>caracteriza substantivo</td><td>atividade significativa</td></tr>
+<tr><td>Artigo</td><td>determina o substantivo</td><td>o, a, os, as, um, uma</td></tr>
+<tr><td>Numeral</td><td>indica quantidade, ordem, fração ou multiplicação</td><td>dois, primeiro, meio, dobro</td></tr>
+<tr><td>Pronome</td><td>substitui ou acompanha nome</td><td>ele, essa, cujo, meu, alguém</td></tr>
+<tr><td>Verbo</td><td>indica ação, estado, fenômeno ou processo</td><td>brincar, estar, chover, aprender</td></tr>
+</tbody>
+</table>
+
+<h3>4.2 Classes invariáveis</h3>
+<table>
+<thead><tr><th>Classe</th><th>Função</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Advérbio</td><td>modifica verbo, adjetivo ou advérbio</td><td>falou claramente; muito atenta</td></tr>
+<tr><td>Preposição</td><td>liga termos</td><td>de, a, com, para, em, por</td></tr>
+<tr><td>Conjunção</td><td>liga orações ou termos</td><td>mas, porque, embora, se</td></tr>
+<tr><td>Interjeição</td><td>expressa reação</td><td>nossa!, cuidado!, atenção!</td></tr>
+</tbody>
+</table>
+
+<h3>4.3 Palavras de classe móvel</h3>
+<table>
+<thead><tr><th>Palavra</th><th>Exemplo 1</th><th>Classe</th><th>Exemplo 2</th><th>Classe</th></tr></thead>
+<tbody>
+<tr><td>baixo</td><td>Falou baixo.</td><td>advérbio</td><td>Banco baixo.</td><td>adjetivo</td></tr>
+<tr><td>muito</td><td>Muitos candidatos faltaram.</td><td>pronome indefinido</td><td>Estudou muito.</td><td>advérbio</td></tr>
+<tr><td>meio</td><td>Meia turma chegou.</td><td>numeral</td><td>Estava meio nervosa.</td><td>advérbio</td></tr>
+<tr><td>mesmo</td><td>Ela mesma respondeu.</td><td>pronome de reforço</td><td>Mesmo cansada, estudou.</td><td>conjunção concessiva</td></tr>
+<tr><td>brincar</td><td>Gosta de brincar.</td><td>verbo</td><td>O brincar é essencial.</td><td>substantivo</td></tr>
+</tbody>
+</table>
+</section>
+<section id="sintaxe">
+<h2>5. Sintaxe: funções na oração</h2>
+<p>Sintaxe analisa a função dos termos na frase. O primeiro passo é localizar o verbo; depois, perguntar quem pratica, sofre ou é tema da declaração.</p>
+
+<h3>5.1 Tipos de sujeito</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Como reconhecer</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Simples</td><td>um núcleo</td><td>A turma participou.</td></tr>
+<tr><td>Composto</td><td>dois ou mais núcleos</td><td>A diretora e a coordenadora participaram.</td></tr>
+<tr><td>Oculto</td><td>não aparece, mas é identificado pelo verbo</td><td>Estudamos para a prova. sujeito: nós</td></tr>
+<tr><td>Indeterminado</td><td>existe agente, mas não se identifica</td><td>Precisa-se de educadores.</td></tr>
+<tr><td>Oração sem sujeito</td><td>verbo impessoal</td><td>Havia dúvidas. Faz dois anos.</td></tr>
+</tbody>
+</table>
+
+<h3>5.2 Classificação dos verbos</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Teste</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Intransitivo</td><td>não exige complemento</td><td>A criança dormiu.</td></tr>
+<tr><td>Transitivo direto</td><td>exige complemento sem preposição</td><td>Explicou a atividade.</td></tr>
+<tr><td>Transitivo indireto</td><td>exige complemento com preposição</td><td>Precisa de apoio.</td></tr>
+<tr><td>Transitivo direto e indireto</td><td>exige dois complementos</td><td>Entregou o relatório à coordenação.</td></tr>
+<tr><td>De ligação</td><td>liga sujeito a característica</td><td>A turma permaneceu atenta.</td></tr>
+</tbody>
+</table>
+
+<h3>5.3 Predicados</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Estrutura</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Verbal</td><td>núcleo é verbo significativo</td><td>Os alunos participaram.</td></tr>
+<tr><td>Nominal</td><td>verbo de ligação + predicativo</td><td>A proposta é pertinente.</td></tr>
+<tr><td>Verbo-nominal</td><td>verbo significativo + predicativo</td><td>As crianças chegaram agitadas.</td></tr>
+</tbody>
+</table>
+
+<h3>5.4 Vocativo</h3>
+<p>Vocativo é chamamento e vem separado por vírgula. Não é sujeito.</p>
+<div class="box gold"><span class="label">Exemplo</span><p><em>Educadoras, observem os registros.</em> “Educadoras” é vocativo. O sujeito de “observem” é oculto: vocês.</p></div>
+
+<h3>5.5 Partícula “se”</h3>
+<table>
+<thead><tr><th>Uso</th><th>Exemplo</th><th>Análise</th></tr></thead>
+<tbody>
+<tr><td>Índice de indeterminação</td><td>Precisa-se de apoio.</td><td>verbo transitivo indireto + se</td></tr>
+<tr><td>Partícula apassivadora</td><td>Organizaram-se os materiais.</td><td>os materiais foram organizados</td></tr>
+<tr><td>Pronome reflexivo</td><td>A criança machucou-se.</td><td>a ação recai sobre o sujeito</td></tr>
+</tbody>
+</table>
+</section>
+<section id="periodo">
+<h2>6. Período composto</h2>
+<p>Período composto é aquele que possui duas ou mais orações. Para separar orações, conte os verbos ou locuções verbais.</p>
+
+<h3>6.1 Coordenação</h3>
+<p>Orações coordenadas são sintaticamente independentes. Podem ser assindéticas, sem conjunção, ou sindéticas, com conjunção.</p>
+<table>
+<thead><tr><th>Tipo</th><th>Conectivos</th><th>Sentido</th></tr></thead>
+<tbody>
+<tr><td>Aditiva</td><td>e, nem, também</td><td>soma</td></tr>
+<tr><td>Adversativa</td><td>mas, porém, contudo, entretanto</td><td>oposição</td></tr>
+<tr><td>Alternativa</td><td>ou, ora...ora</td><td>alternância</td></tr>
+<tr><td>Conclusiva</td><td>portanto, logo, por isso</td><td>conclusão</td></tr>
+<tr><td>Explicativa</td><td>pois, porque</td><td>explicação</td></tr>
+</tbody>
+</table>
+
+<h3>6.2 Subordinação</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Teste</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Substantiva</td><td>pode ser trocada por “isso”</td><td>É necessário que todos estudem.</td></tr>
+<tr><td>Adjetiva</td><td>caracteriza termo anterior</td><td>Os candidatos que estudaram passaram.</td></tr>
+<tr><td>Adverbial</td><td>indica circunstância</td><td>Quando chegou, iniciou a reunião.</td></tr>
+</tbody>
+</table>
+
+<h3>6.3 Orações subordinadas substantivas</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Função</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Subjetiva</td><td>sujeito</td><td>É importante que todos participem.</td></tr>
+<tr><td>Objetiva direta</td><td>objeto direto</td><td>Espero que você passe.</td></tr>
+<tr><td>Objetiva indireta</td><td>objeto indireto</td><td>Preciso de que você ajude.</td></tr>
+<tr><td>Completiva nominal</td><td>completa nome</td><td>Tenho certeza de que passarei.</td></tr>
+<tr><td>Predicativa</td><td>predicativo</td><td>O ideal é que todos estudem.</td></tr>
+<tr><td>Apositiva</td><td>aposto</td><td>Desejo isto: que você passe.</td></tr>
+</tbody>
+</table>
+
+<h3>6.4 Adjetiva restritiva x explicativa</h3>
+<div class="box warn"><span class="label">Pegadinha de vírgula</span><p><em>Os candidatos que estudaram passaram.</em> Apenas os que estudaram. Oração restritiva.</p><p><em>Os candidatos, que estudaram, passaram.</em> Todos estudaram. Oração explicativa.</p></div>
+
+<h3>6.5 Adverbiais</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Conectivos</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Causal</td><td>porque, já que, como</td><td>Como estudou, acertou.</td></tr>
+<tr><td>Condicional</td><td>se, caso</td><td>Se estudar, passará.</td></tr>
+<tr><td>Concessiva</td><td>embora, ainda que</td><td>Embora cansada, estudou.</td></tr>
+<tr><td>Temporal</td><td>quando, enquanto</td><td>Quando chegou, sentou-se.</td></tr>
+<tr><td>Final</td><td>para que, a fim de que</td><td>Estudou para que passasse.</td></tr>
+<tr><td>Consecutiva</td><td>tão...que, tanto...que</td><td>Estudou tanto que passou.</td></tr>
+<tr><td>Comparativa</td><td>como, mais que</td><td>Leu mais que o colega.</td></tr>
+<tr><td>Conformativa</td><td>conforme, segundo</td><td>Fez conforme orientaram.</td></tr>
+<tr><td>Proporcional</td><td>à medida que</td><td>Aprende à medida que pratica.</td></tr>
+</tbody>
+</table>
+</section>
+<section id="concordancia">
+<h2>7. Concordância nominal e verbal</h2>
+
+<h3>7.1 Concordância verbal</h3>
+<p>O verbo concorda com o sujeito. O segredo é identificar o núcleo do sujeito.</p>
+<table>
+<thead><tr><th>Caso</th><th>Correto</th><th>Explicação</th></tr></thead>
+<tbody>
+<tr><td>Sujeito simples</td><td>A turma participou.</td><td>núcleo: turma</td></tr>
+<tr><td>Sujeito composto antes do verbo</td><td>A diretora e a coordenadora participaram.</td><td>plural</td></tr>
+<tr><td>Sujeito composto depois do verbo</td><td>Chegaram a diretora e a coordenadora.</td><td>plural é mais seguro</td></tr>
+<tr><td>Haver = existir</td><td>Havia problemas.</td><td>impessoal, singular</td></tr>
+<tr><td>Fazer = tempo</td><td>Faz dois anos.</td><td>impessoal, singular</td></tr>
+<tr><td>Existir</td><td>Existiam problemas.</td><td>concorda com o sujeito</td></tr>
+<tr><td>A maioria de</td><td>A maioria dos candidatos compareceu.</td><td>singular é mais seguro em prova</td></tr>
+</tbody>
+</table>
+
+<h3>7.2 Concordância nominal</h3>
+<table>
+<thead><tr><th>Caso</th><th>Correto</th><th>Explicação</th></tr></thead>
+<tbody>
+<tr><td>É proibido sem artigo</td><td>É proibido entrada.</td><td>expressão invariável</td></tr>
+<tr><td>É proibida com artigo</td><td>É proibida a entrada.</td><td>concorda com entrada</td></tr>
+<tr><td>Anexo</td><td>Seguem anexas as atividades.</td><td>concorda com atividades</td></tr>
+<tr><td>Mesmo/próprio</td><td>Ela mesma respondeu.</td><td>concorda com o referente</td></tr>
+<tr><td>Meio advérbio</td><td>Ela estava meio nervosa.</td><td>invariável</td></tr>
+<tr><td>Meia numeral</td><td>Comi meia maçã.</td><td>concorda</td></tr>
+</tbody>
+</table>
+</section>
+<section id="crase">
+<h2>8. Regência e crase</h2>
+<p>Crase é a fusão da preposição <strong>a</strong> com o artigo feminino <strong>a/as</strong>. Para haver crase, duas condições precisam ocorrer: a palavra anterior exige preposição “a” e a palavra seguinte aceita artigo feminino.</p>
+
+<h3>8.1 Teste do masculino</h3>
+<div class="box tip"><span class="label">Teste rápido</span><p>Troque a palavra feminina por uma masculina. Se aparecer “ao”, há crase no feminino.</p><p><em>Fui à escola.</em> → <em>Fui ao colégio.</em></p></div>
+
+<h3>8.2 Regências que geram crase</h3>
+<table>
+<thead><tr><th>Termo</th><th>Regência</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>referir-se</td><td>a</td><td>Referiu-se à proposta.</td></tr>
+<tr><td>assistir, no sentido de ver</td><td>a</td><td>Assistiu à palestra.</td></tr>
+<tr><td>obedecer</td><td>a</td><td>Obedeceu às normas.</td></tr>
+<tr><td>atender, em certos usos</td><td>a</td><td>Atendeu à solicitação.</td></tr>
+<tr><td>acesso</td><td>a</td><td>Teve acesso à informação.</td></tr>
+<tr><td>favorável</td><td>a</td><td>Foi favorável à mudança.</td></tr>
+<tr><td>relativo</td><td>a</td><td>Tema relativo à educação.</td></tr>
+</tbody>
+</table>
+
+<h3>8.3 Crase obrigatória</h3>
+<ul>
+<li>antes de palavra feminina com regência: <em>referiu-se à escola</em>;</li>
+<li>em locuções femininas: <em>à noite, às vezes, à medida que</em>;</li>
+<li>antes de horas determinadas: <em>às 19h</em>;</li>
+<li>com sentido de “à moda de”: <em>escreveu à Machado de Assis</em>.</li>
+</ul>
+
+<h3>8.4 Crase proibida</h3>
+<ul>
+<li>antes de verbo: <em>começou a estudar</em>;</li>
+<li>antes de palavra masculina: <em>foi a pé</em>;</li>
+<li>antes de pronome pessoal: <em>entreguei a ela</em>;</li>
+<li>antes de artigo indefinido: <em>foi a uma reunião</em>;</li>
+<li>entre palavras repetidas: <em>frente a frente</em>;</li>
+<li>na expressão <em>a partir de</em>.</li>
+</ul>
+
+<h3>8.5 Crase facultativa</h3>
+<ul>
+<li>antes de possessivo feminino: <em>a minha / à minha coordenadora</em>;</li>
+<li>antes de nome próprio feminino: <em>a Ana / à Ana</em>;</li>
+<li>depois de “até”: <em>até a escola / até à escola</em>.</li>
+</ul>
+</section>
+<section id="pontuacao">
+<h2>9. Pontuação</h2>
+<p>Pontuação organiza a estrutura da frase e pode mudar o sentido. A vírgula não deve ser usada apenas porque há pausa na fala.</p>
+
+<h3>9.1 Não use vírgula</h3>
+<ul>
+<li>entre sujeito e verbo: <em>A professora explicou a atividade.</em></li>
+<li>entre verbo e complemento: <em>Entregou os documentos.</em></li>
+<li>entre nome e complemento: <em>Tenho necessidade de estudo.</em></li>
+</ul>
+
+<h3>9.2 Use vírgula</h3>
+<table>
+<thead><tr><th>Uso</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>Vocativo</td><td>Educadoras, observem os registros.</td></tr>
+<tr><td>Aposto explicativo</td><td>Cianorte, município do Paraná, realizará PSS.</td></tr>
+<tr><td>Enumeração</td><td>Estudou crase, pontuação, concordância e acentuação.</td></tr>
+<tr><td>Adjunto adverbial deslocado</td><td>No início da aula, todos participaram.</td></tr>
+<tr><td>Oração adverbial antes da principal</td><td>Quando chegou, sentou-se.</td></tr>
+<tr><td>Conjunção adversativa</td><td>Estudou, mas errou.</td></tr>
+<tr><td>Oração explicativa</td><td>Os alunos, que estudaram, foram bem.</td></tr>
+</tbody>
+</table>
+
+<h3>9.3 Vírgula que muda sentido</h3>
+<table>
+<thead><tr><th>Sem vírgula</th><th>Com vírgula</th><th>Diferença</th></tr></thead>
+<tbody>
+<tr><td>Os candidatos que estudaram passaram.</td><td>Os candidatos, que estudaram, passaram.</td><td>restrição x explicação</td></tr>
+<tr><td>Não espere.</td><td>Não, espere.</td><td>ordem para não esperar x pedido para esperar</td></tr>
+<tr><td>A professora explicou.</td><td>A professora, explicou.</td><td>a segunda separa sujeito e verbo, erro</td></tr>
+</tbody>
+</table>
+
+<h3>9.4 Dois-pontos</h3>
+<p>Usados para introduzir explicação, enumeração, resumo ou fala.</p>
+<div class="box gold"><span class="label">Exemplo</span><p><em>A organização dos espaços não é neutra: comunica possibilidades de ação.</em> Os dois-pontos introduzem explicação da afirmação anterior.</p></div>
+</section>
+<section id="acentuacao">
+<h2>10. Acentuação gráfica</h2>
+
+<h3>10.1 Sílaba tônica</h3>
+<table>
+<thead><tr><th>Tipo</th><th>Sílaba tônica</th><th>Exemplos</th></tr></thead>
+<tbody>
+<tr><td>Oxítona</td><td>última</td><td>café, cipó, também</td></tr>
+<tr><td>Paroxítona</td><td>penúltima</td><td>escola, fácil, infância</td></tr>
+<tr><td>Proparoxítona</td><td>antepenúltima</td><td>público, pedagógico, matemática</td></tr>
+</tbody>
+</table>
+
+<h3>10.2 Regras principais</h3>
+<table>
+<thead><tr><th>Regra</th><th>Exemplos</th><th>Pegadinha</th></tr></thead>
+<tbody>
+<tr><td>Oxítonas em a/e/o/em/ens</td><td>sofá, café, cipó, também, parabéns</td><td>comparar com paroxítonas</td></tr>
+<tr><td>Paroxítonas terminadas em l, r, x, n, i, is, us, um, ã, ão, ditongo</td><td>fácil, açúcar, lápis, órgão, história</td><td>história e infância são paroxítonas terminadas em ditongo</td></tr>
+<tr><td>Proparoxítonas</td><td>público, básico, pedagógico</td><td>todas são acentuadas</td></tr>
+<tr><td>Hiato com i/u tônicos</td><td>saúde, saída, país, baú</td><td>não confundir com oxítona comum</td></tr>
+<tr><td>Diferencial</td><td>pôde/pode, pôr/por</td><td>tempo verbal ou classe gramatical</td></tr>
+</tbody>
+</table>
+
+<h3>10.3 Novo Acordo: cuidado</h3>
+<p>Ditongos abertos em paroxítonas perderam o acento: <strong>ideia, assembleia, jiboia</strong>. Em oxítonas, permanecem: <strong>herói, papéis, céu</strong>.</p>
+</section>
+<section id="pegadinhas">
+<h2>11. Pegadinhas essenciais para revisar antes da prova</h2>
+<div class="grid">
+<div class="card"><h4>Havia problemas</h4><p>Correto. Haver com sentido de existir fica no singular.</p></div>
+<div class="card"><h4>Existiam problemas</h4><p>Correto. Existir concorda com o sujeito.</p></div>
+<div class="card"><h4>Faz dois anos</h4><p>Correto. Fazer indicando tempo é impessoal.</p></div>
+<div class="card"><h4>Às 19h</h4><p>Correto. Crase antes de hora determinada.</p></div>
+<div class="card"><h4>Começou a estudar</h4><p>Correto. Não há crase antes de verbo.</p></div>
+<div class="card"><h4>Educadoras, atenção</h4><p>Correto. Vocativo separado por vírgula.</p></div>
+<div class="card"><h4>A turma participou</h4><p>Correto. O núcleo do sujeito é “turma”.</p></div>
+<div class="card"><h4>Meio nervosa</h4><p>Correto. Meio advérbio é invariável.</p></div>
+<div class="card"><h4>Seguem anexas</h4><p>Correto. Anexo concorda com atividades.</p></div>
+<div class="card"><h4>Os candidatos que estudaram</h4><p>Sem vírgula: oração restritiva.</p></div>
+</div>
+</section>
+<section id="checklist">
+<h2>12. Checklist final para responder questões</h2>
+<ol>
+<li>O comando pede informação explícita, inferência ou norma-padrão?</li>
+<li>A alternativa está no texto ou é conhecimento externo?</li>
+<li>Há palavra exagerada: sempre, nunca, somente, todos, garante?</li>
+<li>A alternativa transforma possibilidade em certeza?</li>
+<li>O pronome retoma qual termo?</li>
+<li>O conectivo indica causa, oposição, conclusão, condição, tempo, finalidade ou concessão?</li>
+<li>Qual é o verbo da oração?</li>
+<li>Quem é o sujeito? Ele está antes ou depois do verbo?</li>
+<li>O verbo “haver” tem sentido de existir?</li>
+<li>O verbo “fazer” indica tempo decorrido?</li>
+<li>A crase ocorre por regência + artigo?</li>
+<li>A vírgula separou sujeito e verbo? Se sim, provavelmente há erro.</li>
+<li>A oração com “que” é restritiva ou explicativa?</li>
+<li>A palavra é oxítona, paroxítona ou proparoxítona?</li>
+<li>Estou marcando a resposta mais fiel ou a mais bonita?</li>
+</ol>
+</section>
+
+<section id="questoes">
+<h2>13. Questões interativas comentadas</h2>
+<p>Questões autorais no estilo de PSS/concurso municipal, cobrindo todos os blocos do edital. Clique em uma alternativa para corrigir.</p>
+<div class="quizbar">
+  <div><strong>Resultado</strong><br><span id="answered">0</span> respondidas</div>
+  <div class="score"><span id="score">0</span>/<span id="total">0</span> acertos</div>
+  <button onclick="location.reload()">Refazer</button>
+</div>
+<div id="quiz"></div>
+</section>
+
+<footer>
+<p><strong>Apostila Completa de Conteúdo — Português PSS Cianorte/PR 2026</strong></p>
+<p>Material de curso preparatório focado em conteúdo, prova e questões.</p>
+</footer>
+</div>
+<div class="printbar"><button onclick="window.print()">Imprimir / Salvar em PDF</button></div>
+
+<script>
+const data = [{"topic": "Interpretação de texto", "text": "A documentação pedagógica não deve ser compreendida como simples acúmulo de registros. Quando organizada com intencionalidade, ela permite ao educador interpretar percursos, reconhecer hipóteses infantis e planejar intervenções mais adequadas.", "q": "A ideia central do texto é:", "choices": ["a documentação pedagógica é desnecessária quando o educador conhece bem a turma.", "o registro pedagógico tem função formativa quando usado para interpretar e planejar a prática.", "a documentação deve ser feita apenas para cumprir exigências administrativas.", "as hipóteses infantis devem ser substituídas por intervenções padronizadas."], "answer": 1, "exp": "O texto contrapõe a ideia de registro burocrático e defende seu uso pedagógico para interpretar percursos e planejar intervenções."}, {"topic": "Interpretação de texto", "text": "A presença da família na vida escolar não se confunde com realizar as tarefas pela criança. Acompanhar, dialogar e demonstrar interesse são formas de apoio que preservam a autonomia infantil.", "q": "A oposição principal construída no texto ocorre entre:", "choices": ["família e escola.", "acompanhar a criança e substituir sua ação.", "diálogo e interesse.", "autonomia e infância."], "answer": 1, "exp": "O texto diferencia apoio familiar de substituição da ação da criança."}, {"topic": "Interpretação de texto", "text": "O brincar, quando observado com atenção pelo educador, revela modos de pensar, negociar, imaginar e resolver problemas. Por isso, não deve ser tratado como tempo vazio da rotina.", "q": "A expressão “Por isso” introduz:", "choices": ["uma causa para a observação do brincar.", "uma conclusão baseada no valor pedagógico do brincar.", "uma oposição à ideia de resolução de problemas.", "uma comparação entre brincar e estudar."], "answer": 1, "exp": "“Por isso” introduz uma conclusão: como o brincar revela processos importantes, não deve ser tratado como tempo vazio."}, {"topic": "Interpretação de texto", "text": "A inclusão escolar exige mais do que a presença física da criança no espaço educativo. Requer a reorganização das práticas, dos materiais, dos tempos e das formas de participação.", "q": "Segundo o texto, inclusão escolar implica:", "choices": ["garantir presença física, independentemente das práticas.", "reorganizar condições pedagógicas para ampliar participação.", "separar as crianças conforme suas necessidades.", "priorizar apenas adaptações de materiais."], "answer": 1, "exp": "O texto afirma que inclusão vai além da presença física e exige reorganização das práticas, materiais, tempos e participação."}, {"topic": "Interpretação de texto", "text": "O trabalho com leitura na Educação Infantil não se limita à decodificação. Antes mesmo de ler convencionalmente, a criança interpreta imagens, antecipa sentidos, escuta narrativas e participa de práticas sociais de linguagem.", "q": "A inferência adequada ao texto é:", "choices": ["a decodificação deve ser excluída de todo processo escolar.", "a criança pode participar de práticas leitoras antes do domínio convencional da leitura.", "a leitura de imagens substitui definitivamente a leitura de palavras.", "a escuta de narrativas impede o desenvolvimento da linguagem escrita."], "answer": 1, "exp": "O texto amplia a noção de leitura, mas não elimina a decodificação. A inferência correta é que a criança participa de práticas leitoras antes da leitura convencional."}, {"topic": "Coesão textual", "text": "A professora propôs uma roda de conversa sobre as brincadeiras preferidas da turma. Essa estratégia favoreceu a escuta e a ampliação do vocabulário.", "q": "A expressão “Essa estratégia” retoma:", "choices": ["a professora.", "a turma.", "a roda de conversa proposta.", "o vocabulário."], "answer": 2, "exp": "O demonstrativo “essa” retoma a ação anterior: a proposta de roda de conversa."}, {"topic": "Coesão textual", "text": "Embora a atividade tenha sido planejada com antecedência, a educadora precisou reorganizá-la diante das necessidades observadas no grupo.", "q": "O conectivo “Embora” expressa relação de:", "choices": ["causa", "condição", "concessão", "conclusão"], "answer": 2, "exp": "“Embora” introduz uma ideia contrária ao esperado, mas que não impede a ação principal. Isso é concessão."}, {"topic": "Coesão textual", "text": "A instituição reorganizou os espaços em que as crianças realizam experiências de leitura e brincadeira.", "q": "A expressão “em que” poderia ser substituída, sem prejuízo, por:", "choices": ["onde", "cujo", "quando", "portanto"], "answer": 0, "exp": "Como o antecedente é “espaços”, o relativo “onde” é adequado."}, {"topic": "Coesão textual", "text": "A coordenadora apresentou isto à equipe: os registros precisavam dialogar com o planejamento.", "q": "O pronome “isto” tem valor:", "choices": ["anafórico, pois retoma algo anterior.", "catafórico, pois anuncia algo que virá em seguida.", "relativo, pois retoma um substantivo.", "interrogativo, pois introduz pergunta."], "answer": 1, "exp": "O pronome “isto” antecipa o conteúdo explicado depois dos dois-pontos."}, {"topic": "Coesão textual", "text": "A equipe revisou os registros e, a partir deles, redefiniu o planejamento.", "q": "O pronome “deles” retoma:", "choices": ["a equipe", "os registros", "o planejamento", "a revisão"], "answer": 1, "exp": "“Deles” retoma o termo masculino plural “os registros”."}, {"topic": "Morfologia", "text": "A criança falou baixo durante a contação de história.", "q": "A palavra “baixo” é:", "choices": ["substantivo", "adjetivo", "advérbio", "preposição"], "answer": 2, "exp": "Modifica o verbo “falou”, indicando modo. Portanto, é advérbio."}, {"topic": "Morfologia", "text": "O brinquedo quebrado foi separado pela educadora.", "q": "A palavra “quebrado” exerce função de:", "choices": ["adjetivo", "artigo", "conjunção", "advérbio"], "answer": 0, "exp": "Caracteriza o substantivo “brinquedo”."}, {"topic": "Morfologia", "text": "O brincar deve ser observado com intencionalidade pedagógica.", "q": "A palavra “brincar”, no trecho, funciona como:", "choices": ["verbo apenas", "substantivo", "advérbio", "preposição"], "answer": 1, "exp": "Está substantivada pelo artigo “O”: o brincar = a ação de brincar."}, {"topic": "Morfologia", "text": "Muitas crianças participaram da atividade; outras preferiram observar.", "q": "A palavra “Muitas” é:", "choices": ["advérbio", "pronome indefinido", "artigo", "conjunção"], "answer": 1, "exp": "Acompanha o substantivo “crianças”, indicando quantidade indefinida."}, {"topic": "Morfologia", "text": "A proposta cuja finalidade é ampliar a participação será discutida.", "q": "O pronome “cuja” indica:", "choices": ["oposição", "posse/relação", "tempo", "conclusão"], "answer": 1, "exp": "“Cuja finalidade” significa finalidade da proposta. Indica relação de posse/pertencimento."}, {"topic": "Sintaxe", "text": "Permaneceram na sala a diretora e duas educadoras.", "q": "O sujeito da oração é:", "choices": ["na sala.", "a diretora e duas educadoras.", "permaneceram.", "sujeito indeterminado."], "answer": 1, "exp": "Pergunte ao verbo: quem permaneceram? A diretora e duas educadoras. O sujeito está posposto."}, {"topic": "Sintaxe", "text": "Havia muitas crianças no pátio.", "q": "Na oração, ocorre:", "choices": ["sujeito simples", "sujeito composto", "oração sem sujeito", "sujeito oculto"], "answer": 2, "exp": "Haver com sentido de existir é verbo impessoal. Portanto, a oração é sem sujeito."}, {"topic": "Sintaxe", "text": "Precisa-se de educadores atentos.", "q": "O sujeito é:", "choices": ["simples", "composto", "indeterminado", "inexistente"], "answer": 2, "exp": "Verbo transitivo indireto + se: índice de indeterminação do sujeito."}, {"topic": "Sintaxe", "text": "Organizaram-se os materiais da sala.", "q": "A expressão “os materiais da sala” exerce função de:", "choices": ["objeto direto", "sujeito paciente", "vocativo", "objeto indireto"], "answer": 1, "exp": "Equivale a “os materiais foram organizados”. O termo é sujeito paciente."}, {"topic": "Sintaxe", "text": "As crianças chegaram agitadas.", "q": "O predicado é:", "choices": ["verbal", "nominal", "verbo-nominal", "inexistente"], "answer": 2, "exp": "Há verbo significativo “chegaram” e predicativo do sujeito “agitadas”."}, {"topic": "Período composto", "text": "É importante que os registros sejam analisados pela equipe.", "q": "A oração “que os registros sejam analisados pela equipe” é:", "choices": ["subordinada substantiva subjetiva", "subordinada adjetiva restritiva", "coordenada adversativa", "subordinada adverbial temporal"], "answer": 0, "exp": "O que é importante? Que os registros sejam analisados. A oração funciona como sujeito."}, {"topic": "Período composto", "text": "Os candidatos que leram o edital compreenderam melhor a prova.", "q": "A oração “que leram o edital” é:", "choices": ["adjetiva explicativa", "adjetiva restritiva", "substantiva objetiva direta", "coordenada conclusiva"], "answer": 1, "exp": "Sem vírgulas, restringe o grupo de candidatos."}, {"topic": "Período composto", "text": "Como a candidata leu o comando com atenção, eliminou duas alternativas.", "q": "A oração iniciada por “Como” expressa:", "choices": ["comparação", "causa", "conformidade", "conclusão"], "answer": 1, "exp": "No início do período, “como” frequentemente equivale a “porque/já que”."}, {"topic": "Período composto", "text": "A equipe revisou os registros para que o planejamento fosse reorganizado.", "q": "A oração iniciada por “para que” indica:", "choices": ["finalidade", "condição", "oposição", "comparação"], "answer": 0, "exp": "“Para que” apresenta finalidade."}, {"topic": "Concordância", "text": "Assinale a alternativa correta.", "q": "Qual frase respeita a concordância verbal?", "choices": ["Houveram muitos problemas na organização.", "Fazem três anos que a escola ampliou o atendimento.", "Existem muitas dúvidas sobre o edital.", "Havia muitas crianças chegaram cedo."], "answer": 2, "exp": "O verbo existir concorda com o sujeito: existem muitas dúvidas."}, {"topic": "Concordância", "text": "A maioria dos candidatos ____ a importância da revisão.", "q": "Na norma-padrão tradicional, a forma mais segura é:", "choices": ["perceberam", "percebeu", "percebem-se", "perceberão-se"], "answer": 1, "exp": "O núcleo é “maioria”, singular. Em prova objetiva, o singular costuma ser a opção mais segura."}, {"topic": "Concordância", "text": "Assinale a alternativa correta.", "q": "Qual frase respeita a concordância nominal?", "choices": ["É proibido a entrada.", "É proibida a entrada.", "É proibida entrada.", "É proibidos a entrada."], "answer": 1, "exp": "Com artigo “a”, a expressão concorda: proibida a entrada."}, {"topic": "Concordância", "text": "A candidata estava ____ nervosa antes da prova.", "q": "A lacuna deve ser preenchida por:", "choices": ["meia", "meio", "meias", "meios"], "answer": 1, "exp": "“Meio” como advérbio é invariável."}, {"topic": "Crase", "text": "A coordenadora referiu-se ___ proposta pedagógica.", "q": "A lacuna deve ser preenchida por:", "choices": ["a", "à", "há", "as"], "answer": 1, "exp": "Referir-se a + a proposta = à proposta."}, {"topic": "Crase", "text": "A reunião será ___ 19h.", "q": "A lacuna deve ser preenchida por:", "choices": ["a", "à", "às", "as"], "answer": 2, "exp": "Usa-se crase antes de horas determinadas: às 19h."}, {"topic": "Crase", "text": "Assinale a alternativa correta.", "q": "Qual frase está correta quanto à crase?", "choices": ["Começou à estudar cedo.", "Entreguei o relatório à ela.", "Fomos à pé para a escola.", "A atividade ocorreu à noite."], "answer": 3, "exp": "“À noite” é locução feminina. Não há crase antes de verbo, pronome pessoal ou palavra masculina."}, {"topic": "Crase", "text": "A proposta ___ qual me referi foi aprovada.", "q": "A lacuna deve ser preenchida por:", "choices": ["a", "à", "há", "as"], "answer": 1, "exp": "Referir-se a + a qual = à qual."}, {"topic": "Pontuação", "text": "Assinale a alternativa corretamente pontuada.", "q": "Qual frase está correta?", "choices": ["A professora, explicou a atividade.", "A professora explicou, a atividade.", "No início da aula, a professora explicou a atividade.", "No início, da aula a professora explicou a atividade."], "answer": 2, "exp": "Adjunto adverbial deslocado pode vir separado por vírgula. Não se separa sujeito e verbo nem verbo e objeto."}, {"topic": "Pontuação", "text": "Educadoras, observem os registros antes do planejamento.", "q": "A vírgula foi usada para separar:", "choices": ["sujeito", "vocativo", "objeto direto", "predicativo"], "answer": 1, "exp": "“Educadoras” é chamamento, portanto vocativo."}, {"topic": "Pontuação", "text": "Os candidatos que estudaram acertaram a questão.", "q": "A oração “que estudaram” é:", "choices": ["explicativa, pois vem sem vírgula.", "restritiva, pois limita o grupo de candidatos.", "causal, pois indica motivo.", "conclusiva, pois indica resultado."], "answer": 1, "exp": "Sem vírgulas, a oração restringe o grupo."}, {"topic": "Pontuação", "text": "A organização dos espaços não é neutra: comunica possibilidades de ação.", "q": "Os dois-pontos foram usados para:", "choices": ["separar sujeito e verbo", "introduzir explicação", "marcar vocativo", "indicar erro de pontuação"], "answer": 1, "exp": "Os dois-pontos introduzem explicação da afirmação anterior."}, {"topic": "Acentuação", "text": "Assinale a alternativa em que a palavra é acentuada pela mesma regra de “infância”.", "q": "Qual é a correta?", "choices": ["café", "história", "público", "país"], "answer": 1, "exp": "Infância e história são paroxítonas terminadas em ditongo."}, {"topic": "Acentuação", "text": "A palavra “saúde” recebe acento pela mesma regra de:", "q": "Assinale a alternativa correta.", "choices": ["saída", "café", "público", "história"], "answer": 0, "exp": "Saúde e saída têm hiato com vogal tônica."}, {"topic": "Acentuação", "text": "Assinale a alternativa em que todas as palavras são proparoxítonas.", "q": "Qual é a correta?", "choices": ["público, pedagógico, matemática", "café, sofá, também", "história, série, infância", "saúde, país, saída"], "answer": 0, "exp": "Todas têm tonicidade na antepenúltima sílaba."}, {"topic": "Acentuação", "text": "Assinale a frase correta quanto ao acento diferencial.", "q": "Qual alternativa está correta?", "choices": ["Ontem ela não pôde comparecer.", "Ontem ela não pode comparecer.", "Vou por os documentos na pasta.", "Ele pôde vir amanhã."], "answer": 0, "exp": "“Pôde” é passado; “pode” é presente. “Pôr” verbo recebe acento."}];
+const letters = ["A","B","C","D","E"];
+const quiz = document.getElementById("quiz");
+const total = document.getElementById("total");
+const scoreEl = document.getElementById("score");
+const answeredEl = document.getElementById("answered");
+let score=0, answered=0;
+total.textContent = data.length;
+
+data.forEach((item, idx) => {
+  const q = document.createElement("article");
+  q.className = "q";
+  q.innerHTML = `
+    <span class="topic">${item.topic}</span>
+    <div class="qhead"><span class="qnum">${idx+1}</span><div><strong>${item.q}</strong></div></div>
+    ${item.text ? `<div class="box gold"><span class="label">Texto-base</span><p>${item.text}</p></div>` : ""}
+    <ol class="alt">${item.choices.map((c,i)=>`<li data-i="${i}" data-letter="${letters[i]}">${c}</li>`).join("")}</ol>
+    <div class="feedback"></div>
+    <div class="exp"><strong>Comentário:</strong> ${item.exp}</div>
+  `;
+  const lis = [...q.querySelectorAll("li")];
+  const fb = q.querySelector(".feedback");
+  lis.forEach(li => li.addEventListener("click", () => {
+    if(q.dataset.done) return;
+    q.dataset.done = "1";
+    q.classList.add("done");
+    answered++;
+    const picked = Number(li.dataset.i);
+    const ok = picked === item.answer;
+    if(ok) score++;
+    lis.forEach(opt => {
+      const oi = Number(opt.dataset.i);
+      if(oi === item.answer) opt.classList.add("correct");
+      else if(oi === picked) opt.classList.add("wrong");
+      else opt.classList.add("dim");
+    });
+    fb.className = "feedback show " + (ok ? "ok" : "bad");
+    fb.textContent = ok ? `✅ Correto. Alternativa ${letters[item.answer]}.` : `❌ Você marcou ${letters[picked]}. A correta é ${letters[item.answer]}.`;
+    scoreEl.textContent = score;
+    answeredEl.textContent = answered;
+  }));
+  quiz.appendChild(q);
+});
+
+const bar=document.getElementById('bar');
+function prog(){const d=document.documentElement;const h=d.scrollHeight-d.clientHeight;bar.style.width=(h?d.scrollTop/h*100:0)+'%'}
+document.addEventListener('scroll',prog,{passive:true}); prog();
+</script>
+</body>
+</html>

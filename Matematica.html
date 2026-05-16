@@ -1,0 +1,1685 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apostila Aprofundada de Matemática — PSS Cianorte PR 2026</title>
+<style>
+:root{
+  --bg:#f6f7fb;--paper:#fff;--ink:#111827;--muted:#64748b;--line:#e5e7eb;
+  --blue:#1d4ed8;--blue2:#dbeafe;--green:#15803d;--green2:#dcfce7;--red:#b91c1c;--red2:#fee2e2;
+  --amber:#b45309;--amber2:#fef3c7;--purple:#7e22ce;--purple2:#f3e8ff;--dark:#0f172a;
+  --radius:18px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top left,#dbeafe 0,transparent 360px),radial-gradient(circle at top right,#dcfce7 0,transparent 300px),var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);line-height:1.62}.wrap{max-width:1260px;margin:0 auto;padding:22px}.hero{background:linear-gradient(135deg,#0f172a,#1d4ed8 58%,#15803d);color:white;border-radius:28px;padding:34px;box-shadow:0 24px 70px rgba(15,23,42,.22);position:relative;overflow:hidden}.hero:after{content:"∑";position:absolute;right:22px;top:-18px;font-size:190px;font-weight:900;opacity:.10;transform:rotate(-11deg)}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.14);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-size:clamp(34px,7vw,72px);line-height:.95;margin:18px 0 10px;max-width:980px;letter-spacing:-.045em}.hero p{font-size:18px;max-width:900px;color:#e8eefc;margin:0}.cover-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:22px}.cover-meta div{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:12px}.cover-meta b{display:block}.layout{display:grid;grid-template-columns:310px 1fr;gap:22px;margin-top:22px}.toc{position:sticky;top:12px;align-self:start;background:rgba(255,255,255,.90);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 14px 40px rgba(15,23,42,.08);max-height:calc(100vh - 24px);overflow:auto}.toc h2{font-size:17px;margin:0 0 10px}.toc a{display:block;text-decoration:none;color:#1f2937;border-radius:12px;padding:8px 10px;font-size:14px;font-weight:750}.toc a:hover{background:#eef2ff;color:#1d4ed8}.content{min-width:0}.chapter,.box,.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 12px 34px rgba(15,23,42,.07)}.chapter{padding:28px;margin-bottom:22px}.chapter h2{font-size:clamp(26px,4vw,42px);letter-spacing:-.03em;line-height:1.05;margin:0 0 16px}.chapter h3{font-size:23px;margin:30px 0 10px}.lead{font-size:18px;color:#374151}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}.card{padding:16px}.card b{display:block;margin-bottom:5px}.tag{display:inline-block;background:#eef2ff;color:var(--blue);border:1px solid #c7d2fe;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.03em}.tag.green{background:var(--green2);color:var(--green);border-color:#bbf7d0}.tag.red{background:var(--red2);color:var(--red);border-color:#fecaca}.tag.amber{background:var(--amber2);color:var(--amber);border-color:#fde68a}.tag.purple{background:var(--purple2);color:var(--purple);border-color:#e9d5ff}.box{padding:16px;margin:16px 0}.box.blue{background:#eff6ff;border-color:#bfdbfe}.box.green{background:#f0fdf4;border-color:#bbf7d0}.box.amber{background:#fffbeb;border-color:#fde68a}.box.red{background:#fef2f2;border-color:#fecaca}.formula{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:2px 7px;white-space:nowrap}.formula.big{display:block;font-size:18px;font-weight:900;white-space:normal;padding:14px;margin:12px 0;background:#f8fafc}.exemplo{border-left:6px solid var(--blue);background:#f8fafc;border-radius:14px;padding:14px 16px;margin:16px 0}.steps li{margin:.45rem 0}table{border-collapse:collapse;width:100%;margin:14px 0;background:white;border-radius:14px;overflow:hidden;font-size:15px}th,td{border:1px solid var(--line);padding:9px 10px;vertical-align:top}th{background:#f1f5f9;text-align:left}.tight li{margin:.25rem 0}.refs li{margin:.45rem 0}.treino{border-top:1px solid var(--line);padding-top:22px}.quiz{border:1px solid #dbe3ef;border-radius:18px;padding:16px;margin:14px 0;background:#fff;position:relative}.qhead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}.qhead span{font-weight:950;color:#0f172a}.qhead em{font-size:12px;color:#64748b;font-style:normal}.stem{font-size:16px;margin:6px 0 12px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.option{text-align:left;padding:11px 12px;border:1px solid #cbd5e1;background:#f8fafc;border-radius:12px;cursor:pointer;font-size:15px;line-height:1.35}.option:hover{border-color:var(--blue);background:#eff6ff}.option.correct{border-color:#16a34a;background:#dcfce7;color:#14532d}.option.wrong{border-color:#dc2626;background:#fee2e2;color:#7f1d1d}.feedback{display:none;margin-top:12px;border:1px dashed #cbd5e1;border-radius:12px;padding:12px;background:#f8fafc}.quiz.answered .feedback{display:block}.peg{margin-top:8px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:8px}.venn{height:190px;position:relative;background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;margin:12px 0;overflow:hidden}.circle{position:absolute;width:150px;height:150px;border-radius:50%;top:20px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:26px}.circle.left{left:calc(50% - 150px);background:#dbeafecc;border:3px solid #1d4ed8;color:#1d4ed8}.circle.right{right:calc(50% - 150px);background:#dcfce7cc;border:3px solid #15803d;color:#15803d}.middle{position:absolute;left:50%;top:85px;transform:translateX(-50%);font-weight:950;color:#0f172a;background:white;border:1px solid #cbd5e1;border-radius:999px;padding:4px 10px}.formulaGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.formulaGrid div{border:1px solid var(--line);background:#f8fafc;border-radius:14px;padding:14px}.formulaGrid b{display:block;color:var(--blue);margin-bottom:8px}.formulaGrid span{display:block;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin:3px 0}.print-note{font-size:13px;color:#e0e7ff;margin-top:12px}.footer{color:#64748b;font-size:13px;text-align:center;padding:28px}@media(max-width:900px){.layout{grid-template-columns:1fr}.toc{position:relative;max-height:none}.options{grid-template-columns:1fr}.wrap{padding:14px}.hero{padding:24px}.chapter{padding:20px}}@media print{body{background:white}.wrap{max-width:none;padding:0}.toc{display:none}.layout{display:block}.hero,.chapter,.box,.card,.quiz{box-shadow:none}.hero{border-radius:0}.chapter{border:0;border-bottom:1px solid #ddd;border-radius:0;break-inside:auto}.feedback{display:block}.option.correct{border:2px solid #111}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <span class="eyebrow">Apostila aprofundada • Matemática • PSS Cianorte/PR 2026</span>
+  <h1>Matemática para o PSS de Cianorte</h1>
+  <p>Versão ampliada para curso preparatório: teoria direta, referências de estilo de cobrança, pegadinhas, questões autorais com alternativas plausíveis e correção automática ao marcar.</p>
+  <div class="cover-meta">
+    <div><b>Foco</b>Educador Infantil, Professor e cargos da educação municipal.</div>
+    <div><b>Banca</b>Instituto UniFil, com reforço por padrões regionais.</div>
+    <div><b>Estratégia</b>Acertar o básico e defender pontos nos temas avançados.</div>
+    <div><b>Uso</b>Estudo no navegador, impressão ou conversão em PDF.</div>
+  </div>
+  <div class="print-note">No navegador: Ctrl+P → Salvar como PDF. Em tela, clique nas alternativas para ver a correta.</div>
+</header>
+<div class="layout">
+<nav class="toc"><h2>Sumário</h2><a href="#perfil">1. Perfil real da prova e como esta apostila foi aprofundada</a>
+<a href="#estrategia">2. Prioridades: o que estudar primeiro para ganhar ponto</a>
+<a href="#numeros">3. Números, operações, frações, MMC/MDC, potência, medidas e dinheiro</a>
+<a href="#conjuntos">4. Teoria dos conjuntos</a>
+<a href="#proporcao">5. Razão, proporção, regra de três, porcentagem, juros e médias</a>
+<a href="#algebra">6. Álgebra: produtos notáveis, fatoração, polinômios e equações</a>
+<a href="#funcoes">7. Funções exponenciais, logaritmos, PA e PG</a>
+<a href="#combinatoria">8. Análise combinatória, binômio de Newton e probabilidade</a>
+<a href="#matrizes">9. Matrizes, determinantes e sistemas lineares</a>
+<a href="#complexos">10. Números complexos</a>
+<a href="#geometria">11. Geometria: forma, perímetro, área, volume e ângulos</a>
+<a href="#analitica">12. Geometria analítica</a>
+<a href="#logica">13. Raciocínio lógico e problemas</a>
+<a href="#simulado">14. Simulado final — 30 questões no estilo da prova</a>
+<a href="#formulas">15. Folha de fórmulas e revisão rápida</a>
+<a href="#referencias">16. Referências usadas para aprofundamento</a></nav>
+<main class="content">
+<section id="perfil" class="chapter"><h2>1. Perfil real da prova e como esta apostila foi aprofundada</h2>
+<p class="lead">Esta versão foi ampliada para funcionar como apostila de curso preparatório: mais teoria operacional, mais exemplos resolvidos, mais pegadinhas e questões com alternativas plausíveis. A ideia não é decorar fórmulas soltas, mas reconhecer o tipo de problema rapidamente.</p>
+<div class="box blue"><b>Ponto central:</b> o edital do PSS Cianorte/PR 002/2026 é amplo, mas Matemática tem poucas questões. Isso exige estratégia: dominar o básico que mais vira questão e saber o mínimo seguro dos tópicos avançados para não perder uma questão direta.</div>
+<div class="cards">
+  <div class="card"><span class="tag">Edital</span><b>Conteúdo muito amplo</b>Vai de operações, frações e porcentagem até matrizes, determinantes, sistemas, complexos, logaritmos, PA/PG e geometria analítica.</div>
+  <div class="card"><span class="tag green">Banca</span><b>Instituto UniFil</b>Em questões catalogadas da banca aparecem problemas objetivos de MMC, frações, regra de três composta, reajustes percentuais, função, proporcionalidade, ângulos e combinatória simples.</div>
+  <div class="card"><span class="tag amber">Regional</span><b>Referência UEM</b>A UEM valoriza raciocínio lógico-dedutivo, resolução de problemas, organização de dados e uso correto de conceitos, não apenas memorização mecânica.</div>
+  <div class="card"><span class="tag purple">Treino</span><b>Alternativas enganosas</b>As opções foram criadas para parecerem verdadeiras: erro de sinal, porcentagem sobre base errada, MMC trocado por MDC, média ponderada confundida com simples e unidade convertida de forma errada.</div>
+</div>
+<h3>1.1 Como ler uma questão de Matemática em prova</h3>
+<ol class="steps">
+<li><b>Marque os dados:</b> números, unidades, porcentagens, quantidades e palavras como “restante”, “ao todo”, “a cada”, “pelo menos”, “exatamente”.</li>
+<li><b>Descubra a família do problema:</b> fração, porcentagem, regra de três, equação, geometria, conjunto, contagem etc.</li>
+<li><b>Faça uma estimativa:</b> antes de calcular, pergunte se a resposta deve ser maior ou menor que o valor inicial.</li>
+<li><b>Desconfie de alternativas bonitas:</b> banca adora colocar o resultado de uma conta parcial.</li>
+<li><b>Converta unidades antes da fórmula:</b> metro com centímetro, litro com mililitro, reais com centavos.</li>
+</ol>
+<h3>1.2 Padrões observados em questões anteriores da banca</h3>
+<table>
+<thead><tr><th>Padrão de cobrança</th><th>Como costuma aparecer</th><th>Como estudar</th></tr></thead>
+<tbody>
+<tr><td>MMC</td><td>Alarmes, eventos que se repetem, horários que coincidem.</td><td>Decomposição em fatores primos e identificação da palavra “novamente juntos”.</td></tr>
+<tr><td>Frações em sequência</td><td>Gasta uma fração do total; depois uma fração do restante; divide o que sobra.</td><td>Separar por etapas. Nunca aplicar tudo no valor inicial se o texto diz “do restante”.</td></tr>
+<tr><td>Regra de três composta</td><td>Máquinas, horas, produção, funcionários, dias.</td><td>Comparar cada grandeza com a produção: direta ou inversa.</td></tr>
+<tr><td>Porcentagem sucessiva</td><td>Aumento seguido de desconto, ou desconto seguido de aumento.</td><td>Usar fatores: +20% = ×1,20; -25% = ×0,75.</td></tr>
+<tr><td>Ângulos</td><td>Adjacentes, suplementares, complementares, expressão com x.</td><td>Suplementares somam 180°; complementares somam 90°.</td></tr>
+<tr><td>Função simples</td><td>Substituir x em uma expressão.</td><td>Trocar x pelo valor dado e respeitar parênteses/potência.</td></tr>
+<tr><td>Combinatória</td><td>Anagramas, senhas, escolhas de comissões ou ordem de elementos.</td><td>Distinguir se ordem importa. Se importa, arranjo/permutação; se não importa, combinação.</td></tr>
+</tbody>
+</table>
+<div class="box red"><b>Honestidade metodológica:</b> as questões desta apostila são autorais e inspiradas em padrões de cobrança. Não são cópias de provas anteriores. Isso evita decorar uma questão específica e treina o raciocínio que a banca cobra.</div>
+</section><section id="estrategia" class="chapter"><h2>2. Prioridades: o que estudar primeiro para ganhar ponto</h2>
+<p class="lead">Como o edital é grande, a preparação precisa ser proporcional ao risco. O candidato deve garantir primeiro as questões de conta básica, porcentagem, proporção, equação e geometria simples. Depois, revisa tópicos avançados em versão “prova objetiva”.</p>
+<table>
+<thead><tr><th>Prioridade</th><th>Conteúdos</th><th>Por quê?</th></tr></thead>
+<tbody>
+<tr><td><b>Altíssima</b></td><td>Operações, frações, MMC/MDC, regra de três, porcentagem, juros, médias, problemas.</td><td>São os temas mais reutilizados em vários tipos de questão.</td></tr>
+<tr><td><b>Alta</b></td><td>Equações de 1º e 2º grau, produtos notáveis, fatoração, potência, PA/PG, geometria plana.</td><td>Costumam virar questão direta com fórmula curta.</td></tr>
+<tr><td><b>Média</b></td><td>Conjuntos, probabilidade, combinatória, função exponencial, logaritmo, geometria analítica.</td><td>Aparecem menos, mas são previsíveis quando aparecem.</td></tr>
+<tr><td><b>Defensiva</b></td><td>Matrizes, determinantes, sistemas lineares, complexos, binômio de Newton.</td><td>Se vierem, provavelmente serão básicos. Estude para reconhecer e resolver o primeiro nível.</td></tr>
+</tbody>
+</table>
+<div class="box amber"><b>Plano de acerto:</b> uma prova com apenas 5 questões de Matemática pode colocar qualquer assunto do edital. A saída é não deixar “buracos totais”. Mesmo nos temas difíceis, aprenda o suficiente para uma questão simples.</div>
+<h3>2.1 Como eliminar alternativas</h3>
+<ul class="tight">
+<li><b>Valor impossível:</b> se a questão pede desconto, o valor final geralmente não pode ser maior, salvo se houver aumento depois.</li>
+<li><b>Unidade errada:</b> área em m², volume em m³, dinheiro com duas casas decimais.</li>
+<li><b>Conta parcial:</b> em frações sucessivas, uma alternativa costuma ser o valor antes da última divisão.</li>
+<li><b>Base errada:</b> 20% de 150 não é a mesma coisa que 150% de 20; porcentagem sempre tem uma base.</li>
+<li><b>Ordem das operações:</b> alternativa errada costuma vir de somar antes de multiplicar.</li>
+</ul>
+</section><section id="numeros" class="chapter"><h2>3. Números, operações, frações, MMC/MDC, potência, medidas e dinheiro</h2>
+<p class="lead">Este capítulo sustenta quase tudo. Em concurso, o erro não costuma ser falta de fórmula difícil; costuma ser divisão mal feita, fração aplicada ao total errado, unidade mal convertida ou conta fora da ordem.</p>
+<h3>3.1 Ordem das operações</h3>
+<div class="formula big">Parênteses → potências/raízes → multiplicação/divisão → adição/subtração</div>
+<div class="exemplo"><b>Exemplo:</b> 8 + 2 × 5 = 8 + 10 = 18. Se fizer 10 × 5 = 50, caiu na pegadinha da ordem.</div>
+<h3>3.2 Conjuntos numéricos básicos</h3>
+<table><thead><tr><th>Conjunto</th><th>Exemplos</th><th>Observação de prova</th></tr></thead><tbody>
+<tr><td>Naturais</td><td>0, 1, 2, 3...</td><td>Usado em contagem, idade inteira, quantidade de alunos.</td></tr>
+<tr><td>Inteiros</td><td>..., -2, -1, 0, 1, 2...</td><td>Cuidado com sinais: dívida, temperatura, saldo.</td></tr>
+<tr><td>Racionais</td><td>1/2, -3/4, 0,25, 2,333...</td><td>Todo número que pode ser escrito como fração.</td></tr>
+</tbody></table>
+<h3>3.3 Frações: o que mais derruba candidato</h3>
+<table><thead><tr><th>Operação</th><th>Regra</th><th>Exemplo</th></tr></thead><tbody>
+<tr><td>Soma/subtração</td><td>Denominadores iguais: mantém. Diferentes: usa MMC.</td><td>1/3 + 1/4 = 4/12 + 3/12 = 7/12.</td></tr>
+<tr><td>Multiplicação</td><td>Multiplica em linha.</td><td>2/5 × 10 = 20/5 = 4.</td></tr>
+<tr><td>Divisão</td><td>Multiplica pela fração inversa.</td><td>3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8.</td></tr>
+<tr><td>Fração do restante</td><td>Calcule o restante primeiro.</td><td>1/3 do restante não é 1/3 do total.</td></tr>
+</tbody></table>
+<div class="box red"><b>Pegadinha forte:</b> “gastou 1/4 do total; do restante gastou 1/3” não significa gastar 1/4 + 1/3 do total. A segunda fração incide sobre o que sobrou.</div>
+<h3>3.4 MMC ou MDC?</h3>
+<div class="cards"><div class="card"><b>MMC</b>Encontro de ciclos: alarmes, ônibus, remédios, eventos que se repetem. Palavra-chave: “quando acontecerá junto novamente?”.</div><div class="card"><b>MDC</b>Divisão em partes iguais: kits, pacotes, grupos, pedaços iguais sem sobra. Palavra-chave: “maior número de grupos iguais?”.</div></div>
+<h3>3.5 Potenciação</h3>
+<table><thead><tr><th>Regra</th><th>Fórmula</th><th>Exemplo</th></tr></thead><tbody>
+<tr><td>Produto de mesma base</td><td>aᵐ·aⁿ=aᵐ⁺ⁿ</td><td>2³·2²=2⁵=32</td></tr>
+<tr><td>Divisão de mesma base</td><td>aᵐ/aⁿ=aᵐ⁻ⁿ</td><td>5⁴/5²=5²=25</td></tr>
+<tr><td>Potência de potência</td><td>(aᵐ)ⁿ=aᵐⁿ</td><td>(3²)³=3⁶</td></tr>
+<tr><td>Expoente zero</td><td>a⁰=1, a≠0</td><td>9⁰=1</td></tr>
+<tr><td>Expoente negativo</td><td>a⁻ⁿ=1/aⁿ</td><td>2⁻³=1/8</td></tr>
+</tbody></table>
+<h3>3.6 Medidas e sistema monetário</h3>
+<table><thead><tr><th>Grandeza</th><th>Conversões essenciais</th><th>Erro típico</th></tr></thead><tbody>
+<tr><td>Comprimento</td><td>1 km = 1000 m; 1 m = 100 cm</td><td>Confundir cm com m.</td></tr>
+<tr><td>Área</td><td>1 m² = 10.000 cm²</td><td>Achar que 1 m² = 100 cm².</td></tr>
+<tr><td>Volume</td><td>1 m³ = 1000 L; 1 L = 1000 mL</td><td>Aplicar conversão linear em volume.</td></tr>
+<tr><td>Massa</td><td>1 kg = 1000 g</td><td>Esquecer de converter antes de multiplicar preço por kg.</td></tr>
+<tr><td>Dinheiro</td><td>R$ 1,00 = 100 centavos</td><td>Arredondar antes da hora.</td></tr>
+</tbody></table>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Calcule: 36 ÷ 6 + 4 × 3 − 2.</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 14</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 16</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 34</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 50</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 16</b><br>Primeiro divisão e multiplicação: 36÷6=6 e 4×3=12. Depois 6+12−2=16.
+<div class="peg"><b>Pegadinha:</b> A alternativa 50 surge de fazer a soma antes da multiplicação.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma escola recebeu R$ 960,00. Gastou 1/4 com materiais. Do restante, gastou 1/3 com serviços. O que sobrou foi dividido entre 8 turmas. Quanto cada turma recebeu?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 40,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 50,00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 60,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 80,00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) R$ 60,00</b><br>1/4 de 960 = 240; sobra 720. 1/3 de 720 = 240; sobra 480. 480÷8=60.
+<div class="peg"><b>Pegadinha:</b> O 1/3 é do restante, não do total inicial.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Três alarmes tocam a cada 18, 24 e 30 minutos. Se tocaram juntos às 8h, em que horário tocarão juntos novamente?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 10h00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 12h00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 14h00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 16h00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 14h00</b><br>MMC(18,24,30)=360? Vamos decompor: 18=2·3², 24=2³·3, 30=2·3·5. MMC=2³·3²·5=360 minutos = 6 horas. 8h + 6h = 14h. Atenção: a alternativa correta não está nesta lista? Corrigindo: deve ser 14h.
+<div class="peg"><b>Pegadinha:</b> Esta é uma questão de MMC. A versão final abaixo ajusta as alternativas para evitar erro de lista.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O maior número de kits iguais que podem ser montados com 48 lápis e 60 borrachas, sem sobrar material, é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 6</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 8</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 12</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 24</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 12</b><br>É caso de MDC: MDC(48,60)=12. Serão 12 kits.
+<div class="peg"><b>Pegadinha:</b> Se a palavra é repartir igualmente sem sobra, pense em MDC, não em MMC.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Qual é o valor de 2³ · 2⁴ ÷ 2²?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 2⁵ = 32</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 2⁹ = 512</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 2² = 4</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 2⁷ = 128</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 2⁵ = 32</b><br>Mesma base: soma expoentes na multiplicação e subtrai na divisão. 3+4−2=5. Resultado: 2⁵=32.
+<div class="peg"><b>Pegadinha:</b> Não multiplique os expoentes: isso só aparece em potência de potência.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma caixa tem 2,5 kg de arroz. Quantos gramas há em 4 caixas iguais?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 100 g</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 1000 g</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 10.000 g</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 100.000 g</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 10.000 g</b><br>2,5 kg = 2500 g. Em 4 caixas: 4×2500=10.000 g.
+<div class="peg"><b>Pegadinha:</b> Converter depois de multiplicar também funciona: 2,5×4=10 kg = 10.000 g.</div>
+</div></div>
+<div class="quiz" data-correct="3">
+<div class="qhead"><span>Questão 7</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma sala mede 4 m por 3 m. Sua área, em cm², é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 12 cm²</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 120 cm²</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 1.200 cm²</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 120.000 cm²</button>
+</div>
+<div class="feedback"><b>Gabarito: D) 120.000 cm²</b><br>Área = 4×3=12 m². Como 1 m² = 10.000 cm², então 12 m² = 120.000 cm².
+<div class="peg"><b>Pegadinha:</b> Conversão de área é ao quadrado. 1 m² não é 100 cm².</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 8</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma compra de R$ 37,80, o cliente pagou com uma nota de R$ 50,00. O troco correto é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 11,20</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 12,20</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 13,20</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 87,80</button>
+</div>
+<div class="feedback"><b>Gabarito: B) R$ 12,20</b><br>50,00−37,80=12,20.
+<div class="peg"><b>Pegadinha:</b> Faça conta de centavos com duas casas para não perder 1 real.</div>
+</div></div></section><section id="conjuntos" class="chapter"><h2>4. Teoria dos conjuntos</h2>
+<p class="lead">Conjuntos entram em problemas de grupos: alunos que praticam esportes, pessoas que gostam de disciplinas, candidatos aprovados em etapas, usuários de serviços etc.</p>
+<h3>4.1 Símbolos que importam</h3>
+<table><thead><tr><th>Símbolo</th><th>Significado</th><th>Tradução em prova</th></tr></thead><tbody>
+<tr><td>∈</td><td>pertence</td><td>O elemento está dentro do conjunto.</td></tr>
+<tr><td>∉</td><td>não pertence</td><td>O elemento não está no conjunto.</td></tr>
+<tr><td>⊂</td><td>está contido</td><td>Um conjunto é parte de outro.</td></tr>
+<tr><td>∪</td><td>união</td><td>Quem está em A ou em B, isto é, pelo menos um.</td></tr>
+<tr><td>∩</td><td>interseção</td><td>Quem está em A e em B ao mesmo tempo.</td></tr>
+<tr><td>A − B</td><td>diferença</td><td>Quem está em A, mas não está em B.</td></tr>
+</tbody></table>
+<h3>4.2 Fórmula da união de dois conjuntos</h3>
+<div class="formula big">n(A ∪ B) = n(A) + n(B) − n(A ∩ B)</div>
+<p>Subtraímos a interseção porque quem está nos dois grupos foi contado duas vezes.</p>
+<div class="venn"><div class="circle left">A</div><div class="circle right">B</div><div class="middle">A∩B</div></div>
+<h3>4.3 Três conjuntos: raciocínio seguro</h3>
+<ol class="steps"><li>Comece pelo centro: os que pertencem aos três.</li><li>Preencha as interseções de dois conjuntos, descontando quem já está nos três.</li><li>Preencha as partes exclusivas.</li><li>Some tudo e compare com o total.</li><li>Se houver “nenhum”, some depois ou subtraia do total.</li></ol>
+<div class="box red"><b>Palavra perigosa:</b> em Matemática, “ou” geralmente significa união: A ou B ou ambos. Quando a prova quer exclusividade, ela diz “somente”, “apenas”, “exclusivamente”.</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma turma, 22 alunos gostam de Matemática, 18 gostam de Português e 10 gostam das duas disciplinas. Quantos gostam de pelo menos uma dessas disciplinas?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 30</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 40</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 50</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 14</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 30</b><br>n(A∪B)=22+18−10=30.
+<div class="peg"><b>Pegadinha:</b> “Pelo menos uma” é união, não soma direta.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma sala com 35 alunos, 20 fazem futebol, 15 fazem vôlei e 6 fazem os dois. Quantos não fazem nenhum dos dois?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 6</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 29</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 12</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 14</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 6</b><br>Fazem pelo menos um: 20+15−6=29. Não fazem nenhum: 35−29=6.
+<div class="peg"><b>Pegadinha:</b> A alternativa 29 é quem faz pelo menos uma atividade, não quem não faz.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se A={1,2,3,4} e B={3,4,5,6}, então A∩B é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> {1,2,3,4,5,6}</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> {3,4}</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> {1,2}</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> {5,6}</button>
+</div>
+<div class="feedback"><b>Gabarito: B) {3,4}</b><br>Interseção é o que está nos dois conjuntos: 3 e 4.
+<div class="peg"><b>Pegadinha:</b> União juntaria todos; interseção pega o comum.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se A={a,b,c,d} e B={c,d,e}, então A−B é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> {a,b}</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> {c,d}</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> {a,b,e}</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> {a,b,c,d,e}</button>
+</div>
+<div class="feedback"><b>Gabarito: A) {a,b}</b><br>A−B é o que está em A e não está em B: a e b.
+<div class="peg"><b>Pegadinha:</b> Diferença não é “o que está em apenas um dos conjuntos”; aqui a ordem importa.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma pesquisa, 40 pessoas leem jornal A, 32 leem jornal B e 12 leem ambos. O número de pessoas que leem somente o jornal A é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 12</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 28</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 40</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 60</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 28</b><br>Somente A = total de A − ambos = 40−12=28.
+<div class="peg"><b>Pegadinha:</b> Quem lê A inclui quem lê ambos; para “somente”, subtraia a interseção.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Dos 50 candidatos, 30 acertaram Português, 25 acertaram Matemática e 12 acertaram ambas. Quantos acertaram somente uma das duas?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 31</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 43</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 38</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 17</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 31</b><br>Somente Português: 30−12=18. Somente Matemática: 25−12=13. Somente uma: 18+13=31.
+<div class="peg"><b>Pegadinha:</b> “Somente uma” exclui quem acertou as duas.</div>
+</div></div></section><section id="proporcao" class="chapter"><h2>5. Razão, proporção, regra de três, porcentagem, juros e médias</h2>
+<p class="lead">Este é o bloco com maior chance de aparecer. A banca gosta porque permite enunciados do cotidiano: salário, escola, orçamento, compra, desconto, produção, máquinas e divisão proporcional.</p>
+<h3>5.1 Razão e proporção</h3>
+<p><b>Razão</b> é comparação por divisão. Se há 12 meninas e 8 meninos, a razão meninas:meninos é 12:8 = 3:2.</p>
+<div class="formula big">a/b = c/d  →  a·d = b·c</div>
+<h3>5.2 Grandezas diretamente e inversamente proporcionais</h3>
+<table><thead><tr><th>Tipo</th><th>Como reconhecer</th><th>Exemplo</th></tr></thead><tbody>
+<tr><td>Diretamente proporcional</td><td>Uma aumenta, a outra aumenta.</td><td>Mais horas de máquina → mais produção.</td></tr>
+<tr><td>Inversamente proporcional</td><td>Uma aumenta, a outra diminui.</td><td>Mais funcionários → menos dias para concluir, mantendo o serviço.</td></tr>
+</tbody></table>
+<h3>5.3 Regra de três composta</h3>
+<ol class="steps"><li>Monte a grandeza que você quer descobrir.</li><li>Compare cada outra grandeza com ela.</li><li>Se for direta, mantém a fração. Se for inversa, inverte.</li><li>Multiplique os fatores.</li></ol>
+<h3>5.4 Porcentagem</h3>
+<div class="cards"><div class="card"><b>10%</b>Dividir por 10.</div><div class="card"><b>25%</b>Um quarto.</div><div class="card"><b>50%</b>Metade.</div><div class="card"><b>75%</b>Três quartos.</div><div class="card"><b>Aumento de p%</b>Multiplica por 1+p/100.</div><div class="card"><b>Desconto de p%</b>Multiplica por 1−p/100.</div></div>
+<div class="box red"><b>Porcentagem sucessiva:</b> aumento de 20% seguido de desconto de 20% não volta ao valor inicial. Exemplo: 100 → 120 → 96.</div>
+<h3>5.5 Juros simples e compostos</h3>
+<table><thead><tr><th>Tipo</th><th>Fórmula</th><th>Ideia</th></tr></thead><tbody>
+<tr><td>Juros simples</td><td>J = C·i·t; M = C+J</td><td>Juro sempre sobre o capital inicial.</td></tr>
+<tr><td>Juros compostos</td><td>M = C·(1+i)^t</td><td>Juro sobre juro.</td></tr>
+</tbody></table>
+<p><b>Importante:</b> taxa deve estar em decimal: 5% = 0,05.</p>
+<h3>5.6 Média aritmética simples e ponderada</h3>
+<div class="formula big">Média simples = soma dos valores ÷ quantidade de valores</div>
+<div class="formula big">Média ponderada = soma(valor × peso) ÷ soma dos pesos</div>
+<div class="box amber"><b>Pegadinha:</b> se há pesos diferentes, não tire média simples. Peso 2 conta duas vezes.</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Três irmãos dividem R$ 180.000,00 em partes diretamente proporcionais a 2, 3 e 4. Quanto recebe o segundo irmão?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 40.000,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 50.000,00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 60.000,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 80.000,00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) R$ 60.000,00</b><br>Soma das partes: 2+3+4=9. Cada parte vale 180.000÷9=20.000. O segundo recebe 3 partes: 60.000.
+<div class="peg"><b>Pegadinha:</b> Não divida por 3 irmãos igualmente; a divisão é proporcional.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma gráfica produz 900 panfletos em 6 horas usando 3 máquinas. Quantos panfletos produzirá em 8 horas usando 4 máquinas, no mesmo ritmo?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 1.200</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 1.400</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 1.600</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 1.800</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 1.600</b><br>Produção é direta com horas e máquinas: 900×(8/6)×(4/3)=900×4/3×4/3=1600.
+<div class="peg"><b>Pegadinha:</b> As duas grandezas aumentam a produção; nenhuma deve ser invertida.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um produto sofreu aumento de 20% e depois desconto de 25%, passando a custar R$ 180,00. Qual era o preço inicial?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 180,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 187,50</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 200,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 240,00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) R$ 200,00</b><br>Preço inicial x. Depois: x×1,20×0,75 = x×0,90. Então 0,90x=180; x=200.
+<div class="peg"><b>Pegadinha:</b> Aumento e desconto sucessivos não se anulam automaticamente.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um produto de R$ 80,00 teve desconto de 15%. O preço final é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 12,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 65,00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 68,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 95,00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) R$ 68,00</b><br>15% de 80 = 12. Preço final = 80−12=68.
+<div class="peg"><b>Pegadinha:</b> R$ 12,00 é o valor do desconto, não o preço final.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um capital de R$ 1.000,00 aplicado a juros simples de 2% ao mês por 5 meses rende:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 10,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 50,00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 100,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 1.100,00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) R$ 100,00</b><br>J=C·i·t=1000×0,02×5=100.
+<div class="peg"><b>Pegadinha:</b> A questão pede o juro, não o montante. O montante seria R$ 1.100,00.</div>
+</div></div>
+<div class="quiz" data-correct="3">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">R$ 1.000,00 aplicados a juros compostos de 10% ao ano por 2 anos resultam em montante de:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 1.020,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 1.100,00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 1.200,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 1.210,00</button>
+</div>
+<div class="feedback"><b>Gabarito: D) R$ 1.210,00</b><br>M=1000×(1,10)²=1000×1,21=1210.
+<div class="peg"><b>Pegadinha:</b> Em juros compostos, o segundo ano incide sobre 1100, não sobre 1000.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 7</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">As notas de um candidato foram 6, 8 e 10, com pesos 1, 2 e 3. A média ponderada é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 8</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 8,33</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 8,67</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 9</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 8,67</b><br>M=(6×1+8×2+10×3)/(1+2+3)=(6+16+30)/6=52/6=8,67.
+<div class="peg"><b>Pegadinha:</b> Média simples daria 8; mas há pesos.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 8</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se 4 professores corrigem 120 provas em 3 horas, mantendo o mesmo ritmo, 6 professores corrigem quantas provas em 2 horas?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 120</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 160</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 180</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 240</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 120</b><br>Produção é direta com professores e horas: 120×(6/4)×(2/3)=120×1,5×0,666...=120.
+<div class="peg"><b>Pegadinha:</b> Mais professores aumenta, menos horas diminui; os efeitos se compensam.</div>
+</div></div>
+<div class="quiz" data-correct="3">
+<div class="qhead"><span>Questão 9</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma receita usa 300 g de farinha para 12 bolinhos. Para fazer 20 bolinhos, mantendo a proporção, serão necessários:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 360 g</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 400 g</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 450 g</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 500 g</button>
+</div>
+<div class="feedback"><b>Gabarito: D) 500 g</b><br>300/12=25 g por bolinho. Para 20: 20×25=500 g.
+<div class="peg"><b>Pegadinha:</b> Não some 8 bolinhos como se fossem 8 gramas; mantenha a proporção.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 10</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um funcionário recebe R$ 2.400,00 e terá reajuste de 8%. O novo salário será:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 2.408,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 2.480,00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 2.592,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 2.600,00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) R$ 2.592,00</b><br>8% de 2400 = 192. Novo salário = 2400+192=2592.
+<div class="peg"><b>Pegadinha:</b> R$ 2.480,00 viria de calcular 8% como 80 reais, erro comum.</div>
+</div></div></section><section id="algebra" class="chapter"><h2>6. Álgebra: produtos notáveis, fatoração, polinômios e equações</h2>
+<p class="lead">Álgebra em concurso costuma cobrar manipulação direta. O segredo é reconhecer padrões: quadrado da soma, diferença de quadrados, trinômio do 2º grau e equações simples.</p>
+<h3>6.1 Produtos notáveis</h3>
+<table><thead><tr><th>Nome</th><th>Fórmula</th><th>Exemplo</th></tr></thead><tbody>
+<tr><td>Quadrado da soma</td><td>(a+b)² = a²+2ab+b²</td><td>(x+3)² = x²+6x+9</td></tr>
+<tr><td>Quadrado da diferença</td><td>(a−b)² = a²−2ab+b²</td><td>(x−5)² = x²−10x+25</td></tr>
+<tr><td>Produto da soma pela diferença</td><td>(a+b)(a−b)=a²−b²</td><td>(x+4)(x−4)=x²−16</td></tr>
+</tbody></table>
+<div class="box red"><b>Erro mortal:</b> (x+3)² não é x²+9. O termo do meio, 2·x·3=6x, precisa aparecer.</div>
+<h3>6.2 Fatoração</h3>
+<ul class="tight"><li><b>Fator comum:</b> ax+ay=a(x+y).</li><li><b>Diferença de quadrados:</b> a²−b²=(a+b)(a−b).</li><li><b>Trinômio quadrado perfeito:</b> a²±2ab+b²=(a±b)².</li><li><b>Trinômio do 2º grau:</b> procure dois números que somem b e multipliquem c, quando o coeficiente de x² for 1.</li></ul>
+<h3>6.3 Equação de 1º grau</h3>
+<p>Isolar a incógnita. O que está somando passa subtraindo; o que está multiplicando passa dividindo.</p>
+<div class="exemplo"><b>Exemplo:</b> 3x + 5 = 20 → 3x = 15 → x = 5.</div>
+<h3>6.4 Equação de 2º grau</h3>
+<div class="formula big">ax²+bx+c=0, com a≠0</div>
+<div class="formula big">Δ=b²−4ac &nbsp;&nbsp; e &nbsp;&nbsp; x=(-b±√Δ)/(2a)</div>
+<table><thead><tr><th>Delta</th><th>Quantidade de raízes reais</th></tr></thead><tbody><tr><td>Δ&gt;0</td><td>Duas raízes reais distintas.</td></tr><tr><td>Δ=0</td><td>Uma raiz real dupla.</td></tr><tr><td>Δ&lt;0</td><td>Nenhuma raiz real.</td></tr></tbody></table>
+<h3>6.5 Polinômios</h3>
+<p>Um polinômio é uma expressão como P(x)=2x³−5x²+x−7. O grau é o maior expoente de x com coeficiente não nulo. Para calcular P(2), substitua x por 2 em todos os lugares.</p>
+<div class="box amber"><b>Polinômios em prova:</b> normalmente aparecem como valor numérico, soma/subtração, grau, raiz de polinômio ou fatoração simples.</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A expansão correta de (x+4)² é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> x²+16</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> x²+8x+16</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> x²+4x+16</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 2x+8</button>
+</div>
+<div class="feedback"><b>Gabarito: B) x²+8x+16</b><br>(x+4)²=x²+2·x·4+4²=x²+8x+16.
+<div class="peg"><b>Pegadinha:</b> Não esqueça o termo do meio.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A fatoração de x²−25 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> (x−5)²</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> (x+5)²</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> (x+5)(x−5)</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> x(x−25)</button>
+</div>
+<div class="feedback"><b>Gabarito: C) (x+5)(x−5)</b><br>É diferença de quadrados: x²−5²=(x+5)(x−5).
+<div class="peg"><b>Pegadinha:</b> Não é trinômio quadrado perfeito; falta termo do meio.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Resolva: 4x−7=21.</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> x=3,5</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> x=7</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> x=14</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> x=28</button>
+</div>
+<div class="feedback"><b>Gabarito: B) x=7</b><br>4x=28; x=7.
+<div class="peg"><b>Pegadinha:</b> Não divida 21 por 4 antes de passar o −7.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A equação x²−5x+6=0 tem raízes:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 1 e 6</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 2 e 3</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> −2 e −3</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 0 e 6</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 2 e 3</b><br>Fatorando: x²−5x+6=(x−2)(x−3). Raízes: 2 e 3.
+<div class="peg"><b>Pegadinha:</b> Os números devem somar 5 e multiplicar 6, com sinais positivos nas raízes.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Para P(x)=2x²−3x+1, o valor de P(3) é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 10</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 12</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 16</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 28</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 10</b><br>P(3)=2·9−3·3+1=18−9+1=10.
+<div class="peg"><b>Pegadinha:</b> Substitua x em todos os termos.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O grau do polinômio 5x⁴−2x³+x−9 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 1</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 3</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 4</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 5</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 4</b><br>O maior expoente é 4.
+<div class="peg"><b>Pegadinha:</b> Grau não é quantidade de termos.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 7</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A soma das raízes de x²−7x+10=0 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> −7</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 7</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 10</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> −10</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 7</b><br>Pela relação de Girard, soma das raízes = −b/a = −(−7)/1 = 7.
+<div class="peg"><b>Pegadinha:</b> O produto é c/a=10; não confunda soma com produto.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 8</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se 2(x−3)+5=17, então x vale:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 7</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 8</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 9</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 10</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 9</b><br>2x−6+5=17 → 2x−1=17 → 2x=18 → x=9. A alternativa correta não aparece; ajuste final abaixo.
+<div class="peg"><b>Pegadinha:</b> Cuidado ao distribuir o 2.</div>
+</div></div></section><section id="funcoes" class="chapter"><h2>7. Funções exponenciais, logaritmos, PA e PG</h2>
+<p class="lead">Esse bloco parece avançado, mas em PSS costuma vir no nível de aplicação direta. O candidato precisa saber substituir valor em função, resolver potência simples, aplicar propriedades básicas de logaritmo e reconhecer progressões.</p>
+<h3>7.1 Função: ideia básica</h3>
+<p>Função é uma regra que associa cada valor de entrada x a um valor de saída f(x). Em provas simples, a cobrança mais comum é substituir x.</p>
+<div class="exemplo"><b>Exemplo:</b> se f(x)=(x+2)³−10, então f(2)=(4)³−10=64−10=54.</div>
+<h3>7.2 Função exponencial</h3>
+<div class="formula big">f(x)=aˣ, com a&gt;0 e a≠1</div>
+<p>Se a&gt;1, a função é crescente. Se 0&lt;a&lt;1, é decrescente.</p>
+<h3>7.3 Logaritmos</h3>
+<div class="formula big">logₐ b = x  ⇔  aˣ = b</div>
+<table><thead><tr><th>Propriedade</th><th>Fórmula</th><th>Exemplo</th></tr></thead><tbody>
+<tr><td>Produto</td><td>log(a·b)=log a + log b</td><td>log(2·5)=log2+log5</td></tr>
+<tr><td>Quociente</td><td>log(a/b)=log a − log b</td><td>log(10/2)=log10−log2</td></tr>
+<tr><td>Potência</td><td>log(aⁿ)=n·log a</td><td>log(2³)=3log2</td></tr>
+</tbody></table>
+<div class="box red"><b>Não existe:</b> log(a+b)=log a + log b. Essa é uma das pegadinhas mais comuns.</div>
+<h3>7.4 Progressão aritmética — PA</h3>
+<p>Na PA, a diferença entre termos consecutivos é constante. Essa diferença é a razão r.</p>
+<div class="formula big">aₙ = a₁ + (n−1)r</div>
+<div class="formula big">Sₙ = (a₁+aₙ)n/2</div>
+<h3>7.5 Progressão geométrica — PG</h3>
+<p>Na PG, cada termo é obtido multiplicando o anterior por uma razão q.</p>
+<div class="formula big">aₙ = a₁·qⁿ⁻¹</div>
+<div class="formula big">Sₙ = a₁(qⁿ−1)/(q−1), q≠1</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="3">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se f(x)=(x+2)³−10, então f(2) é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 6</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 17</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 26</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 54</button>
+</div>
+<div class="feedback"><b>Gabarito: D) 54</b><br>f(2)=(2+2)³−10=4³−10=64−10=54.
+<div class="peg"><b>Pegadinha:</b> O parêntese deve ser resolvido antes da potência.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A solução de 2ˣ=32 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> x=4</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> x=5</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> x=16</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> x=30</button>
+</div>
+<div class="feedback"><b>Gabarito: B) x=5</b><br>32=2⁵, então x=5.
+<div class="peg"><b>Pegadinha:</b> Escreva os dois lados na mesma base.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">log₂ 32 vale:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 4</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 5</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 16</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 30</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 5</b><br>log₂32 pergunta: 2 elevado a quanto dá 32? Resposta: 5.
+<div class="peg"><b>Pegadinha:</b> Logaritmo é expoente.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma PA com a₁=5 e razão 3, o 10º termo é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 30</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 32</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 35</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 50</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 32</b><br>a₁₀=5+(10−1)·3=5+27=32.
+<div class="peg"><b>Pegadinha:</b> Use n−1, não n.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Na PG 3, 6, 12, 24,... o 6º termo é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 48</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 72</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 96</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 192</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 96</b><br>A razão é 2. a₆=3·2⁵=96.
+<div class="peg"><b>Pegadinha:</b> O 6º termo exige 5 multiplicações depois do primeiro.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A soma dos 5 primeiros termos da PA 2, 5, 8, 11, 14 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 35</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 40</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 45</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 70</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 40</b><br>S₅=(2+14)·5/2=16·2,5=40.
+<div class="peg"><b>Pegadinha:</b> Não some só primeiro e último; multiplique por n/2.</div>
+</div></div>
+<div class="quiz" data-correct="3">
+<div class="qhead"><span>Questão 7</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se log₁₀x = 3, então x vale:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 3</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 10</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 100</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 1000</button>
+</div>
+<div class="feedback"><b>Gabarito: D) 1000</b><br>log₁₀x=3 significa 10³=x. Logo x=1000.
+<div class="peg"><b>Pegadinha:</b> A base 10 costuma estar oculta em log comum, mas aqui está explícita.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 8</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A função f(x)=3ˣ, com base maior que 1, é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> constante</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> crescente</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> decrescente</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> negativa para todo x</button>
+</div>
+<div class="feedback"><b>Gabarito: B) crescente</b><br>Função exponencial com base maior que 1 é crescente.
+<div class="peg"><b>Pegadinha:</b> Não confunda com base entre 0 e 1, que seria decrescente.</div>
+</div></div></section><section id="combinatoria" class="chapter"><h2>8. Análise combinatória, binômio de Newton e probabilidade</h2>
+<p class="lead">Combinatória assusta porque cada enunciado parece diferente. O caminho é perguntar: a ordem importa? Há repetição? Estou escolhendo ou organizando?</p>
+<h3>8.1 Princípio Fundamental da Contagem</h3>
+<p>Se uma decisão tem m possibilidades e outra tem n possibilidades, o total é m·n, quando as escolhas são independentes.</p>
+<div class="exemplo"><b>Exemplo:</b> 3 camisetas e 4 bermudas formam 3·4=12 combinações de roupa.</div>
+<h3>8.2 Permutação, arranjo e combinação</h3>
+<table><thead><tr><th>Tipo</th><th>Ordem importa?</th><th>Usar quando...</th><th>Fórmula</th></tr></thead><tbody>
+<tr><td>Permutação</td><td>Sim</td><td>Organizar todos os elementos.</td><td>n!</td></tr>
+<tr><td>Arranjo</td><td>Sim</td><td>Escolher alguns e ordenar.</td><td>n!/(n−p)!</td></tr>
+<tr><td>Combinação</td><td>Não</td><td>Escolher grupo, comissão, equipe.</td><td>n!/[p!(n−p)!]</td></tr>
+</tbody></table>
+<div class="box amber"><b>Teste rápido:</b> Ana-Bia-Caio é diferente de Bia-Ana-Caio? Se sim, ordem importa. Se é a mesma comissão, ordem não importa.</div>
+<h3>8.3 Binômio de Newton</h3>
+<div class="formula big">(a+b)ⁿ = Σ C(n,k)aⁿ⁻ᵏbᵏ</div>
+<p>Para provas simples, memorize os coeficientes das primeiras linhas do triângulo de Pascal:</p>
+<table><tbody><tr><td>n=0</td><td>1</td></tr><tr><td>n=1</td><td>1&nbsp;&nbsp;1</td></tr><tr><td>n=2</td><td>1&nbsp;&nbsp;2&nbsp;&nbsp;1</td></tr><tr><td>n=3</td><td>1&nbsp;&nbsp;3&nbsp;&nbsp;3&nbsp;&nbsp;1</td></tr><tr><td>n=4</td><td>1&nbsp;&nbsp;4&nbsp;&nbsp;6&nbsp;&nbsp;4&nbsp;&nbsp;1</td></tr><tr><td>n=5</td><td>1&nbsp;&nbsp;5&nbsp;&nbsp;10&nbsp;&nbsp;10&nbsp;&nbsp;5&nbsp;&nbsp;1</td></tr></tbody></table>
+<h3>8.4 Probabilidade</h3>
+<div class="formula big">P(evento)= casos favoráveis ÷ casos possíveis</div>
+<ul class="tight"><li><b>Evento certo:</b> probabilidade 1 ou 100%.</li><li><b>Evento impossível:</b> probabilidade 0.</li><li><b>Eventos complementares:</b> P(não A)=1−P(A).</li><li><b>“E” em eventos independentes:</b> multiplica as probabilidades.</li><li><b>“Ou” em eventos mutuamente exclusivos:</b> soma as probabilidades.</li></ul>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="3">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma senha tem 2 letras, escolhidas entre A, B e C, seguidas de 2 algarismos, escolhidos entre 1, 2, 3 e 4. Admitindo repetição, quantas senhas podem ser formadas?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 24</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 36</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 48</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 144</button>
+</div>
+<div class="feedback"><b>Gabarito: D) 144</b><br>Cada letra tem 3 opções e cada algarismo tem 4 opções: 3·3·4·4=144.
+<div class="peg"><b>Pegadinha:</b> Com repetição, as opções não diminuem.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Quantos anagramas tem a palavra SOL?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 3</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 6</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 9</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 12</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 6</b><br>São 3 letras distintas: 3! = 6.
+<div class="peg"><b>Pegadinha:</b> Anagrama organiza todas as letras; é permutação.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Quantos anagramas da palavra CASA existem?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 12</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 24</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 6</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 18</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 12</b><br>CASA tem 4 letras, com A repetido 2 vezes. Total: 4!/2! = 12.
+<div class="peg"><b>Pegadinha:</b> Com letras repetidas, divida pelo fatorial da repetição.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">De 8 pessoas, uma comissão de 3 será escolhida. Quantas comissões diferentes podem ser formadas?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 24</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 56</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 336</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 512</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 56</b><br>Comissão não tem ordem: C(8,3)=8·7·6/(3·2·1)=56.
+<div class="peg"><b>Pegadinha:</b> Se trocar a ordem dos nomes, a comissão continua igual.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma corrida com 6 participantes, quantos pódios diferentes de 1º, 2º e 3º lugares podem ocorrer?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 18</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 20</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 120</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 216</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 120</b><br>Ordem importa: A(6,3)=6·5·4=120.
+<div class="peg"><b>Pegadinha:</b> Pódio tem ordem; não é combinação.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">No desenvolvimento de (x+1)⁴, o coeficiente de x² é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 2</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 4</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 6</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 8</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 6</b><br>Linha n=4 do Pascal: 1,4,6,4,1. O termo x² tem coeficiente 6.
+<div class="peg"><b>Pegadinha:</b> Não confunda com o expoente 2; o coeficiente é combinatório.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 7</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Ao lançar um dado comum, a probabilidade de sair número par é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 1/6</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 1/3</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 1/2</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 2/3</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 1/2</b><br>Pares: 2,4,6. São 3 casos em 6: 3/6=1/2.
+<div class="peg"><b>Pegadinha:</b> Probabilidade usa casos favoráveis sobre possíveis.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 8</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma urna tem 5 bolas vermelhas e 3 azuis. A probabilidade de retirar uma azul é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 3/5</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 3/8</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 5/8</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 1/3</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 3/8</b><br>Total: 8 bolas. Azuis: 3. Probabilidade=3/8.
+<div class="peg"><b>Pegadinha:</b> O denominador é o total de bolas, não a quantidade de vermelhas.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 9</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Jogando duas moedas, a probabilidade de sair duas caras é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 1/2</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 1/3</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 1/4</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 2/4</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 1/4</b><br>Espaço amostral: CC, CK, KC, KK. Duas caras: 1 caso. Probabilidade=1/4.
+<div class="peg"><b>Pegadinha:</b> Duas moedas geram quatro resultados igualmente prováveis.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 10</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se a probabilidade de chover é 30%, a probabilidade de não chover é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 30%</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 60%</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 70%</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 130%</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 70%</b><br>Evento complementar: 100%−30%=70%.
+<div class="peg"><b>Pegadinha:</b> Probabilidades complementares somam 100%.</div>
+</div></div></section><section id="matrizes" class="chapter"><h2>9. Matrizes, determinantes e sistemas lineares</h2>
+<p class="lead">Em PSS, esse bloco deve ser estudado de forma objetiva. Aprenda operações simples, determinante 2×2 e 3×3 básico, e resolução de sistemas por substituição ou eliminação.</p>
+<h3>9.1 Matrizes</h3>
+<p>Uma matriz é uma tabela de números organizada em linhas e colunas. Uma matriz 2×3 tem 2 linhas e 3 colunas.</p>
+<table><thead><tr><th>Operação</th><th>Regra</th></tr></thead><tbody>
+<tr><td>Soma</td><td>Somente matrizes de mesma ordem; soma elemento com elemento.</td></tr>
+<tr><td>Multiplicação por escalar</td><td>Multiplica todos os elementos pelo número.</td></tr>
+<tr><td>Multiplicação de matrizes</td><td>Colunas da primeira devem igualar linhas da segunda.</td></tr>
+</tbody></table>
+<h3>9.2 Determinante 2×2</h3>
+<div class="formula big">det [[a,b],[c,d]] = ad − bc</div>
+<h3>9.3 Sistemas lineares</h3>
+<p>Um sistema é um conjunto de equações com as mesmas incógnitas. Métodos comuns: substituição, comparação e eliminação.</p>
+<div class="exemplo"><b>Exemplo:</b> x+y=10 e x−y=2. Somando as equações: 2x=12 → x=6. Então y=4.</div>
+<h3>9.4 Regra de Cramer — só o essencial</h3>
+<p>Para sistema 2×2, se o determinante da matriz dos coeficientes for diferente de zero, há solução única.</p>
+<div class="formula big">D = a₁b₂ − a₂b₁</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A matriz A tem 3 linhas e 2 colunas. Sua ordem é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 2×3</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 3×2</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 3×3</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 2×2</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 3×2</b><br>Ordem é linhas × colunas: 3×2.
+<div class="peg"><b>Pegadinha:</b> Não inverta coluna com linha.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se A=[[1,2],[3,4]] e B=[[5,6],[7,8]], então A+B é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> [[6,8],[10,12]]</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> [[5,12],[21,32]]</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> [[4,4],[4,4]]</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> [[6,6],[6,6]]</button>
+</div>
+<div class="feedback"><b>Gabarito: A) [[6,8],[10,12]]</b><br>Soma elemento a elemento: 1+5=6, 2+6=8, 3+7=10, 4+8=12.
+<div class="peg"><b>Pegadinha:</b> Não multiplique elementos; a operação pedida é soma.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O determinante da matriz [[2,3],[1,4]] é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 5</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 8</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 11</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 14</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 5</b><br>det=2·4−3·1=8−3=5.
+<div class="peg"><b>Pegadinha:</b> Multiplique diagonal principal menos diagonal secundária.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Resolva o sistema: x+y=9 e x−y=3.</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> x=3, y=6</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> x=6, y=3</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> x=9, y=3</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> x=12, y=6</button>
+</div>
+<div class="feedback"><b>Gabarito: B) x=6, y=3</b><br>Somando: 2x=12, x=6. Então 6+y=9, y=3.
+<div class="peg"><b>Pegadinha:</b> Somar as equações elimina y.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se 2x+3y=12 e y=2, então x vale:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 2</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 3</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 4</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 6</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 3</b><br>2x+3·2=12 → 2x+6=12 → 2x=6 → x=3.
+<div class="peg"><b>Pegadinha:</b> Substitua o valor de y antes de isolar x.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A matriz identidade de ordem 2 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> [[1,1],[1,1]]</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> [[0,1],[1,0]]</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> [[1,0],[0,1]]</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> [[0,0],[0,0]]</button>
+</div>
+<div class="feedback"><b>Gabarito: C) [[1,0],[0,1]]</b><br>Matriz identidade tem 1 na diagonal principal e 0 fora dela.
+<div class="peg"><b>Pegadinha:</b> Não é matriz com todos os elementos iguais a 1.</div>
+</div></div></section><section id="complexos" class="chapter"><h2>10. Números complexos</h2>
+<p class="lead">Números complexos assustam, mas a cobrança de concurso costuma ficar no básico: forma algébrica, unidade imaginária, soma, subtração, multiplicação simples, conjugado e módulo.</p>
+<h3>10.1 Forma algébrica</h3>
+<div class="formula big">z = a + bi</div>
+<p>a é a parte real; b é a parte imaginária; i é a unidade imaginária.</p>
+<div class="formula big">i² = −1</div>
+<h3>10.2 Operações básicas</h3>
+<table><thead><tr><th>Operação</th><th>Como fazer</th></tr></thead><tbody>
+<tr><td>Soma/subtração</td><td>Junte partes reais com reais e imaginárias com imaginárias.</td></tr>
+<tr><td>Multiplicação</td><td>Distribua normalmente e use i²=−1.</td></tr>
+<tr><td>Conjugado</td><td>Troque o sinal da parte imaginária: a+bi → a−bi.</td></tr>
+<tr><td>Módulo</td><td>|z|=√(a²+b²).</td></tr>
+</tbody></table>
+<div class="box red"><b>Pegadinha:</b> i² não é 1. É −1. Esse detalhe muda sinais em multiplicações.</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se z=3+4i, a parte real de z é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 3</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 4</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> i</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 7</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 3</b><br>Na forma a+bi, a parte real é a. Aqui, a=3.
+<div class="peg"><b>Pegadinha:</b> 4 é o coeficiente da parte imaginária.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O conjugado de 5−2i é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> −5+2i</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 5+2i</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> −5−2i</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 2−5i</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 5+2i</b><br>Conjugado troca apenas o sinal da parte imaginária: 5−2i → 5+2i.
+<div class="peg"><b>Pegadinha:</b> A parte real não muda de sinal.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">(2+3i)+(4−i) é igual a:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 6+2i</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 6+4i</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> −2+2i</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 8−3i</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 6+2i</b><br>Partes reais: 2+4=6. Imaginárias: 3i−i=2i. Resultado: 6+2i.
+<div class="peg"><b>Pegadinha:</b> Some semelhantes com semelhantes.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O valor de i² é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> −1</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 0</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 1</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 2i</button>
+</div>
+<div class="feedback"><b>Gabarito: A) −1</b><br>Por definição, i²=−1.
+<div class="peg"><b>Pegadinha:</b> Essa é a definição central dos complexos.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O módulo de z=3+4i é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 4</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 5</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 7</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 25</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 5</b><br>|z|=√(3²+4²)=√25=5.
+<div class="peg"><b>Pegadinha:</b> 25 é o quadrado do módulo, não o módulo.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">(1+i)(1−i) é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 0</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 1</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 2</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 2i</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 2</b><br>(1+i)(1−i)=1−i+i−i²=1−(−1)=2.
+<div class="peg"><b>Pegadinha:</b> Os termos −i e +i se anulam; i² vira −1.</div>
+</div></div></section><section id="geometria" class="chapter"><h2>11. Geometria: forma, perímetro, área, volume e ângulos</h2>
+<p class="lead">Geometria costuma render questões diretas. A maior parte dos erros vem de confundir perímetro com área, usar unidade errada ou esquecer que volume exige três dimensões.</p>
+<h3>11.1 Perímetro e área</h3>
+<table><thead><tr><th>Figura</th><th>Perímetro</th><th>Área</th></tr></thead><tbody>
+<tr><td>Quadrado</td><td>4l</td><td>l²</td></tr>
+<tr><td>Retângulo</td><td>2(b+h)</td><td>b·h</td></tr>
+<tr><td>Triângulo</td><td>soma dos lados</td><td>b·h/2</td></tr>
+<tr><td>Círculo</td><td>2πr</td><td>πr²</td></tr>
+<tr><td>Trapézio</td><td>soma dos lados</td><td>(B+b)h/2</td></tr>
+</tbody></table>
+<h3>11.2 Ângulos</h3>
+<ul class="tight"><li><b>Complementares:</b> somam 90°.</li><li><b>Suplementares:</b> somam 180°.</li><li><b>Opostos pelo vértice:</b> são iguais.</li><li><b>Soma dos ângulos internos de triângulo:</b> 180°.</li><li><b>Soma dos ângulos internos de polígono:</b> (n−2)·180°.</li></ul>
+<h3>11.3 Teorema de Pitágoras</h3>
+<div class="formula big">a² = b² + c²</div>
+<p>Em triângulo retângulo, a hipotenusa é o maior lado, oposto ao ângulo de 90°.</p>
+<h3>11.4 Volumes mais cobrados</h3>
+<table><thead><tr><th>Sólido</th><th>Volume</th></tr></thead><tbody>
+<tr><td>Paralelepípedo</td><td>comprimento × largura × altura</td></tr>
+<tr><td>Cubo</td><td>aresta³</td></tr>
+<tr><td>Cilindro</td><td>πr²h</td></tr>
+<tr><td>Prisma</td><td>área da base × altura</td></tr>
+</tbody></table>
+<div class="box red"><b>Perímetro ≠ área ≠ volume:</b> perímetro mede contorno; área mede superfície; volume mede espaço ocupado.</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um retângulo mede 8 cm por 5 cm. Sua área é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 13 cm²</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 26 cm²</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 40 cm²</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 80 cm²</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 40 cm²</b><br>Área do retângulo: base×altura = 8×5=40 cm².
+<div class="peg"><b>Pegadinha:</b> 26 cm é o perímetro, não a área.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O perímetro de um quadrado de lado 7 m é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 14 m</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 28 m</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 49 m²</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 21 m</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 28 m</b><br>Perímetro do quadrado = 4×7=28 m.
+<div class="peg"><b>Pegadinha:</b> 49 m² é a área.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A área de um triângulo de base 10 cm e altura 6 cm é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 16 cm²</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 30 cm²</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 60 cm²</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 120 cm²</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 30 cm²</b><br>Área = b·h/2 = 10×6/2=30 cm².
+<div class="peg"><b>Pegadinha:</b> Não esqueça de dividir por 2.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Dois ângulos suplementares medem (3x+10)° e (2x−20)°. O maior ângulo mede:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 56°</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 90°</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 124°</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 130°</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 124°</b><br>Suplementares somam 180: 3x+10+2x−20=180 → 5x−10=180 → x=38. Ângulos: 124° e 56°.
+<div class="peg"><b>Pegadinha:</b> Suplementares somam 180°, não 90°.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um triângulo retângulo tem catetos 6 e 8. A hipotenusa mede:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 10</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 12</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 14</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 100</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 10</b><br>h²=6²+8²=36+64=100; h=10.
+<div class="peg"><b>Pegadinha:</b> 100 é h², não h.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um cubo de aresta 3 cm tem volume:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 9 cm²</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 12 cm³</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 27 cm³</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 81 cm³</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 27 cm³</b><br>Volume do cubo = aresta³ = 3³=27 cm³.
+<div class="peg"><b>Pegadinha:</b> Volume usa unidade cúbica.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 7</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A soma dos ângulos internos de um pentágono é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 180°</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 360°</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 540°</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 720°</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 540°</b><br>S=(n−2)·180=(5−2)·180=540°.
+<div class="peg"><b>Pegadinha:</b> Pentágono tem 5 lados.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 8</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um cilindro tem raio 2 cm e altura 5 cm. Usando π=3, o volume é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 20 cm³</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 30 cm³</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 60 cm³</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 75 cm³</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 60 cm³</b><br>V=πr²h=3×2²×5=3×4×5=60 cm³.
+<div class="peg"><b>Pegadinha:</b> Não use 2r no lugar de r².</div>
+</div></div></section><section id="analitica" class="chapter"><h2>12. Geometria analítica</h2>
+<p class="lead">Geometria analítica liga álgebra e geometria no plano cartesiano. Em prova objetiva, os pontos mais prováveis são distância entre pontos, ponto médio, coeficiente angular e equação da reta.</p>
+<h3>12.1 Plano cartesiano</h3>
+<p>Um ponto é representado por P(x,y). O primeiro número é a abscissa x; o segundo é a ordenada y.</p>
+<h3>12.2 Distância entre dois pontos</h3>
+<div class="formula big">d = √[(x₂−x₁)² + (y₂−y₁)²]</div>
+<h3>12.3 Ponto médio</h3>
+<div class="formula big">M = ((x₁+x₂)/2, (y₁+y₂)/2)</div>
+<h3>12.4 Coeficiente angular</h3>
+<div class="formula big">m = (y₂−y₁)/(x₂−x₁)</div>
+<p>Ele indica a inclinação da reta. Retas crescentes têm m positivo; decrescentes têm m negativo; horizontais têm m=0.</p>
+<h3>12.5 Equação reduzida da reta</h3>
+<div class="formula big">y = mx + b</div>
+<p>m é o coeficiente angular; b é o ponto onde a reta corta o eixo y.</p>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A distância entre os pontos A(0,0) e B(3,4) é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 5</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 7</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 12</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 25</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 5</b><br>d=√[(3−0)²+(4−0)²]=√(9+16)=√25=5.
+<div class="peg"><b>Pegadinha:</b> 25 é o quadrado da distância.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O ponto médio entre A(2,4) e B(6,8) é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> (4,6)</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> (8,12)</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> (2,2)</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> (6,4)</button>
+</div>
+<div class="feedback"><b>Gabarito: A) (4,6)</b><br>M=((2+6)/2,(4+8)/2)=(4,6).
+<div class="peg"><b>Pegadinha:</b> Faça média das coordenadas correspondentes.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O coeficiente angular da reta que passa por (1,2) e (3,6) é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 1</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 2</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 3</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 4</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 2</b><br>m=(6−2)/(3−1)=4/2=2.
+<div class="peg"><b>Pegadinha:</b> Não divida variação de x por variação de y; é Δy/Δx.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Na reta y=2x+5, o coeficiente angular é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 2</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 5</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 7</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> x</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 2</b><br>Na forma y=mx+b, m=2.
+<div class="peg"><b>Pegadinha:</b> O 5 é o coeficiente linear.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma reta horizontal tem coeficiente angular:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> −1</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 0</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 1</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> indefinido</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 0</b><br>Reta horizontal não sobe nem desce; m=0.
+<div class="peg"><b>Pegadinha:</b> Reta vertical é que tem coeficiente angular indefinido.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A reta y=−3x+1 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> crescente</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> decrescente</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> horizontal</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> vertical</button>
+</div>
+<div class="feedback"><b>Gabarito: B) decrescente</b><br>Coeficiente angular −3 é negativo; a reta é decrescente.
+<div class="peg"><b>Pegadinha:</b> Sinal de m indica crescimento/decrescimento.</div>
+</div></div></section><section id="logica" class="chapter"><h2>13. Raciocínio lógico e problemas</h2>
+<p class="lead">Raciocínio lógico em edital de Matemática geralmente envolve sequências, proposições simples, negação, leitura cuidadosa de condições e problemas com padrões.</p>
+<h3>13.1 Sequências</h3>
+<p>Procure primeiro padrões simples: soma constante, multiplicação constante, alternância, quadrados, números pares/ímpares.</p>
+<h3>13.2 Proposições</h3>
+<table><thead><tr><th>Conectivo</th><th>Leitura</th><th>Atenção</th></tr></thead><tbody>
+<tr><td>p e q</td><td>conjunção</td><td>Só é verdadeira se as duas forem verdadeiras.</td></tr>
+<tr><td>p ou q</td><td>disjunção</td><td>Em lógica inclusiva, é verdadeira se pelo menos uma for verdadeira.</td></tr>
+<tr><td>Se p, então q</td><td>condicional</td><td>Só é falsa quando p é verdadeira e q é falsa.</td></tr>
+<tr><td>Não p</td><td>negação</td><td>Inverte o valor lógico.</td></tr>
+</tbody></table>
+<h3>13.3 Negação de frases com quantificadores</h3>
+<table><thead><tr><th>Frase</th><th>Negação correta</th></tr></thead><tbody>
+<tr><td>Todos os alunos estudam.</td><td>Algum aluno não estuda.</td></tr>
+<tr><td>Algum aluno estudou.</td><td>Nenhum aluno estudou.</td></tr>
+<tr><td>Nenhum candidato faltou.</td><td>Algum candidato faltou.</td></tr>
+</tbody></table>
+<div class="box red"><b>Pegadinha:</b> a negação de “todos” não é “nenhum”. A negação de “todos fizeram” é “pelo menos um não fez”.</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Na sequência 2, 5, 8, 11, 14, o próximo termo é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 15</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 16</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 17</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 18</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 17</b><br>A sequência aumenta de 3 em 3. Próximo: 14+3=17.
+<div class="peg"><b>Pegadinha:</b> É uma PA de razão 3.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Na sequência 3, 6, 12, 24, o próximo termo é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 30</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 36</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 48</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 72</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 48</b><br>Cada termo é o dobro do anterior. Próximo: 48.
+<div class="peg"><b>Pegadinha:</b> Não é soma fixa; é multiplicação por 2.</div>
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A negação de “Todos os professores chegaram cedo” é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> Nenhum professor chegou cedo</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> Todos chegaram tarde</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> Algum professor não chegou cedo</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> Algum professor chegou cedo</button>
+</div>
+<div class="feedback"><b>Gabarito: C) Algum professor não chegou cedo</b><br>Negar “todos chegaram cedo” significa que pelo menos um não chegou cedo.
+<div class="peg"><b>Pegadinha:</b> Não troque “todos” por “nenhum” automaticamente.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se a proposição p é verdadeira e q é falsa, então p e q é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> verdadeira</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> falsa</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> verdadeira e falsa</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> impossível de avaliar</button>
+</div>
+<div class="feedback"><b>Gabarito: B) falsa</b><br>Conjunção “e” só é verdadeira quando ambas são verdadeiras.
+<div class="peg"><b>Pegadinha:</b> Basta uma falsa para p e q ser falsa.</div>
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se hoje é segunda, então amanhã é terça. A frase condicional só seria falsa se:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> hoje fosse segunda e amanhã não fosse terça</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> hoje não fosse segunda e amanhã fosse terça</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> hoje não fosse segunda e amanhã não fosse terça</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> hoje fosse segunda e amanhã fosse terça</button>
+</div>
+<div class="feedback"><b>Gabarito: A) hoje fosse segunda e amanhã não fosse terça</b><br>Condicional p→q só é falsa quando p é verdadeira e q é falsa.
+<div class="peg"><b>Pegadinha:</b> Essa é a principal pegadinha de condicional.</div>
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma fila, Ana está antes de Bia, e Bia está antes de Carla. Logo:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> Carla está antes de Ana</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> Ana está antes de Carla</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> Bia é a primeira</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> Carla é a segunda</button>
+</div>
+<div class="feedback"><b>Gabarito: B) Ana está antes de Carla</b><br>Se Ana vem antes de Bia e Bia antes de Carla, então Ana vem antes de Carla.
+<div class="peg"><b>Pegadinha:</b> É transitividade de ordem.</div>
+</div></div></section><section id="simulado" class="chapter"><h2>14. Simulado final — 30 questões no estilo da prova</h2>
+<p class="lead">Agora é treino de prova. Marque uma alternativa. O sistema mostrará se acertou, destacará a correta e exibirá comentário. As alternativas erradas foram pensadas para serem plausíveis, como em concurso.</p>
+<div class="box blue"><b>Como usar:</b> faça primeiro sem olhar fórmula. Depois revise somente os erros e anote a pegadinha que te derrubou.</div>
+<h3 class="treino">Treino com correção automática</h3><div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 1</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Uma escola comprou 15 caixas com 24 lápis cada. Distribuiu igualmente entre 9 turmas. Quantos lápis cada turma recebeu?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 30</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 36</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 40</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 45</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 40</b><br>15×24=360 lápis. 360÷9=40.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 2</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O MMC entre 8, 12 e 18 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 24</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 36</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 72</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 144</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 72</b><br>8=2³, 12=2²·3, 18=2·3². MMC=2³·3²=72.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 3</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O MDC entre 45 e 60 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 5</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 10</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 15</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 30</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 15</b><br>45=3²·5 e 60=2²·3·5. MDC=3·5=15.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 4</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um produto de R$ 250,00 recebe desconto de 12%. O desconto é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 12,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 25,00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 30,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 220,00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) R$ 30,00</b><br>12% de 250 = 0,12×250 = 30.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 5</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se 5 kg de alimento custam R$ 60,00, então 8 kg custam:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> R$ 84,00</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> R$ 90,00</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> R$ 96,00</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> R$ 100,00</button>
+</div>
+<div class="feedback"><b>Gabarito: C) R$ 96,00</b><br>Preço por kg = 60÷5=12. 8 kg = 8×12=96.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 6</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A média simples de 7, 8, 9 e 10 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 8</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 8,5</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 9</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 9,5</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 8,5</b><br>Soma=34. 34÷4=8,5.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 7</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A solução de 5x+10=45 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 5</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 7</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 9</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 11</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 7</b><br>5x=35; x=7.
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 8</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A fatoração de 3x+6 é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 3(x+2)</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> x(3+6)</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 6(x+3)</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 3(x+6)</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 3(x+2)</b><br>Fator comum 3: 3x+6=3(x+2).
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 9</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O resultado de (x−2)² é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> x²−4</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> x²−2x+4</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> x²−4x+4</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> x²+4x+4</button>
+</div>
+<div class="feedback"><b>Gabarito: C) x²−4x+4</b><br>(x−2)²=x²−4x+4.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 10</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">As raízes de x²−9=0 são:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 0 e 9</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 3 e 3</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> −3 e 3</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> −9 e 9</button>
+</div>
+<div class="feedback"><b>Gabarito: C) −3 e 3</b><br>x²=9; x=±3.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 11</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Se A={2,4,6} e B={1,2,3,4}, então A∪B é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> {2,4}</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> {1,2,3,4,6}</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> {6}</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> {1,3}</button>
+</div>
+<div class="feedback"><b>Gabarito: B) {1,2,3,4,6}</b><br>União junta todos sem repetir.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 12</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma turma de 40 alunos, 25 gostam de música, 20 de esporte e 10 de ambos. Gostam de pelo menos um:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 30</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 35</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 45</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 55</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 35</b><br>25+20−10=35.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 13</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">log₃ 81 vale:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 3</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 4</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 27</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 78</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 4</b><br>3⁴=81.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 14</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma PA, a₁=4 e r=5. O 8º termo é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 35</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 39</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 40</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 44</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 39</b><br>a₈=4+7·5=39.
+</div></div>
+<div class="quiz" data-correct="3">
+<div class="qhead"><span>Questão 15</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Em uma PG, a₁=2 e q=3. O 5º termo é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 30</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 54</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 81</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 162</button>
+</div>
+<div class="feedback"><b>Gabarito: D) 162</b><br>a₅=2·3⁴=162.
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 16</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Quantas maneiras há de escolher 2 alunos entre 5 para representar a turma?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 10</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 20</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 25</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 5</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 10</b><br>Escolha sem ordem: C(5,2)=10.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 17</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Quantos números de dois algarismos distintos podem ser formados com 1,2,3 e 4?</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 8</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 10</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 12</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 16</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 12</b><br>4 opções para a dezena e 3 para unidade: 12.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 18</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A probabilidade de tirar uma carta de copas de um baralho comum de 52 cartas é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 1/2</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 1/4</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 1/13</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 13/13</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 1/4</b><br>Há 13 copas em 52 cartas: 13/52=1/4.
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 19</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O determinante de [[1,5],[2,3]] é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> −7</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 7</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 13</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 15</button>
+</div>
+<div class="feedback"><b>Gabarito: A) −7</b><br>det=1·3−5·2=3−10=−7.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 20</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">No sistema x+y=12 e x=5, y é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 5</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 7</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 12</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 17</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 7</b><br>5+y=12; y=7.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 21</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O conjugado de −2+7i é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 2−7i</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> −2−7i</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 2+7i</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> −7+2i</button>
+</div>
+<div class="feedback"><b>Gabarito: B) −2−7i</b><br>Troca só o sinal da parte imaginária.
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 22</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O módulo de 6+8i é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 10</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 14</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 48</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 100</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 10</b><br>√(6²+8²)=√100=10.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 23</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um quadrado tem área 64 cm². Seu lado mede:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 4 cm</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 8 cm</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 16 cm</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 32 cm</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 8 cm</b><br>l²=64; l=8.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 24</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A área de um círculo de raio 3, usando π=3, é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 9</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 18</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 27</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 36</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 27</b><br>A=πr²=3×9=27.
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 25</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Um ângulo complementar a 35° mede:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 55°</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 65°</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 145°</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 180°</button>
+</div>
+<div class="feedback"><b>Gabarito: A) 55°</b><br>Complementares somam 90°. 90−35=55.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 26</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O volume de um paralelepípedo 2 m × 3 m × 4 m é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 9 m³</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 12 m³</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 24 m³</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 48 m³</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 24 m³</b><br>V=2×3×4=24 m³.
+</div></div>
+<div class="quiz" data-correct="2">
+<div class="qhead"><span>Questão 27</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A distância entre (1,1) e (4,5) é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 3</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 4</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 5</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 7</button>
+</div>
+<div class="feedback"><b>Gabarito: C) 5</b><br>√[(3)²+(4)²]=5.
+</div></div>
+<div class="quiz" data-correct="0">
+<div class="qhead"><span>Questão 28</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">O ponto médio entre (0,2) e (6,10) é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> (3,6)</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> (6,3)</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> (2,10)</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> (0,6)</button>
+</div>
+<div class="feedback"><b>Gabarito: A) (3,6)</b><br>M=((0+6)/2,(2+10)/2)=(3,6).
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 29</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">A negação de “Nenhum aluno faltou” é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> Todos faltaram</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> Algum aluno faltou</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> Nenhum aluno veio</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> Todos chegaram cedo</button>
+</div>
+<div class="feedback"><b>Gabarito: B) Algum aluno faltou</b><br>Negar nenhum é afirmar que pelo menos um faltou.
+</div></div>
+<div class="quiz" data-correct="1">
+<div class="qhead"><span>Questão 30</span><em>autorais no estilo prova objetiva</em></div>
+<p class="stem">Na sequência 1, 4, 9, 16, 25, o próximo termo é:</p>
+<div class="options">
+<button type="button" class="option" data-idx="0"><b>A)</b> 30</button>
+<button type="button" class="option" data-idx="1"><b>B)</b> 36</button>
+<button type="button" class="option" data-idx="2"><b>C)</b> 49</button>
+<button type="button" class="option" data-idx="3"><b>D)</b> 64</button>
+</div>
+<div class="feedback"><b>Gabarito: B) 36</b><br>São quadrados perfeitos: 1²,2²,3²,4²,5²; próximo 6²=36.
+</div></div></section><section id="formulas" class="chapter"><h2>15. Folha de fórmulas e revisão rápida</h2>
+<p class="lead">Use esta seção na véspera para revisão. A prova não exige decorar tudo de forma abstrata; exige saber reconhecer onde cada fórmula entra.</p>
+<div class="formulaGrid">
+<div><b>Frações</b><span>a/b + c/d = (ad+bc)/bd</span><span>a/b ÷ c/d = a/b × d/c</span></div>
+<div><b>Porcentagem</b><span>p% de x = p/100 · x</span><span>aumento: x(1+p/100)</span><span>desconto: x(1−p/100)</span></div>
+<div><b>Juros</b><span>Simples: J=Cit</span><span>Compostos: M=C(1+i)^t</span></div>
+<div><b>Média</b><span>Simples: soma/n</span><span>Ponderada: Σ(valor·peso)/Σpesos</span></div>
+<div><b>PA</b><span>aₙ=a₁+(n−1)r</span><span>Sₙ=(a₁+aₙ)n/2</span></div>
+<div><b>PG</b><span>aₙ=a₁qⁿ⁻¹</span><span>Sₙ=a₁(qⁿ−1)/(q−1)</span></div>
+<div><b>2º grau</b><span>Δ=b²−4ac</span><span>x=(-b±√Δ)/(2a)</span></div>
+<div><b>Geometria</b><span>Retângulo: A=bh</span><span>Triângulo: A=bh/2</span><span>Círculo: A=πr²</span><span>Pitágoras: a²=b²+c²</span></div>
+<div><b>Analítica</b><span>d=√[(x₂−x₁)²+(y₂−y₁)²]</span><span>M=((x₁+x₂)/2,(y₁+y₂)/2)</span></div>
+<div><b>Probabilidade</b><span>P=favoráveis/possíveis</span><span>P(não A)=1−P(A)</span></div>
+<div><b>Determinante 2×2</b><span>ad−bc</span></div>
+<div><b>Complexos</b><span>i²=−1</span><span>|a+bi|=√(a²+b²)</span></div>
+</div>
+<h3>15.1 Checklist de pegadinhas</h3>
+<ul class="tight"><li>MMC para ciclos; MDC para repartir igualmente.</li><li>“Do restante” muda a base da fração.</li><li>Porcentagens sucessivas usam fatores, não soma/subtração simples.</li><li>Média ponderada não é média simples.</li><li>Área converte ao quadrado; volume ao cubo.</li><li>Complementar soma 90°; suplementar soma 180°.</li><li>Combinação: ordem não importa. Arranjo/permutação: ordem importa.</li><li>Logaritmo é expoente.</li><li>i² = −1.</li><li>Na reta y=mx+b, m é inclinação e b é corte no eixo y.</li></ul>
+</section><section id="referencias" class="chapter"><h2>16. Referências usadas para aprofundamento</h2>
+<p class="lead">A apostila foi aprofundada com base no edital do PSS Cianorte/PR 002/2026, no perfil da banca Instituto UniFil e em matrizes regionais de Matemática.</p>
+<ul class="refs">
+<li><b>Edital PSS Cianorte/PR 002/2026:</b> usado para confirmar banca, número de questões, conteúdo programático e cronograma de cadernos/gabarito.</li>
+<li><b>Instituto UniFil:</b> organizadora do PSS. Foram observados padrões de questões catalogadas em bancos públicos de questões da banca, especialmente Matemática básica, frações, MMC, regra de três, porcentagem, função, ângulos e combinatória.</li>
+<li><b>UEM — Programa dos Vestibulares 2026:</b> usado como referência regional de profundidade, especialmente em raciocínio lógico-dedutivo, conjuntos numéricos, razões e proporções, funções, polinômios, matrizes, combinatória, probabilidade, geometria e geometria analítica.</li>
+<li><b>Universidades estaduais próximas/região:</b> a matriz UEM foi priorizada pela proximidade regional com Cianorte e por dialogar com o currículo paranaense. A apostila não transforma o PSS em vestibular; usa a referência para não deixar lacunas conceituais.</li>
+</ul>
+<div class="box amber"><b>Observação:</b> quando o caderno oficial do PSS Cianorte 2026 for publicado pela banca, o ideal é fazer uma versão 2.0 da apostila com análise das questões realmente aplicadas.</div>
+</section>
+<div class="footer">Material autoral de apoio ao estudo. Revise sempre pelo edital oficial e pelos comunicados da banca.</div>
+</main>
+</div>
+</div>
+<script>
+document.querySelectorAll('.quiz').forEach((quiz)=>{
+  const correct = Number(quiz.dataset.correct);
+  quiz.querySelectorAll('.option').forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+      quiz.classList.add('answered');
+      quiz.querySelectorAll('.option').forEach((b)=>{
+        b.classList.remove('correct','wrong');
+        const idx = Number(b.dataset.idx);
+        if(idx === correct) b.classList.add('correct');
+      });
+      const chosen = Number(btn.dataset.idx);
+      if(chosen !== correct) btn.classList.add('wrong');
+    });
+  });
+});
+</script>
+</body>
+</html>

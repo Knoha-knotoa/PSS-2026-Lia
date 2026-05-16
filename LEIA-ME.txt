@@ -1,0 +1,16 @@
+PAINEL DE ESTUDOS PSS CIANORTE
+
+Como usar:
+1. Extraia todos os arquivos deste ZIP em uma pasta.
+2. Abra o arquivo index.html no navegador.
+3. A primeira aba é o "Simulado para o cafézinho": 2 questões de cada área, sorteadas aleatoriamente.
+4. A aba "Banco com 200 questões" permite buscar e filtrar.
+5. As demais abas abrem as apostilas HTML.
+
+Arquivos:
+- index.html
+- Portugues.html
+- Matematica.html
+- Conhecimentos-gerais.html
+- Conhecimentos-especificos.html
+- banco_unificado_200_questoes_pss_cianorte.json
